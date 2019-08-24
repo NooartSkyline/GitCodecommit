@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11" name="DBTRANS">
+  <DataContextMoniker Name="/DBTRANSDataContext" />
+  <nestedChildShapes>
+    <classShape Id="f0c1c8a2-c761-4b1b-8c1f-ee13c557424e" absoluteBounds="3.75, 0.75, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBTRANSDataContext/TBTrans_PostGISerial" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dce8c1f1-69c0-4c23-99fa-e4b16670908e" absoluteBounds="3.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8dd7e165-6b99-4c42-88d0-74cdbf80ec77" absoluteBounds="3.75, 2.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBTRANSDataContext/TBTrans_GR_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c68ae94f-0ffc-4cdb-a335-db889706c555" absoluteBounds="3.7649999999999997, 3.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e311b666-77fa-4e07-be57-e678d16953a4" absoluteBounds="0.5, 0.5, 2, 10.232159830729165">
+      <DataClassMoniker Name="/DBTRANSDataContext/TBTrans_PostGRItem" />
+      <nestedChildShapes>
+        <elementListCompartment Id="640fb9b9-4f20-42ec-815c-9c50cb3f3c40" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 9.6721598307291661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBMASTER">
+  <DataContextMoniker Name="/DBMASTERDataContext" />
+  <nestedChildShapes>
+    <classShape Id="e2df4b98-f4cc-4173-bfb9-2f7ef8291105" absoluteBounds="5.875, 1.375, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DBMASTERDataContext/TBMaster_Barcode" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2e264c83-6ea6-4a31-9df3-61b0c2fe9909" absoluteBounds="5.89, 1.835, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

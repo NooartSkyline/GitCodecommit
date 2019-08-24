@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBMASTER" Class="DBMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.104;Initial Catalog=DBMASTER;Persist Security Info=True;User ID=sa" SettingsObjectName="DohomeApplicationPolicy.Properties.Settings" SettingsPropertyName="DBMASTERConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBMaster_DHApp_Group_Detail" Member="TBMaster_DHApp_Group_Details">
+    <Type Name="TBMaster_DHApp_Group_Detail">
+      <Column Name="Site" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Sloc" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Group_Code" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Branch" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBMaster_DHApp_User" Member="TBMaster_DHApp_Users">
+    <Type Name="TBMaster_DHApp_User">
+      <Column Name="User_Code" Type="System.String" DbType="VarChar(15) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Group_Code" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBMaster_DHApp_Group_Policy" Member="TBMaster_DHApp_Group_Policies">
+    <Type Name="TBMaster_DHApp_Group_Policy">
+      <Column Name="Group_Code" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Group_Name" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Group_Desc" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBMaster_User_Job_Key" Member="TBMaster_User_Job_Keys">
+    <Type Name="TBMaster_User_Job_Key">
+      <Column Name="CODE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MYNAME" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="JOBKEYTYPE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LAST_UPDATE_TIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

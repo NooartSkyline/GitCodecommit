@@ -1,0 +1,81 @@
+﻿using System.Runtime.Serialization;
+using BLToolkit.DataAccess;
+using BLToolkit.Mapping;
+using System.ServiceModel;
+using System.Collections.Generic;
+using BLToolkit.Data;
+using System;
+
+namespace DoHome.MobileService
+{
+    [DataContract]
+    public class LabelPrint
+    {
+        [DataMember]
+        [MapField("DocNo")]
+        public string DocumentNo { get; set; }
+
+        //[DataMember]
+        //[MapField("DocDate")]
+        //public DateTime DocumentDate { get; set; }
+
+        //[DataMember]
+        //[MapIgnore]
+        //public string DocumentDateString { get; set; }
+
+        [DataMember]
+        [MapField("LocationCode")]
+        public string LocationCode { get; set; }
+
+        [DataMember]
+        [MapField("QuantityOfLabel")]
+        public int QuantityOfLabel { get; set; }
+
+    }
+
+    public partial interface IMobileService
+    {
+
+        [OperationContract]
+        List<LabelPrint> GetLabelPrint(string branchCode, string userCode);
+
+    }
+
+
+    public partial class MobileService : IMobileService
+    {
+
+        public List<LabelPrint> GetLabelPrint(string branchCode, string userCode)
+        {
+            try
+            {
+                using (DbManager db = new DbManager(branchCode))
+                {
+                    var labelPrint = db.SetCommand(GetSql(55),
+                                     db.Parameter("@UserCode", userCode))
+                                     .ExecuteList<LabelPrint>();
+
+
+                    //if (labelPrint != null)
+                    //{
+                    //    var cult = new System.Globalization.CultureInfo("th-TH");
+
+                    //    foreach (var item in labelPrint)
+                    //        item.DocumentDateString = item.DocumentDate.ToString("dd/MM/yyyy", cult);
+                    //}
+
+                    return labelPrint;
+                }
+            }
+            catch (Exception ex)
+            {
+                log.Error(ex);
+            }
+
+            return null;
+        }
+
+
+    }
+
+}

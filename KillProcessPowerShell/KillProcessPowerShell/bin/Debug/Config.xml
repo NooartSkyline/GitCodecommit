@@ -1,0 +1,8 @@
+<?xml version="1.0" standalone="yes"?>
+<NARGUS>
+	<SYSCONFIG>
+		<task_name_for_kill>powershell</task_name_for_kill>
+		<time_ticker>3000</time_ticker>	
+		<log_path>C:/LogKillProcessPowerShell/</log_path>	 
+	</SYSCONFIG>
+</NARGUS>

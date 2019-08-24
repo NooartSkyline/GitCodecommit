@@ -1,0 +1,138 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
+using DoHome.HandHeld.Client.DataAccess;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class LabelLocationPrintForm : Form
+    {
+        #region Method
+
+        private void PrepareAddNewToGrid()
+        {
+            try
+            {
+                var locationCode = txtLocationCode.Text.Trim();
+                if (!string.IsNullOrEmpty(locationCode) && Utils.CheckLocationIsLocation(locationCode))
+                {
+                    AddNewToGrid(locationCode.ToUpper());
+                }
+                txtLocationCode.Text = null;
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex);
+            }
+        }
+
+        private void AddNewToGrid(string locationCode)
+        {
+            if (grdLocations.DataSource == null)
+                grdLocations.DataSource = new List<LabelLocationPrint>();
+
+            var locations = (List<LabelLocationPrint>)grdLocations.DataSource;
+            if (!locations.Exists(p => p.LocationCode == locationCode))
+            {
+                locations.Add(new LabelLocationPrint { LocationCode = locationCode, Quantity = 1 });
+                LabelLocationPrintManager.Add(locations);
+                BindGrid();
+            }
+
+        }
+
+        private void BindGrid()
+        {
+            grdLocations.DataSource = LabelLocationPrintManager.GetAll();
+            txtLocationCode.Focus();
+        }
+
+        #endregion
+
+        public LabelLocationPrintForm()
+        {
+            InitializeComponent();
+        }
+
+        private void txtLocationCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                PrepareAddNewToGrid();
+            }
+        }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            PrepareAddNewToGrid();
+        }
+
+        private void grdLocations_CellClick(object sender, Resco.Controls.SmartGrid.CellEventArgs e)
+        {
+            //if click cell delete.
+            if (e.Cell.ColumnIndex == 2)
+            {
+                if (GlobalMessageBox.ShowQuestion("คุณต้องการลบรายการ ใช่หรือไม่ ?") == DialogResult.Yes)
+                {
+                    var locationCode = grdLocations.Cells[e.Cell.RowIndex, 0].Text;
+                    var locations = (List<LabelLocationPrint>)grdLocations.DataSource;
+                    if (locations.Exists(p => p.LocationCode == locationCode))
+                    {
+                        LabelLocationPrintManager.Delete(locationCode);
+                        BindGrid();
+                    }
+                }
+            }
+        }
+
+        private void btnKeyboard_Click(object sender, EventArgs e)
+        {
+            var oForm = new LocationKeyboardForm();
+            if (oForm.ShowDialog() == DialogResult.OK)
+            {
+                txtLocationCode.Text = oForm.Tag as string;
+            }
+        }
+
+        private void LabelLocationPrintForm_Load(object sender, EventArgs e)
+        {
+            BindGrid();
+        }
+
+        private void btnRefressQuantity_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                grdLocations.EndEdit();
+                var locations = (List<LabelLocationPrint>)grdLocations.DataSource;
+                LabelLocationPrintManager.UpdateQuantity(locations);
+                BindGrid();
+                GlobalMessageBox.ShowInfomation("กำหนดจำนวนเรียบร้อยแล้ว");
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // ensure update quantity when not call btnRefressQuantity_Click.
+                grdLocations.EndEdit();
+                var locations = (List<LabelLocationPrint>)grdLocations.DataSource;
+                LabelLocationPrintManager.UpdateQuantity(locations);
+                BindGrid();
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex);
+            }
+        }
+
+
+
+    }
+
+}

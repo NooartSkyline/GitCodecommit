@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_regitry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="ลงทะเบียน"
+            android:textColor="@color/colorwrite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+            android:id="@+id/sticky_switch1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/sticky_switch2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:ss_animationDuration="600"
+            app:ss_animationType="line"
+            app:ss_iconPadding="40dp"
+            app:ss_iconSize="22dp"
+            app:ss_leftIcon="@drawable/ic_mood_bad"
+            app:ss_leftText="OFF"
+            app:ss_rightIcon="@drawable/ic_mood_black"
+            app:ss_rightText="ON"
+            app:ss_selectedTextSize="14sp"
+            app:ss_sliderBackgroundColor="@color/colorSliderBackground"
+            app:ss_switchColor="@color/colorSwitchColor"
+            app:ss_textColor="@color/colorwrite"
+            app:ss_textSize="18sp" />
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+            android:id="@+id/sticky_switch2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/sticky_switch1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/sticky_switch1"
+            app:layout_constraintTop_toBottomOf="@+id/sticky_switch1"
+            app:ss_animationDuration="600"
+            app:ss_animationType="line"
+            app:ss_iconPadding="40dp"
+            app:ss_iconSize="22dp"
+            app:ss_leftIcon="@drawable/ic_mood_bad"
+            app:ss_leftText="OFF"
+            app:ss_rightIcon="@drawable/ic_mood_black"
+            app:ss_rightText="ON"
+            app:ss_selectedTextSize="14sp"
+            app:ss_sliderBackgroundColor="@color/colorSliderBackground"
+            app:ss_switchColor="@color/colorSwitchColor"
+            app:ss_textColor="@color/colorwrite"
+            app:ss_textSize="18sp" />
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+            android:id="@+id/sticky_switch3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/sticky_switch4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            app:ss_animationDuration="600"
+            app:ss_animationType="line"
+            app:ss_iconPadding="40dp"
+            app:ss_iconSize="22dp"
+            app:ss_leftIcon="@drawable/ic_mood_bad"
+            app:ss_leftText="OFF"
+            app:ss_rightIcon="@drawable/ic_mood_black"
+            app:ss_rightText="ON"
+            app:ss_selectedTextSize="14sp"
+            app:ss_sliderBackgroundColor="@color/colorSliderBackground"
+            app:ss_switchColor="@color/colorSwitchColor"
+            app:ss_textColor="@color/colorwrite"
+            app:ss_textSize="18sp" />
+
+        <io.ghyeok.stickyswitch.widget.StickySwitch
+            android:id="@+id/sticky_switch4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/sticky_switch3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/sticky_switch3"
+            app:layout_constraintTop_toBottomOf="@+id/sticky_switch3"
+            app:ss_animationDuration="600"
+            app:ss_animationType="line"
+            app:ss_iconPadding="40dp"
+            app:ss_iconSize="22dp"
+            app:ss_leftIcon="@drawable/ic_mood_bad"
+            app:ss_leftText="OFF"
+            app:ss_rightIcon="@drawable/ic_mood_black"
+            app:ss_rightText="ON"
+            app:ss_selectedTextSize="14sp"
+            app:ss_sliderBackgroundColor="@color/colorSliderBackground"
+            app:ss_switchColor="@color/colorSwitchColor"
+            app:ss_textColor="@color/colorwrite"
+            app:ss_textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tv_code_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/colorwrite"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="บันได"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/sticky_switch1"
+            app:layout_constraintTop_toBottomOf="@+id/tv_code_name" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="กลาง"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView2"
+            app:layout_constraintStart_toStartOf="@+id/sticky_switch2" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="หัวเสาร์หน้าบ้าน"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/sticky_switch3"
+            app:layout_constraintTop_toBottomOf="@+id/sticky_switch1" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="เสาร์ติดข้างบ้าน"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="@+id/sticky_switch4" />
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

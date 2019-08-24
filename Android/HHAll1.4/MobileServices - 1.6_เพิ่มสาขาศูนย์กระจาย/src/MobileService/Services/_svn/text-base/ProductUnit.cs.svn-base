@@ -1,0 +1,106 @@
+﻿using System.Runtime.Serialization;
+using BLToolkit.DataAccess;
+using BLToolkit.Mapping;
+using System.ServiceModel;
+using BLToolkit.Data;
+using System.Collections.Generic;
+
+namespace DoHome.MobileService
+{
+    [DataContract]
+    public class ProductUnit
+    {
+        /// <summary>
+        /// Gets or sets the UnitCode
+        /// </summary>
+        [DataMember]
+        [MapField("UnitCode")]
+        public string Code { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets the UnitName
+        /// </summary>
+        [DataMember]
+        [MapField("UnitName")]
+        public string Name { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProductCode
+        /// </summary>
+        [DataMember]
+        [MapValue("ProductCode"),NonUpdatable]
+        public string ProductCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the IsSelected
+        /// </summary>
+        [DataMember]
+        [MapIgnore, NonUpdatable]
+        public bool IsSelected { get; set; }
+
+    }
+
+    public partial interface IMobileService
+    {
+
+        [OperationContract]
+        ProductUnit ProductUnitGetByCode(string branchCode, string unitCode);
+
+        [OperationContract]
+        string GetUnitByCode(string branchCode,string unitCode);
+
+        [OperationContract]
+        List<ProductUnit> ProductUnitGetByProductCode(string branchCode,string productCode);
+    }
+
+    public partial class MobileService : IMobileService
+    {
+        public string GetUnitByCode(string branchCode,string unitCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db
+                    .SetCommand("SELECT MyName FROM TBUnit Where Code = @UnitCode;",
+                    db.Parameter("@UnitCode", unitCode))
+                    .ExecuteScalar<string>();
+            }
+        }
+
+        public ProductUnit ProductUnitGetByCode(string branchCode,string unitCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db
+                    .SetCommand("SELECT Code UnitCode,MyName UnitName FROM TBUnit Where Code = @UnitCode;",
+                    db.Parameter("@UnitCode", unitCode))
+                    .ExecuteObject<ProductUnit>();
+            }
+        }
+
+        public List<ProductUnit> ProductUnitGetByProductCode(string branchCode,string productCode)
+        {
+            System.Text.StringBuilder sql = new System.Text.StringBuilder();
+            //sql.Append("SELECT pu.UnitCode ,u.Myname UnitName ,pu.ProductCode ");
+            //sql.Append("FROM TBProductUnit pu ");
+            //sql.Append("INNER JOIN TBUnit u ON pu.UnitCode = u.Code  ");
+            //sql.Append("WHERE pu.Status = 1 ");
+            //sql.Append("AND pu.ProductCode = @ProductCode");
+            sql.Append("SELECT  DISTINCT UnitCode,ProductCode, ");
+            sql.Append("(SELECT  MyName FROM TBUnit WHERE Code = UnitCode) UnitName ");
+            sql.Append("FROM TBBarcode ");
+            sql.Append("WHERE [Status] = 1 AND ProductCode = @ProductCode");
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db
+                    .SetCommand(sql.ToString(),
+                    db.Parameter("@ProductCode", productCode))
+                    .ExecuteList<ProductUnit>();
+            }
+
+        }
+
+    }
+
+}

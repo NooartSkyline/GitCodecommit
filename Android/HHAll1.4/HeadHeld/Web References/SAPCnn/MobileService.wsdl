@@ -1,0 +1,2625 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="MobileService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.0.37/MobileServiceTester/MobileService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.0.37/MobileServiceTester/MobileService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.0.37/MobileServiceTester/MobileService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DoHome.MobileService" />
+      <xsd:import schemaLocation="http://192.168.0.37/MobileServiceTester/MobileService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DoHome.MobileService.Services" />
+      <xsd:import schemaLocation="http://192.168.0.37/MobileServiceTester/MobileService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMobileService_BranchGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:BranchGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_BranchGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BranchGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductSaleDetailGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductSaleDetailGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductSaleDetailGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductSaleDetailGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckGetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckGetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckGetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckGetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductBarcodeByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBarcodeByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductBarcodeByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductBarcodeByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductByBarCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByBarCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductByBarCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductByBarCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentGetByLocationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentGetByLocationCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentGetByLocationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentGetByLocationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentTextGetByLocationCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentTextGetByLocationCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentTextGetByLocationCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentTextGetByLocationCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentTextGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentTextGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_SapDepartmentTextGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SapDepartmentTextGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddCheckProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddCheckProduct" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddCheckProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddCheckProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_HandHeldCounterHoldGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:HandHeldCounterHoldGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_HandHeldCounterHoldGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HandHeldCounterHoldGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByDocumentNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByDocumentNo" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByDocumentNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByDocumentNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByToDay_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByToDay" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByToDay_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByToDayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByToDayAndProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByToDayAndProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterHoldByToDayAndProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterHoldByToDayAndProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounterHold_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounterHold" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounterHold_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounterHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_HandHeldCounterHoldGetByProductCode2_InputMessage">
+    <wsdl:part name="parameters" element="tns:HandHeldCounterHoldGetByProductCode2" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_HandHeldCounterHoldGetByProductCode2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HandHeldCounterHoldGetByProductCode2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_MasterProductGetByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:MasterProductGetByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_MasterProductGetByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MasterProductGetByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInfoGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInfoGet" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInfoGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInfoGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInfoGetByProductOrBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInfoGetByProductOrBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInfoGetByProductOrBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInfoGetByProductOrBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationTitle_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationTitle" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationTitle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationTitleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationSAPClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationSAPClient" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationSAPClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationSAPClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationSAPServer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationSAPServer" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ApplicationSAPServer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplicationSAPServerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AccountingYear_InputMessage">
+    <wsdl:part name="parameters" element="tns:AccountingYear" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AccountingYear_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AccountingYearResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetServerTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetServerTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetServerTimeString_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeString" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetServerTimeString_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeStringResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode1_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode1" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode1_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode1Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode2_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode2" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode2_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode2Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode3_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode3" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode3_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode3Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode4_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode4" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode4_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode4Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_BarcodeGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:BarcodeGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_BarcodeGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BarcodeGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductPosition_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductPosition" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetProductPosition_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProductPositionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode5_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode5" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductBarcodeGetByProductCodeOrBarcode5_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductBarcodeGetByProductCodeOrBarcode5Response" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounterMainHold_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounterMainHold" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounterMainHold_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounterMainHoldResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddMajorHandHeldCounterMainHoldToSap_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMajorHandHeldCounterMainHoldToSap" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddMajorHandHeldCounterMainHoldToSap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMajorHandHeldCounterMainHoldToSapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddMinorHandHeldCounterMainHoldToSap_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddMinorHandHeldCounterMainHoldToSap" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddMinorHandHeldCounterMainHoldToSap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddMinorHandHeldCounterMainHoldToSapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldZMMInvoiceCnThFromSapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldByDocumentNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldByDocumentNo" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldByDocumentNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldByDocumentNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldBillByUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldBillByUser" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetHandHeldCounterMainHoldBillByUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHandHeldCounterMainHoldBillByUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetDisplayList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetDisplayList" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetDisplayList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetDisplayListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetBySearchPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetBySearchPrice" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetBySearchPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetBySearchPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetByCountStock_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetByCountStock" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetByCountStock_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetByCountStockResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetByLocationCheck_InputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetByLocationCheck" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_DisplayListGetByLocationCheck_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DisplayListGetByLocationCheckResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationGetByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationGetByCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationGetByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationGetByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationGetByWarehouse_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationGetByWarehouse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationGetByWarehouse_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationGetByWarehouseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllLocationDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLocationDescription" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetAllLocationDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLocationDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCheckProduct_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCheckProduct" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCheckProduct_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCheckProductResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentGetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentGetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentGetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentGetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDepartmentGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDepartmentGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetLabelPrint_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabelPrint" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetLabelPrint_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLabelPrintResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductAddWithDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductAddWithDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductAddWithDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductAddWithDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductGet" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailGet" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintProductDetailGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintProductDetailGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintTypeGetByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintTypeGetByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LabelPrintTypeGetByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LabelPrintTypeGetByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationDetailGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationDetailGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationDetailGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationDetailGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationStatusGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationStatusGet" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_PrintLabelLocationStatusGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PrintLabelLocationStatusGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounter_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounter" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_AddHandHeldCounter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddHandHeldCounterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_UserCheckLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserCheckLogin" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_UserCheckLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserCheckLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_UserGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:UserGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_UserGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UserGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUserByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUserByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUserByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUserByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetMenuPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuPermission" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetMenuPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMenuPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductUnitGetByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductUnitGetByCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductUnitGetByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductUnitGetByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUnitByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitByCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetUnitByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUnitByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductUnitGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductUnitGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductUnitGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductUnitGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetCurrentPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetCurrentPrice" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetCurrentPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetCurrentPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetAllPrice_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetAllPrice" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetAllPrice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetAllPriceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetUnitOther_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetUnitOther" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductPriceGetUnitOther_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductPriceGetUnitOtherResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetSingle_InputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetSingle" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetSingle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetSingleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetAllByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetAllByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetAllByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetAllByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_WareHouseGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:WareHouseGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderAccrualGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderAccrualGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderAccrualGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderAccrualGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderAccrualAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderAccrualAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderAccrualAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderAccrualAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailGetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailGetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailGetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailGetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckDetailGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckDetailGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInLocationGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInLocationGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInLocationGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInLocationGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInLocationGetWarehouseCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInLocationGetWarehouseCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductInLocationGetWarehouseCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductInLocationGetWarehouseCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetTopstockForms_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopstockForms" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetTopstockForms_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopstockFormsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetTopstockItems_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopstockItems" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetTopstockItems_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTopstockItemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_CreateTopstockDoc_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTopstockDoc" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_CreateTopstockDoc_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTopstockDocResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixItemAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixItemAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixItemAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixItemAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixItemDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixItemDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixItemDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixItemDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixGetByLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixGetByLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationMixGetByLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationMixGetByLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByProductCodeOrBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByProductCodeOrBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByProductCodeOrBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByProductCodeOrBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetAllByBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetAllByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetAllByBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetAllByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetAllByProductCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetAllByProductCode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetAllByProductCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetAllByProductCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationBlankAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationBlankAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationBlankAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationBlankAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationAddHandHeldLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationAddHandHeldLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationAddHandHeldLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationAddHandHeldLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetHandHeldLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetHandHeldLocation" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetHandHeldLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetHandHeldLocationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_CheckIsCreateLocationToday_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsCreateLocationToday" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_CheckIsCreateLocationToday_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckIsCreateLocationTodayResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetInfomationByBarcode_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetInfomationByBarcode" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetInfomationByBarcode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetInfomationByBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckMasterGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckMasterGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckMasterGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckMasterGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckGetDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckGetDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckGetDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckGetDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckAddMaster_InputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckAddMaster" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckAddMaster_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckAddMasterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckAddDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckAddDetail" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckAddDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckAddDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_RandomCheckDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RandomCheckDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByLike_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByLike" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_ProductLocationGetByLike_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProductLocationGetByLikeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaGetByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaGetByID" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaGetByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaGetByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaGetAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaGetAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_LocationCheckPeriodAgendaGetAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LocationCheckPeriodAgendaGetAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetAllByPresent_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetAllByPresent" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetAllByPresent_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetAllByPresentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetByOrderNo_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetByOrderNo" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetByOrderNo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetByOrderNoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetForkleftAll_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetForkleftAll" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetForkleftAll_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetForkleftAllResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetAdd" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetUpdate_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetUpdate" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetUpdate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetUpdateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetDelete" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetForkLiftShippointByBranch_InputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetForkLiftShippointByBranch" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_OrderedSetGetForkLiftShippointByBranch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OrderedSetGetForkLiftShippointByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetItemShipment_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemShipment" />
+  </wsdl:message>
+  <wsdl:message name="IMobileService_GetItemShipment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemShipmentResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMobileService">
+    <wsdl:operation name="BranchGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/BranchGetAll" message="tns:IMobileService_BranchGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/BranchGetAllResponse" message="tns:IMobileService_BranchGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductSaleDetailGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductSaleDetailGetByProductCode" message="tns:IMobileService_ProductSaleDetailGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductSaleDetailGetByProductCodeResponse" message="tns:IMobileService_ProductSaleDetailGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckAdd" message="tns:IMobileService_LocationCheckAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckAddResponse" message="tns:IMobileService_LocationCheckAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckUpdate" message="tns:IMobileService_LocationCheckUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckUpdateResponse" message="tns:IMobileService_LocationCheckUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDelete" message="tns:IMobileService_LocationCheckDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDeleteResponse" message="tns:IMobileService_LocationCheckDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckGetByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckGetByID" message="tns:IMobileService_LocationCheckGetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckGetByIDResponse" message="tns:IMobileService_LocationCheckGetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckGetAll" message="tns:IMobileService_LocationCheckGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckGetAllResponse" message="tns:IMobileService_LocationCheckGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBarcodeByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetProductBarcodeByProductCode" message="tns:IMobileService_GetProductBarcodeByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetProductBarcodeByProductCodeResponse" message="tns:IMobileService_GetProductBarcodeByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetProductByCode" message="tns:IMobileService_GetProductByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetProductByCodeResponse" message="tns:IMobileService_GetProductByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByBarCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetProductByBarCode" message="tns:IMobileService_GetProductByBarCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetProductByBarCodeResponse" message="tns:IMobileService_GetProductByBarCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetProductCode" message="tns:IMobileService_GetProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetProductCodeResponse" message="tns:IMobileService_GetProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentGetByLocationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentGetByLocationCode" message="tns:IMobileService_SapDepartmentGetByLocationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentGetByLocationCodeResponse" message="tns:IMobileService_SapDepartmentGetByLocationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentTextGetByLocationCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentTextGetByLocationCode" message="tns:IMobileService_SapDepartmentTextGetByLocationCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentTextGetByLocationCodeResponse" message="tns:IMobileService_SapDepartmentTextGetByLocationCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentGetByProductCode" message="tns:IMobileService_SapDepartmentGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentGetByProductCodeResponse" message="tns:IMobileService_SapDepartmentGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentTextGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentTextGetByProductCode" message="tns:IMobileService_SapDepartmentTextGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/SapDepartmentTextGetByProductCodeResponse" message="tns:IMobileService_SapDepartmentTextGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCheckProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddCheckProduct" message="tns:IMobileService_AddCheckProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddCheckProductResponse" message="tns:IMobileService_AddCheckProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HandHeldCounterHoldGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCode" message="tns:IMobileService_HandHeldCounterHoldGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCodeResponse" message="tns:IMobileService_HandHeldCounterHoldGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByDocumentNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByDocumentNo" message="tns:IMobileService_GetHandHeldCounterHoldByDocumentNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByDocumentNoResponse" message="tns:IMobileService_GetHandHeldCounterHoldByDocumentNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByToDay">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDay" message="tns:IMobileService_GetHandHeldCounterHoldByToDay_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDayResponse" message="tns:IMobileService_GetHandHeldCounterHoldByToDay_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByToDayAndProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDayAndProductCode" message="tns:IMobileService_GetHandHeldCounterHoldByToDayAndProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDayAndProductCodeResponse" message="tns:IMobileService_GetHandHeldCounterHoldByToDayAndProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounterHold">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounterHold" message="tns:IMobileService_AddHandHeldCounterHold_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounterHoldResponse" message="tns:IMobileService_AddHandHeldCounterHold_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HandHeldCounterHoldGetByProductCode2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCode2" message="tns:IMobileService_HandHeldCounterHoldGetByProductCode2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCode2Response" message="tns:IMobileService_HandHeldCounterHoldGetByProductCode2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MasterProductGetByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/MasterProductGetByBranch" message="tns:IMobileService_MasterProductGetByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/MasterProductGetByBranchResponse" message="tns:IMobileService_MasterProductGetByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductInfoGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductInfoGet" message="tns:IMobileService_ProductInfoGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductInfoGetResponse" message="tns:IMobileService_ProductInfoGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductInfoGetByProductOrBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductInfoGetByProductOrBarcode" message="tns:IMobileService_ProductInfoGetByProductOrBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductInfoGetByProductOrBarcodeResponse" message="tns:IMobileService_ProductInfoGetByProductOrBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationTitle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ApplicationTitle" message="tns:IMobileService_ApplicationTitle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ApplicationTitleResponse" message="tns:IMobileService_ApplicationTitle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationSAPClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ApplicationSAPClient" message="tns:IMobileService_ApplicationSAPClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ApplicationSAPClientResponse" message="tns:IMobileService_ApplicationSAPClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationSAPServer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ApplicationSAPServer" message="tns:IMobileService_ApplicationSAPServer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ApplicationSAPServerResponse" message="tns:IMobileService_ApplicationSAPServer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AccountingYear">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AccountingYear" message="tns:IMobileService_AccountingYear_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AccountingYearResponse" message="tns:IMobileService_AccountingYear_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetServerTime" message="tns:IMobileService_GetServerTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetServerTimeResponse" message="tns:IMobileService_GetServerTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTimeString">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetServerTimeString" message="tns:IMobileService_GetServerTimeString_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetServerTimeStringResponse" message="tns:IMobileService_GetServerTimeString_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode1">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode1" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode1_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode1Response" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode1_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode2">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode2" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode2_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode2Response" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode2_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode3">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode3" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode3_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode3Response" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode3_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode4">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode4" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode4_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode4Response" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode4_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCode" message="tns:IMobileService_ProductBarcodeGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeResponse" message="tns:IMobileService_ProductBarcodeGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductByProductCode" message="tns:IMobileService_ProductByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductByProductCodeResponse" message="tns:IMobileService_ProductByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BarcodeGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/BarcodeGetByProductCode" message="tns:IMobileService_BarcodeGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/BarcodeGetByProductCodeResponse" message="tns:IMobileService_BarcodeGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByBarcode" message="tns:IMobileService_ProductBarcodeGetByBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByBarcodeResponse" message="tns:IMobileService_ProductBarcodeGetByBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPosition">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetProductPosition" message="tns:IMobileService_GetProductPosition_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetProductPositionResponse" message="tns:IMobileService_GetProductPosition_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode5">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode5" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode5_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode5Response" message="tns:IMobileService_ProductBarcodeGetByProductCodeOrBarcode5_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounterMainHold">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounterMainHold" message="tns:IMobileService_AddHandHeldCounterMainHold_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounterMainHoldResponse" message="tns:IMobileService_AddHandHeldCounterMainHold_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMajorHandHeldCounterMainHoldToSap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddMajorHandHeldCounterMainHoldToSap" message="tns:IMobileService_AddMajorHandHeldCounterMainHoldToSap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddMajorHandHeldCounterMainHoldToSapResponse" message="tns:IMobileService_AddMajorHandHeldCounterMainHoldToSap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMinorHandHeldCounterMainHoldToSap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddMinorHandHeldCounterMainHoldToSap" message="tns:IMobileService_AddMinorHandHeldCounterMainHoldToSap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddMinorHandHeldCounterMainHoldToSapResponse" message="tns:IMobileService_AddMinorHandHeldCounterMainHoldToSap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap" message="tns:IMobileService_GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZMMInvoiceCnThFromSapResponse" message="tns:IMobileService_GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap" message="tns:IMobileService_GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSapResponse" message="tns:IMobileService_GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldByDocumentNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldByDocumentNo" message="tns:IMobileService_GetHandHeldCounterMainHoldByDocumentNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldByDocumentNoResponse" message="tns:IMobileService_GetHandHeldCounterMainHoldByDocumentNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldBillByUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldBillByUser" message="tns:IMobileService_GetHandHeldCounterMainHoldBillByUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldBillByUserResponse" message="tns:IMobileService_GetHandHeldCounterMainHoldBillByUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetDisplayList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetDisplayList" message="tns:IMobileService_ProductLocationGetDisplayList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetDisplayListResponse" message="tns:IMobileService_ProductLocationGetDisplayList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetBySearchPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetBySearchPrice" message="tns:IMobileService_DisplayListGetBySearchPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetBySearchPriceResponse" message="tns:IMobileService_DisplayListGetBySearchPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetByCountStock">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetByCountStock" message="tns:IMobileService_DisplayListGetByCountStock_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetByCountStockResponse" message="tns:IMobileService_DisplayListGetByCountStock_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetByLocationCheck">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetByLocationCheck" message="tns:IMobileService_DisplayListGetByLocationCheck_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/DisplayListGetByLocationCheckResponse" message="tns:IMobileService_DisplayListGetByLocationCheck_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationGetByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationGetByCode" message="tns:IMobileService_LocationGetByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationGetByCodeResponse" message="tns:IMobileService_LocationGetByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationGetByWarehouse">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationGetByWarehouse" message="tns:IMobileService_LocationGetByWarehouse_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationGetByWarehouseResponse" message="tns:IMobileService_LocationGetByWarehouse_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLocationDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetAllLocationDescription" message="tns:IMobileService_GetAllLocationDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetAllLocationDescriptionResponse" message="tns:IMobileService_GetAllLocationDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCheckProduct">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCheckProduct" message="tns:IMobileService_AddHandHeldCheckProduct_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCheckProductResponse" message="tns:IMobileService_AddHandHeldCheckProduct_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentAdd" message="tns:IMobileService_LocationCheckDepartmentAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentAddResponse" message="tns:IMobileService_LocationCheckDepartmentAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentUpdate" message="tns:IMobileService_LocationCheckDepartmentUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentUpdateResponse" message="tns:IMobileService_LocationCheckDepartmentUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentDelete" message="tns:IMobileService_LocationCheckDepartmentDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentDeleteResponse" message="tns:IMobileService_LocationCheckDepartmentDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentGetByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentGetByID" message="tns:IMobileService_LocationCheckDepartmentGetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentGetByIDResponse" message="tns:IMobileService_LocationCheckDepartmentGetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentGetAll" message="tns:IMobileService_LocationCheckDepartmentGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDepartmentGetAllResponse" message="tns:IMobileService_LocationCheckDepartmentGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelPrint">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetLabelPrint" message="tns:IMobileService_GetLabelPrint_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetLabelPrintResponse" message="tns:IMobileService_GetLabelPrint_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductAdd" message="tns:IMobileService_LabelPrintProductAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductAddResponse" message="tns:IMobileService_LabelPrintProductAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductAddWithDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductAddWithDetail" message="tns:IMobileService_LabelPrintProductAddWithDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductAddWithDetailResponse" message="tns:IMobileService_LabelPrintProductAddWithDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDelete" message="tns:IMobileService_LabelPrintProductDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDeleteResponse" message="tns:IMobileService_LabelPrintProductDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductGet" message="tns:IMobileService_LabelPrintProductGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductGetResponse" message="tns:IMobileService_LabelPrintProductGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailAdd" message="tns:IMobileService_LabelPrintProductDetailAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailAddResponse" message="tns:IMobileService_LabelPrintProductDetailAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailDelete" message="tns:IMobileService_LabelPrintProductDetailDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailDeleteResponse" message="tns:IMobileService_LabelPrintProductDetailDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailGet" message="tns:IMobileService_LabelPrintProductDetailGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintProductDetailGetResponse" message="tns:IMobileService_LabelPrintProductDetailGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintTypeGetByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LabelPrintTypeGetByBranch" message="tns:IMobileService_LabelPrintTypeGetByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LabelPrintTypeGetByBranchResponse" message="tns:IMobileService_LabelPrintTypeGetByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationAdd" message="tns:IMobileService_PrintLabelLocationAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationAddResponse" message="tns:IMobileService_PrintLabelLocationAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationGetAll" message="tns:IMobileService_PrintLabelLocationGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationGetAllResponse" message="tns:IMobileService_PrintLabelLocationGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationDelete" message="tns:IMobileService_PrintLabelLocationDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationDeleteResponse" message="tns:IMobileService_PrintLabelLocationDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationDetailGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationDetailGetAll" message="tns:IMobileService_PrintLabelLocationDetailGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationDetailGetAllResponse" message="tns:IMobileService_PrintLabelLocationDetailGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationStatusGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationStatusGet" message="tns:IMobileService_PrintLabelLocationStatusGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/PrintLabelLocationStatusGetResponse" message="tns:IMobileService_PrintLabelLocationStatusGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounter" message="tns:IMobileService_AddHandHeldCounter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/AddHandHeldCounterResponse" message="tns:IMobileService_AddHandHeldCounter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserCheckLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/UserCheckLogin" message="tns:IMobileService_UserCheckLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/UserCheckLoginResponse" message="tns:IMobileService_UserCheckLogin_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UserGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/UserGetAll" message="tns:IMobileService_UserGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/UserGetAllResponse" message="tns:IMobileService_UserGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetUserByBranch" message="tns:IMobileService_GetUserByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetUserByBranchResponse" message="tns:IMobileService_GetUserByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetUserByCode" message="tns:IMobileService_GetUserByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetUserByCodeResponse" message="tns:IMobileService_GetUserByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPermission">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetMenuPermission" message="tns:IMobileService_GetMenuPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetMenuPermissionResponse" message="tns:IMobileService_GetMenuPermission_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductUnitGetByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductUnitGetByCode" message="tns:IMobileService_ProductUnitGetByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductUnitGetByCodeResponse" message="tns:IMobileService_ProductUnitGetByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetUnitByCode" message="tns:IMobileService_GetUnitByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetUnitByCodeResponse" message="tns:IMobileService_GetUnitByCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductUnitGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductUnitGetByProductCode" message="tns:IMobileService_ProductUnitGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductUnitGetByProductCodeResponse" message="tns:IMobileService_ProductUnitGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetCurrentPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetCurrentPrice" message="tns:IMobileService_ProductPriceGetCurrentPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetCurrentPriceResponse" message="tns:IMobileService_ProductPriceGetCurrentPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetAllPrice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetAllPrice" message="tns:IMobileService_ProductPriceGetAllPrice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetAllPriceResponse" message="tns:IMobileService_ProductPriceGetAllPrice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetUnitOther">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetUnitOther" message="tns:IMobileService_ProductPriceGetUnitOther_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductPriceGetUnitOtherResponse" message="tns:IMobileService_ProductPriceGetUnitOther_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetSingle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetSingle" message="tns:IMobileService_WareHouseGetSingle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetSingleResponse" message="tns:IMobileService_WareHouseGetSingle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetAllByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetAllByBranch" message="tns:IMobileService_WareHouseGetAllByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetAllByBranchResponse" message="tns:IMobileService_WareHouseGetAllByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetAll" message="tns:IMobileService_WareHouseGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/WareHouseGetAllResponse" message="tns:IMobileService_WareHouseGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderAccrualGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderAccrualGetByProductCode" message="tns:IMobileService_OrderAccrualGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderAccrualGetByProductCodeResponse" message="tns:IMobileService_OrderAccrualGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderAccrualAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderAccrualAdd" message="tns:IMobileService_OrderAccrualAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderAccrualAddResponse" message="tns:IMobileService_OrderAccrualAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailAdd" message="tns:IMobileService_LocationCheckDetailAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailAddResponse" message="tns:IMobileService_LocationCheckDetailAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailUpdate" message="tns:IMobileService_LocationCheckDetailUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailUpdateResponse" message="tns:IMobileService_LocationCheckDetailUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailDelete" message="tns:IMobileService_LocationCheckDetailDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailDeleteResponse" message="tns:IMobileService_LocationCheckDetailDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailGetByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailGetByID" message="tns:IMobileService_LocationCheckDetailGetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailGetByIDResponse" message="tns:IMobileService_LocationCheckDetailGetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailGetAll" message="tns:IMobileService_LocationCheckDetailGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckDetailGetAllResponse" message="tns:IMobileService_LocationCheckDetailGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductInLocationGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductInLocationGetByProductCode" message="tns:IMobileService_ProductInLocationGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductInLocationGetByProductCodeResponse" message="tns:IMobileService_ProductInLocationGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductInLocationGetWarehouseCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductInLocationGetWarehouseCode" message="tns:IMobileService_ProductInLocationGetWarehouseCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductInLocationGetWarehouseCodeResponse" message="tns:IMobileService_ProductInLocationGetWarehouseCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopstockForms">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetTopstockForms" message="tns:IMobileService_GetTopstockForms_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetTopstockFormsResponse" message="tns:IMobileService_GetTopstockForms_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTopstockItems">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetTopstockItems" message="tns:IMobileService_GetTopstockItems_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetTopstockItemsResponse" message="tns:IMobileService_GetTopstockItems_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTopstockDoc">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/CreateTopstockDoc" message="tns:IMobileService_CreateTopstockDoc_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/CreateTopstockDocResponse" message="tns:IMobileService_CreateTopstockDoc_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByLocation" message="tns:IMobileService_ProductLocationGetByLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByLocationResponse" message="tns:IMobileService_ProductLocationGetByLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationAdd" message="tns:IMobileService_ProductLocationAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationAddResponse" message="tns:IMobileService_ProductLocationAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixAdd" message="tns:IMobileService_ProductLocationMixAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixAddResponse" message="tns:IMobileService_ProductLocationMixAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixItemAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixItemAdd" message="tns:IMobileService_ProductLocationMixItemAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixItemAddResponse" message="tns:IMobileService_ProductLocationMixItemAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixItemDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixItemDelete" message="tns:IMobileService_ProductLocationMixItemDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixItemDeleteResponse" message="tns:IMobileService_ProductLocationMixItemDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixGetByLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixGetByLocation" message="tns:IMobileService_ProductLocationMixGetByLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationMixGetByLocationResponse" message="tns:IMobileService_ProductLocationMixGetByLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByBarcode" message="tns:IMobileService_ProductLocationGetByBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByBarcodeResponse" message="tns:IMobileService_ProductLocationGetByBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByProductCodeOrBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByProductCodeOrBarcode" message="tns:IMobileService_ProductLocationGetByProductCodeOrBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByProductCodeOrBarcodeResponse" message="tns:IMobileService_ProductLocationGetByProductCodeOrBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByProductCode" message="tns:IMobileService_ProductLocationGetByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByProductCodeResponse" message="tns:IMobileService_ProductLocationGetByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetAllByBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetAllByBarcode" message="tns:IMobileService_ProductLocationGetAllByBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetAllByBarcodeResponse" message="tns:IMobileService_ProductLocationGetAllByBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetAllByProductCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetAllByProductCode" message="tns:IMobileService_ProductLocationGetAllByProductCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetAllByProductCodeResponse" message="tns:IMobileService_ProductLocationGetAllByProductCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationBlankAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationBlankAdd" message="tns:IMobileService_ProductLocationBlankAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationBlankAddResponse" message="tns:IMobileService_ProductLocationBlankAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationAddHandHeldLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationAddHandHeldLocation" message="tns:IMobileService_ProductLocationAddHandHeldLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationAddHandHeldLocationResponse" message="tns:IMobileService_ProductLocationAddHandHeldLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetHandHeldLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetHandHeldLocation" message="tns:IMobileService_ProductLocationGetHandHeldLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetHandHeldLocationResponse" message="tns:IMobileService_ProductLocationGetHandHeldLocation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsCreateLocationToday">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/CheckIsCreateLocationToday" message="tns:IMobileService_CheckIsCreateLocationToday_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/CheckIsCreateLocationTodayResponse" message="tns:IMobileService_CheckIsCreateLocationToday_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetInfomationByBarcode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetInfomationByBarcode" message="tns:IMobileService_ProductLocationGetInfomationByBarcode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetInfomationByBarcodeResponse" message="tns:IMobileService_ProductLocationGetInfomationByBarcode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckMasterGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/RandomCheckMasterGetAll" message="tns:IMobileService_RandomCheckMasterGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/RandomCheckMasterGetAllResponse" message="tns:IMobileService_RandomCheckMasterGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckGetDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/RandomCheckGetDetail" message="tns:IMobileService_RandomCheckGetDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/RandomCheckGetDetailResponse" message="tns:IMobileService_RandomCheckGetDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckAddMaster">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/RandomCheckAddMaster" message="tns:IMobileService_RandomCheckAddMaster_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/RandomCheckAddMasterResponse" message="tns:IMobileService_RandomCheckAddMaster_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckAddDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/RandomCheckAddDetail" message="tns:IMobileService_RandomCheckAddDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/RandomCheckAddDetailResponse" message="tns:IMobileService_RandomCheckAddDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/RandomCheckDelete" message="tns:IMobileService_RandomCheckDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/RandomCheckDeleteResponse" message="tns:IMobileService_RandomCheckDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByLike">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByLike" message="tns:IMobileService_ProductLocationGetByLike_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/ProductLocationGetByLikeResponse" message="tns:IMobileService_ProductLocationGetByLike_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaAdd" message="tns:IMobileService_LocationCheckPeriodAgendaAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaAddResponse" message="tns:IMobileService_LocationCheckPeriodAgendaAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaUpdate" message="tns:IMobileService_LocationCheckPeriodAgendaUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaUpdateResponse" message="tns:IMobileService_LocationCheckPeriodAgendaUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaDelete" message="tns:IMobileService_LocationCheckPeriodAgendaDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaDeleteResponse" message="tns:IMobileService_LocationCheckPeriodAgendaDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaGetByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetByID" message="tns:IMobileService_LocationCheckPeriodAgendaGetByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetByIDResponse" message="tns:IMobileService_LocationCheckPeriodAgendaGetByID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaGetAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetAll" message="tns:IMobileService_LocationCheckPeriodAgendaGetAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetAllResponse" message="tns:IMobileService_LocationCheckPeriodAgendaGetAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetAllByPresent">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetAllByPresent" message="tns:IMobileService_OrderedSetGetAllByPresent_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetAllByPresentResponse" message="tns:IMobileService_OrderedSetGetAllByPresent_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetByOrderNo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetByOrderNo" message="tns:IMobileService_OrderedSetGetByOrderNo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetByOrderNoResponse" message="tns:IMobileService_OrderedSetGetByOrderNo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetForkleftAll">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetForkleftAll" message="tns:IMobileService_OrderedSetGetForkleftAll_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetForkleftAllResponse" message="tns:IMobileService_OrderedSetGetForkleftAll_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetAdd" message="tns:IMobileService_OrderedSetAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetAddResponse" message="tns:IMobileService_OrderedSetAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetUpdate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetUpdate" message="tns:IMobileService_OrderedSetUpdate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetUpdateResponse" message="tns:IMobileService_OrderedSetUpdate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetDelete" message="tns:IMobileService_OrderedSetDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetDeleteResponse" message="tns:IMobileService_OrderedSetDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetForkLiftShippointByBranch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetForkLiftShippointByBranch" message="tns:IMobileService_OrderedSetGetForkLiftShippointByBranch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/OrderedSetGetForkLiftShippointByBranchResponse" message="tns:IMobileService_OrderedSetGetForkLiftShippointByBranch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemShipment">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMobileService/GetItemShipment" message="tns:IMobileService_GetItemShipment_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMobileService/GetItemShipmentResponse" message="tns:IMobileService_GetItemShipment_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MobileEndpoints" type="tns:IMobileService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="BranchGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/BranchGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductSaleDetailGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductSaleDetailGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckUpdate">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckGetByID">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckGetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductBarcodeByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetProductBarcodeByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetProductByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductByBarCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetProductByBarCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentGetByLocationCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/SapDepartmentGetByLocationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentTextGetByLocationCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/SapDepartmentTextGetByLocationCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/SapDepartmentGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SapDepartmentTextGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/SapDepartmentTextGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCheckProduct">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddCheckProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HandHeldCounterHoldGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByDocumentNo">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByDocumentNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByToDay">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterHoldByToDayAndProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterHoldByToDayAndProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounterHold">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddHandHeldCounterHold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HandHeldCounterHoldGetByProductCode2">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/HandHeldCounterHoldGetByProductCode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MasterProductGetByBranch">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/MasterProductGetByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductInfoGet">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductInfoGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductInfoGetByProductOrBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductInfoGetByProductOrBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationTitle">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ApplicationTitle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationSAPClient">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ApplicationSAPClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplicationSAPServer">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ApplicationSAPServer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AccountingYear">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AccountingYear" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTimeString">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetServerTimeString" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode1">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode1" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode2">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode2" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode3">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode3" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode4">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode4" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BarcodeGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/BarcodeGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProductPosition">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetProductPosition" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductBarcodeGetByProductCodeOrBarcode5">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductBarcodeGetByProductCodeOrBarcode5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounterMainHold">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddHandHeldCounterMainHold" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMajorHandHeldCounterMainHoldToSap">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddMajorHandHeldCounterMainHoldToSap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMinorHandHeldCounterMainHoldToSap">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddMinorHandHeldCounterMainHoldToSap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZMMInvoiceCnThFromSap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldZDDHandHeldCheckStockFromSap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldByDocumentNo">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldByDocumentNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetHandHeldCounterMainHoldBillByUser">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetHandHeldCounterMainHoldBillByUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetDisplayList">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetDisplayList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetBySearchPrice">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/DisplayListGetBySearchPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetByCountStock">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/DisplayListGetByCountStock" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DisplayListGetByLocationCheck">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/DisplayListGetByLocationCheck" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationGetByCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationGetByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationGetByWarehouse">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationGetByWarehouse" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLocationDescription">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetAllLocationDescription" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCheckProduct">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddHandHeldCheckProduct" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDepartmentAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentUpdate">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDepartmentUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDepartmentDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentGetByID">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDepartmentGetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDepartmentGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDepartmentGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelPrint">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetLabelPrint" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductAddWithDetail">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductAddWithDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductGet">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductDetailAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductDetailDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintProductDetailGet">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintProductDetailGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LabelPrintTypeGetByBranch">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LabelPrintTypeGetByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/PrintLabelLocationAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/PrintLabelLocationGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/PrintLabelLocationDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationDetailGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/PrintLabelLocationDetailGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PrintLabelLocationStatusGet">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/PrintLabelLocationStatusGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddHandHeldCounter">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/AddHandHeldCounter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserCheckLogin">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/UserCheckLogin" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UserGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/UserGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByBranch">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetUserByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserByCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetUserByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMenuPermission">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetMenuPermission" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductUnitGetByCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductUnitGetByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUnitByCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetUnitByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductUnitGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductUnitGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetCurrentPrice">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductPriceGetCurrentPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetAllPrice">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductPriceGetAllPrice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductPriceGetUnitOther">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductPriceGetUnitOther" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetSingle">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/WareHouseGetSingle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetAllByBranch">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/WareHouseGetAllByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WareHouseGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/WareHouseGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAccrualGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderAccrualGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderAccrualAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderAccrualAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDetailAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailUpdate">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDetailUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDetailDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailGetByID">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDetailGetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckDetailGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckDetailGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductInLocationGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductInLocationGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductInLocationGetWarehouseCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductInLocationGetWarehouseCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopstockForms">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetTopstockForms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTopstockItems">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetTopstockItems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateTopstockDoc">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/CreateTopstockDoc" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByLocation">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetByLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationMixAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixItemAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationMixItemAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixItemDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationMixItemDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationMixGetByLocation">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationMixGetByLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetByBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByProductCodeOrBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetByProductCodeOrBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetAllByBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetAllByBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetAllByProductCode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetAllByProductCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationBlankAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationBlankAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationAddHandHeldLocation">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationAddHandHeldLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetHandHeldLocation">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetHandHeldLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckIsCreateLocationToday">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/CheckIsCreateLocationToday" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetInfomationByBarcode">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetInfomationByBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckMasterGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/RandomCheckMasterGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckGetDetail">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/RandomCheckGetDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckAddMaster">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/RandomCheckAddMaster" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckAddDetail">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/RandomCheckAddDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RandomCheckDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/RandomCheckDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProductLocationGetByLike">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/ProductLocationGetByLike" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaUpdate">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaGetByID">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LocationCheckPeriodAgendaGetAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/LocationCheckPeriodAgendaGetAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetAllByPresent">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetGetAllByPresent" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetByOrderNo">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetGetByOrderNo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetForkleftAll">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetGetForkleftAll" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetAdd">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetUpdate">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetUpdate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetDelete">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OrderedSetGetForkLiftShippointByBranch">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/OrderedSetGetForkLiftShippointByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemShipment">
+      <soap:operation soapAction="http://tempuri.org/IMobileService/GetItemShipment" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MobileService">
+    <wsdl:port name="MobileEndpoints" binding="tns:MobileEndpoints">
+      <soap:address location="http://192.168.0.37/MobileServiceTester/MobileService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

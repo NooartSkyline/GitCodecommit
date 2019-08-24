@@ -1,0 +1,284 @@
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\HandHeldDB.sdf
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Sql.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\HandHeld.exe
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\HandHeld.pdb
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\CeReader.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.Data.SqlServerCe.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.EnterpriseServices.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.Data.OracleClient.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.Web.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.Transactions.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\CeReader.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\ResolveAssemblyReference.cache
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChooseFromListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainQuantityForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainSaveForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.InputNumberForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockQuantityForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockFormResumeBillForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.DisplayListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductBlankForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChangeWarehouseForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationProductForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LoginForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Properties.Resources.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterRemark.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Form1.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainTopstock.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceViewForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationViewForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.NumericKeyboardForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetCloseForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationLabelPrintForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckForm2.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationKeyboardForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckForm2.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixedOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductOrderRequest.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.PurchaseInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SalesInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationOfflineModeForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectProductPosition.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectUnitPrice.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockAction.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockDocDisplay.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemDetails.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemsDisplay.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\HandHeld.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\HandHeld.exe
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.2\HeadHeld\obj\Debug\HandHeld.pdb
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\HandHeldDB.sdf
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Sql.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\HandHeld.exe
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\HandHeld.pdb
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\CeReader.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.Data.SqlServerCe.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.EnterpriseServices.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.Data.OracleClient.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.Web.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.Transactions.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\CeReader.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.xml
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\ResolveAssemblyReference.cache
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChooseFromListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainQuantityForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainSaveForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.InputNumberForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockQuantityForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockFormResumeBillForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.DisplayListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductBlankForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChangeWarehouseForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationProductForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LoginForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Properties.Resources.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterRemark.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Form1.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainTopstock.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetListForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceViewForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationViewForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.NumericKeyboardForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetCloseForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationLabelPrintForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckForm2.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationKeyboardForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckForm2.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixedOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceOfflineForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductOrderRequest.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.PurchaseInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SalesInfoForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationOfflineModeForm.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectProductPosition.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectUnitPrice.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockAction.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockDocDisplay.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemDetails.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemsDisplay.resources
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\HandHeld.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\HandHeld.exe
+D:\LogOnRMoonchai\src_ce_Chainway_2D\LogOn1.3\HeadHeld\obj\Debug\HandHeld.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\ResolveAssemblyReference.cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChooseFromListForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainQuantityForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainSaveForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.InputNumberForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockQuantityForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockFormResumeBillForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterPriceForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.DisplayListForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductBlankForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChangeWarehouseForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationProductForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LoginForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Properties.Resources.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterRemark.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Form1.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainTopstock.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetListForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceViewForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationViewForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.NumericKeyboardForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedInfoForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetCloseForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationLabelPrintForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckForm2.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckOfflineForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationKeyboardForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckForm2.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixedOfflineForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceOfflineForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductOrderRequest.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.PurchaseInfoForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SalesInfoForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationOfflineModeForm.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectProductPosition.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectUnitPrice.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockAction.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockDocDisplay.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemDetails.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemsDisplay.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\HandHeld.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\HandHeld.exe
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\HandHeldDB.sdf
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Sql.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\HandHeld.exe
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\HandHeld.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\CeReader.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.Data.SqlServerCe.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.EnterpriseServices.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.Data.OracleClient.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.Web.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.Transactions.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.Core.CF3.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.Core.CF3.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\CeReader.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.xml
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\HeadHeld\obj\Debug\HandHeld.pdb
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\HandHeldDB.sdf
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Sql.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\HandHeld.exe
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\HandHeld.pdb
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\CeReader.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.Data.SqlServerCe.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.EnterpriseServices.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.Data.OracleClient.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.Web.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.Transactions.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.Core.CF3.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.OutlookControls.CF3.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.Core.CF3.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\CeReader.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.ProgressBar.CF3.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\Resco.SmartGrid.CF3.xml
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\bin\Debug\System.EnterpriseServices.Wrapper.dll
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\ResolveAssemblyReference.cache
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChooseFromListForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainQuantityForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockMainSaveForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.InputNumberForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockQuantityForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockFormResumeBillForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.CountStockForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterPriceForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.DisplayListForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductBlankForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ChangeWarehouseForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationProductForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LoginForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Properties.Resources.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.EnterRemark.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.Form1.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.MainTopstock.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetListForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceViewForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelPriceForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationViewForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.NumericKeyboardForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedInfoForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetCloseForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.OrderedSetForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationLabelPrintForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckForm2.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationCheckOfflineForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationKeyboardForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckForm2.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductMixedOfflineForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductCheckPriceOfflineForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LabelLocationForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.ProductOrderRequest.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.PurchaseInfoForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SalesInfoForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.LocationOfflineModeForm.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectProductPosition.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.SelectUnitPrice.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockAction.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockDocDisplay.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemDetails.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\DoHome.HandHeld.Client.TopstockItemsDisplay.resources
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\HandHeld.csproj.GenerateResource.Cache
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\HandHeld.exe
+D:\Project SAP\HH กบ\HHAll1.4\HeadHeld\obj\Debug\HandHeld.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DohomeApplicationPolicy", "DohomeApplicationPolicy\DohomeApplicationPolicy.csproj", "{A991C74F-6C14-4988-9812-F99548258AFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A991C74F-6C14-4988-9812-F99548258AFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A991C74F-6C14-4988-9812-F99548258AFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A991C74F-6C14-4988-9812-F99548258AFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A991C74F-6C14-4988-9812-F99548258AFF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B3EDEDE0-735F-4EB5-9511-4AD3B945AB2A}
+	EndGlobalSection
+EndGlobal

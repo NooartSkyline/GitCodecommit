@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBMASTER" Class="DBMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.104;Initial Catalog=DBMASTER;Persist Security Info=True;User ID=abc" SettingsObjectName="CompareExcel.Properties.Settings" SettingsPropertyName="DBMASTERConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBMaster_Article" Member="TBMaster_Articles">
+    <Type Name="TBMaster_Article">
+      <Column Name="Article" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Site" Type="System.String" DbType="VarChar(100) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DescriptionTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DescriptionEN" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="ArticleCategory" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GenericArticleCode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MerchandiseCategory" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SalesUOM" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PicturePath" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Weight" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Width" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NoPacking" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FeatureTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="FeatureEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CharacteristicTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CharacteristicEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaintenanceTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaintenanceEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="InstructionTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="InstructionEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PartsInBoxSetTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PartsInBoxSetEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="WarrantyTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="WarrantyEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="UpSell" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="CrossSell" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PartsOutBoxSetTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PartsOutBoxSetEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Brand" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BrandDescription" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BrandType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ModelTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ModelEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="COD" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="Installment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="InstallmentDetail" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DoHomeProductType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PreOrderDeliveryDay" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MinimumPiecePerOrder" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="MaximumPiecePerOrder" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DummyImagePath" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SalesStatus" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SloganTH" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SloganEN" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PurchasingGroupSiteLevel" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PurchasingGroup" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="OnlineFrom" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="OnlineTo" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SurchargeAddedAlready" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="DeliveryCondition" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ArticleHierarchy" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ArticleHierarchyNode" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="OldArticleNumber" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TaxType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ArticleType" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="RemainingShelfLife" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TotalShelfLife" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="SerialNumberActivated" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="BatchActivated" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ProductReturnable" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ContentUnit" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="NetContent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="GrossContent" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PriceBandCategory" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LAST_UPDATE_TIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBMaster_Branch" Member="TBMaster_Branches">
+    <Type Name="TBMaster_Branch">
+      <Column Name="CODE" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="OLD_CODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MYNAME" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ADDRESS" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="TEL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="FAX" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="HOTLINE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TAXID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BRANCHCODE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SHORT_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SERVER_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SERVER_IP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DB_MASTER_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DB_TRANS_NAME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USER_ID" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PASSWORD" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BRANCHCODE_TAX" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="OLD_SERVER_CONNECTION_STRING" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="LAST_UPDATE_DATE" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LAST_UPDATE_TIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>

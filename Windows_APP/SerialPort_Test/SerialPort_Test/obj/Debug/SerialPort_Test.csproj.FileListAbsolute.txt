@@ -1,0 +1,10 @@
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\bin\Debug\SerialPort_Test.exe.config
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\bin\Debug\SerialPort_Test.exe
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\bin\Debug\SerialPort_Test.pdb
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.csprojAssemblyReference.cache
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.Form1.resources
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.Properties.Resources.resources
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.csproj.GenerateResource.cache
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.csproj.CoreCompileInputs.cache
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.exe
+C:\Users\withawat.bun\Downloads\SerialPort_Test\SerialPort_Test\obj\Debug\SerialPort_Test.pdb

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sql>
+  <query id="1">
+    Insert Into LocationBindProduct(LocationCode,Barcode,PutLevel,PutQty,DisplayOrder,UserCode,RequestPrintLabel) Values (@LocationCode,@Barcode,@PutLevel,@PutQty,@DisplayOrder,@UserCode,@RequestPrintLabel)
+  </query>
+  <query id="2">
+    Select LocationCode,Count(*) Barcode From LocationBindProduct Where UserCode = @UserCode Group By LocationCode
+  </query>
+  <query id="3">
+    Select * From LocationBindProduct Where LocationCode = @LocationCode And UserCode = @UserCode
+  </query>
+  <query id="4">
+    Delete  From LocationBindProduct Where LocationCode = @LocationCode And UserCode = @UserCode
+  </query>
+  <query id="5">
+    Delete  From Employee
+  </query>
+  <query id="6">
+    Insert Into Employee(EmployeeCode,EmployeeName,[Password]) Values (@EmployeeCode,@EmployeeName,@Password)
+  </query>
+  <query id="7">
+    Select * From Employee
+  </query>
+  <query id="8">
+    Delete  From Location
+  </query>
+  <query id="9">
+    Insert Into Location(LocationCode) Values (@LocationCode)
+  </query>
+  <query id="10">
+    Select Count(*) Cnt From Location Where LocationCode = @LocationCode
+  </query>
+  <query id="11">
+    Delete  From Product
+  </query>
+  <query id="12">
+    Insert Into Product(ProductCode,ProductBarcode,ProductName,ProductUnitCode,ProductPrice) Values (@ProductCode,@ProductBarcode,@ProductName,@ProductUnitCode,@ProductPrice)
+  </query>
+  <query id="13">
+    Insert Into LocationCheckProduct(LocationCode,EmployeeCode,WarehouseCode,CreatedBy,BranchCode)
+    Values (@LocationCode,@EmployeeCode,@WarehouseCode,@CreatedBy,@BranchCode);    
+  </query>
+  <query id="14">
+    Insert Into LocationCheckProductDetail(LocationCheckProductID,ProductBarCode,DisplayOrder,ShopPrice)
+    Values (@LocationCheckProductID,@ProductBarCode,@DisplayOrder,@ShopPrice)
+  </query>  
+  <query id="15">
+    DELETE FROM LocationCheckProductDetail Where LocationCheckProductID = @ID;
+  </query>
+  <query id="16">
+    SELECT *
+    FROM LocationCheckProduct
+    WHERE CreatedBy = @CreatedBy
+  </query>
+  <query id="17">
+    SELECT *
+    FROM LocationCheckProductDetail
+    WHERE LocationCheckProductID = @ID
+  </query>
+  <query id="18">
+    DELETE FROM LocationCheckProduct Where LocationCheckProductID = @ID;
+  </query>
+  <query id="19">
+    SELECT  q1.LocationCode ,Count(*) NumberOfChild
+    FROM    LocationCheckProduct q1 inner join LocationCheckProductDetail q2
+    on q1.LocationCheckProductID = q2.LocationCheckProductID
+    where	q1.CreatedBy = @CreatedBy
+    Group by q1.LocationCode
+    order by q1.LocationCode
+  </query>
+  <query id="20">
+    DELETE FROM Branch;
+  </query>
+  <query id="21">
+    INSERT INTO Branch (Code,Name) VALUES (@Code,@Name);
+  </query>
+  <query id="22">
+    DELETE FROM Warehouse;
+  </query>
+  <query id="23">
+    INSERT INTO Warehouse (Code,Name,BranchCode) VALUES (@Code,@Name,@BranchCode);
+  </query>
+  <query id="24">
+    SELECT * FROM Branch;
+  </query>
+  <query id="25">
+    SELECT Code,Name FROM Warehouse WHERE BranchCode = @BranchCode;
+  </query>
+  <query id="26">
+    SELECT * FROM Employee where EmployeeCode =@EmployeeCode;
+  </query>
+  <query id="27">
+    SELECT  LocationCheckProductID FROM LocationCheckProduct WHERE LocationCode = @LocationCode AND CreatedBy = @CreatedBy
+  </query>
+  <query id="28">
+    DELETE FROM LocationCheckProductDetail WHERE LocationCheckProductID =  @Id
+  </query>
+  <query id="29">
+    DELETE FROM LocationCheckProduct WHERE LocationCheckProductID =  @Id
+  </query>
+  <query id="30">
+    DELETE FROM ProductMixed WHERE LocationCode = @LocationCode AND CreatedBy = @CreatedBy;
+  </query>
+  <query id="31">
+    INSERT INTO ProductMixed (LocationCode,WarehouseCode,BranchCode,DisplayOrder,Barcode,OfficerId,CreatedBy)
+    VALUES (@LocationCode,@WarehouseCode,@BranchCode,@DisplayOrder,@Barcode,@OfficerId,@CreatedBy)
+  </query>
+  <query id="32">
+    SELECT LocationCode,COUNT(*) NumberOfChild
+    FROM ProductMixed
+    WHERE CreatedBy = @CreatedBy
+    GROUP BY LocationCode;
+  </query>
+  <query id="33">
+    SELECT *
+    FROM ProductMixed
+    WHERE LocationCode = @LocationCode AND CreatedBy = @CreatedBy
+    Order BY DisplayOrder;
+  </query>
+  <query id="34">
+    Delete  From LocationCheckAgenda
+  </query>
+  <query id="35">
+    Insert Into LocationCheckAgenda(Id,Name,IsValue,DisplayOrder,PeriodId) Values (@Id,@Name,@IsValue,@DisplayOrder,@PeriodId)
+  </query>
+  <query id="36">
+    SELECT Id,Name,IsValue FROM LocationCheckAgenda ORDER BY DisplayOrder ASC;
+  </query>
+  <query id="37">
+    INSERT INTO LocationCheck (LocationCode,OfficerCode,CheckerCode,AgendaId,AgendaValue,IsChecked,WarehouseCode) 
+    VALUES (@LocationCode,@OfficerCode,@CheckerCode,@AgendaId,@AgendaValue,@IsChecked,@WarehouseCode);
+  </query>
+  <query id="38">
+    SELECT  q1.LocationCode ,COUNT(*) NumberOfChild,Max(CheckerCode) CheckerCode,Max(OfficerCode) OfficerCode,Max(WarehouseCode) WarehouseCode
+    FROM    LocationCheck q1
+    WHERE	q1.CheckerCode = @CheckerCode
+    GROUP BY q1.LocationCode
+    ORDER BY q1.LocationCode
+  </query>
+  <query id="39">
+    SELECT * FROM LocationCheck WHERE LocationCode = @LocationCode AND CheckerCode = @CheckerCode;
+  </query>
+  <query id="40">
+    DELETE FROM LocationCheck WHERE LocationCode = @LocationCode AND CheckerCode = @CheckerCode;
+  </query>
+  <query id="41">
+    SELECT MAX(PeriodId) FROM LocationCheckAgenda;
+  </query>
+  <query id="42">
+    SELECT  MAX(LocationCheckProductID)
+    FROM    LocationCheckProduct
+    WHERE	LocationCode = @LocationCode
+    AND CreatedBy = @CreatedBy
+  </query>
+  <query id="43">
+    SELECT Id,LocationCode,Quantity FROM LabelLocationPrint
+  </query>
+  <query id="44">
+    DELETE FROM LabelLocationPrint
+  </query>
+  <query id="45">
+    DELETE FROM LabelLocationPrint WHERE LocationCode = @LocationCode
+  </query>
+  <query id="46">
+    INSERT INTO LabelLocationPrint (LocationCode,Quantity) VALUES (@LocationCode,@Quantity)
+  </query>
+  <query id="47">
+    UPDATE LabelLocationPrint SET Quantity=@Quantity WHERE LocationCode = @LocationCode
+  </query>
+</sql>

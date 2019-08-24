@@ -1,0 +1,2177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.onelink.co.th/DHMService" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.onelink.co.th/DHMService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.onelink.co.th/DHMService">
+      <s:element name="OTSReceiveShipTo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReceiveShipToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReceiveShipToResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReceiveShipToFromSAP">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReceiveShipToFromSAPResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReceiveShipToFromSAPResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveQData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveQDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReciveQDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveValueFuel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveValueFuelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReciveValueFuelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveRealFuel">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveRealFuelResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReciveRealFuelResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveCostPerDistance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveCostPerDistanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReciveCostPerDistanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCheckPlanStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SapPlanId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCheckPlanStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSCheckPlanStatusResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveQDriver">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ds">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReciveQDriverResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReciveQDriverResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCancelQData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCancelQDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSCancelQDataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReqCustomDistance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReqCustomDistanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReqCustomDistanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReqShipToDistance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSReqShipToDistanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSReqShipToDistanceResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSPlanning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSPlanningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSPlanningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSAdjustPlanning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSAdjustPlanningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSAdjustPlanningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSAssignVehicle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXML" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSAssignVehicleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSAssignVehicleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCancelPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SapPlanId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCancelPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSCancelPlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSUpdClosePlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SapPlanId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSUpdClosePlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSUpdClosePlanResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSRecvDebtInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSRecvDebtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSRecvDebtInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSRecvCashInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strXml" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSRecvCashInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSRecvCashInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCheckDOExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="do_id" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCheckDOExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSCheckDOExistsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="OTSCheckShipToFileExists">
+        <s:complexType />
+      </s:element>
+      <s:element name="OTSCheckShipToFileExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="OTSCheckShipToFileExistsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOTSShipTo">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestOTSShipToResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestOTSShipToResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOTSDO">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestOTSDOResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestOTSDOResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestPlanning">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestPlanningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestPlanningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOTSRecvDebtInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestOTSRecvDebtInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestOTSRecvDebtInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestOTSRecvCashInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestOTSRecvCashInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestOTSRecvCashInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestAdjustRoute">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestAdjustRouteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestAdjustRouteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestShipToRequest">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestShipToRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestShipToRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TestAssignVehicle">
+        <s:complexType />
+      </s:element>
+      <s:element name="TestAssignVehicleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TestAssignVehicleResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="OTSReceiveShipToSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReceiveShipTo" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReceiveShipToResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReceiveShipToFromSAP" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReceiveShipToFromSAPResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReciveQData" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReciveQDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReciveValueFuel" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReciveValueFuelResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReciveRealFuel" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReciveRealFuelResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReciveCostPerDistance" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReciveCostPerDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSCheckPlanStatus" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSCheckPlanStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDriverSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReciveQDriver" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDriverSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReciveQDriverResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSCancelQData" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSCancelQDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReqCustomDistance" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReqCustomDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSReqShipToDistance" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSReqShipToDistanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSPlanning" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSPlanningResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSAdjustPlanning" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSAdjustPlanningResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSAssignVehicle" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSAssignVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSCancelPlan" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSCancelPlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSUpdClosePlan" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSUpdClosePlanResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSRecvDebtInfo" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSRecvDebtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSRecvCashInfo" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSRecvCashInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSCheckDOExists" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSCheckDOExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckShipToFileExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:OTSCheckShipToFileExists" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckShipToFileExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:OTSCheckShipToFileExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSShipToSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOTSShipTo" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSShipToSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOTSShipToResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSDOSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOTSDO" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSDOSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOTSDOResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestPlanningSoapIn">
+    <wsdl:part name="parameters" element="tns:TestPlanning" />
+  </wsdl:message>
+  <wsdl:message name="TestPlanningSoapOut">
+    <wsdl:part name="parameters" element="tns:TestPlanningResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvDebtInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOTSRecvDebtInfo" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvDebtInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOTSRecvDebtInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvCashInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:TestOTSRecvCashInfo" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvCashInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:TestOTSRecvCashInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestAdjustRouteSoapIn">
+    <wsdl:part name="parameters" element="tns:TestAdjustRoute" />
+  </wsdl:message>
+  <wsdl:message name="TestAdjustRouteSoapOut">
+    <wsdl:part name="parameters" element="tns:TestAdjustRouteResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestShipToRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:TestShipToRequest" />
+  </wsdl:message>
+  <wsdl:message name="TestShipToRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:TestShipToRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="TestAssignVehicleSoapIn">
+    <wsdl:part name="parameters" element="tns:TestAssignVehicle" />
+  </wsdl:message>
+  <wsdl:message name="TestAssignVehicleSoapOut">
+    <wsdl:part name="parameters" element="tns:TestAssignVehicleResponse" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusHttpGetIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleHttpGetIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanHttpGetIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanHttpGetIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoHttpGetIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoHttpGetIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsHttpGetIn">
+    <wsdl:part name="do_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckShipToFileExistsHttpGetIn" />
+  <wsdl:message name="OTSCheckShipToFileExistsHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSShipToHttpGetIn" />
+  <wsdl:message name="TestOTSShipToHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSDOHttpGetIn" />
+  <wsdl:message name="TestOTSDOHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestPlanningHttpGetIn" />
+  <wsdl:message name="TestPlanningHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvDebtInfoHttpGetIn" />
+  <wsdl:message name="TestOTSRecvDebtInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvCashInfoHttpGetIn" />
+  <wsdl:message name="TestOTSRecvCashInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestAdjustRouteHttpGetIn" />
+  <wsdl:message name="TestAdjustRouteHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestShipToRequestHttpGetIn" />
+  <wsdl:message name="TestShipToRequestHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestAssignVehicleHttpGetIn" />
+  <wsdl:message name="TestAssignVehicleHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReceiveShipToFromSAPHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveQDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveValueFuelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveRealFuelHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReciveCostPerDistanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusHttpPostIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckPlanStatusHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelQDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqCustomDistanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSReqShipToDistanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSPlanningHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAdjustPlanningHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleHttpPostIn">
+    <wsdl:part name="strXML" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSAssignVehicleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanHttpPostIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCancelPlanHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanHttpPostIn">
+    <wsdl:part name="SapPlanId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSUpdClosePlanHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoHttpPostIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvDebtInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoHttpPostIn">
+    <wsdl:part name="strXml" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSRecvCashInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsHttpPostIn">
+    <wsdl:part name="do_id" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckDOExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="OTSCheckShipToFileExistsHttpPostIn" />
+  <wsdl:message name="OTSCheckShipToFileExistsHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSShipToHttpPostIn" />
+  <wsdl:message name="TestOTSShipToHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSDOHttpPostIn" />
+  <wsdl:message name="TestOTSDOHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestPlanningHttpPostIn" />
+  <wsdl:message name="TestPlanningHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvDebtInfoHttpPostIn" />
+  <wsdl:message name="TestOTSRecvDebtInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestOTSRecvCashInfoHttpPostIn" />
+  <wsdl:message name="TestOTSRecvCashInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestAdjustRouteHttpPostIn" />
+  <wsdl:message name="TestAdjustRouteHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestShipToRequestHttpPostIn" />
+  <wsdl:message name="TestShipToRequestHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="TestAssignVehicleHttpPostIn" />
+  <wsdl:message name="TestAssignVehicleHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="DHMServiceSoap">
+    <wsdl:operation name="OTSReceiveShipTo">
+      <wsdl:input message="tns:OTSReceiveShipToSoapIn" />
+      <wsdl:output message="tns:OTSReceiveShipToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <wsdl:input message="tns:OTSReceiveShipToFromSAPSoapIn" />
+      <wsdl:output message="tns:OTSReceiveShipToFromSAPSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <wsdl:input message="tns:OTSReciveQDataSoapIn" />
+      <wsdl:output message="tns:OTSReciveQDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <wsdl:input message="tns:OTSReciveValueFuelSoapIn" />
+      <wsdl:output message="tns:OTSReciveValueFuelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <wsdl:input message="tns:OTSReciveRealFuelSoapIn" />
+      <wsdl:output message="tns:OTSReciveRealFuelSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <wsdl:input message="tns:OTSReciveCostPerDistanceSoapIn" />
+      <wsdl:output message="tns:OTSReciveCostPerDistanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <wsdl:input message="tns:OTSCheckPlanStatusSoapIn" />
+      <wsdl:output message="tns:OTSCheckPlanStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQDriver">
+      <wsdl:input message="tns:OTSReciveQDriverSoapIn" />
+      <wsdl:output message="tns:OTSReciveQDriverSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <wsdl:input message="tns:OTSCancelQDataSoapIn" />
+      <wsdl:output message="tns:OTSCancelQDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <wsdl:input message="tns:OTSReqCustomDistanceSoapIn" />
+      <wsdl:output message="tns:OTSReqCustomDistanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <wsdl:input message="tns:OTSReqShipToDistanceSoapIn" />
+      <wsdl:output message="tns:OTSReqShipToDistanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <wsdl:input message="tns:OTSPlanningSoapIn" />
+      <wsdl:output message="tns:OTSPlanningSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <wsdl:input message="tns:OTSAdjustPlanningSoapIn" />
+      <wsdl:output message="tns:OTSAdjustPlanningSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <wsdl:input message="tns:OTSAssignVehicleSoapIn" />
+      <wsdl:output message="tns:OTSAssignVehicleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <wsdl:input message="tns:OTSCancelPlanSoapIn" />
+      <wsdl:output message="tns:OTSCancelPlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <wsdl:input message="tns:OTSUpdClosePlanSoapIn" />
+      <wsdl:output message="tns:OTSUpdClosePlanSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <wsdl:input message="tns:OTSRecvDebtInfoSoapIn" />
+      <wsdl:output message="tns:OTSRecvDebtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <wsdl:input message="tns:OTSRecvCashInfoSoapIn" />
+      <wsdl:output message="tns:OTSRecvCashInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <wsdl:input message="tns:OTSCheckDOExistsSoapIn" />
+      <wsdl:output message="tns:OTSCheckDOExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <wsdl:input message="tns:OTSCheckShipToFileExistsSoapIn" />
+      <wsdl:output message="tns:OTSCheckShipToFileExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <wsdl:input message="tns:TestOTSShipToSoapIn" />
+      <wsdl:output message="tns:TestOTSShipToSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <wsdl:input message="tns:TestOTSDOSoapIn" />
+      <wsdl:output message="tns:TestOTSDOSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <wsdl:input message="tns:TestPlanningSoapIn" />
+      <wsdl:output message="tns:TestPlanningSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <wsdl:input message="tns:TestOTSRecvDebtInfoSoapIn" />
+      <wsdl:output message="tns:TestOTSRecvDebtInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <wsdl:input message="tns:TestOTSRecvCashInfoSoapIn" />
+      <wsdl:output message="tns:TestOTSRecvCashInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <wsdl:input message="tns:TestAdjustRouteSoapIn" />
+      <wsdl:output message="tns:TestAdjustRouteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <wsdl:input message="tns:TestShipToRequestSoapIn" />
+      <wsdl:output message="tns:TestShipToRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <wsdl:input message="tns:TestAssignVehicleSoapIn" />
+      <wsdl:output message="tns:TestAssignVehicleSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DHMServiceHttpGet">
+    <wsdl:operation name="OTSReceiveShipTo">
+      <wsdl:input message="tns:OTSReceiveShipToHttpGetIn" />
+      <wsdl:output message="tns:OTSReceiveShipToHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <wsdl:input message="tns:OTSReceiveShipToFromSAPHttpGetIn" />
+      <wsdl:output message="tns:OTSReceiveShipToFromSAPHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <wsdl:input message="tns:OTSReciveQDataHttpGetIn" />
+      <wsdl:output message="tns:OTSReciveQDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <wsdl:input message="tns:OTSReciveValueFuelHttpGetIn" />
+      <wsdl:output message="tns:OTSReciveValueFuelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <wsdl:input message="tns:OTSReciveRealFuelHttpGetIn" />
+      <wsdl:output message="tns:OTSReciveRealFuelHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <wsdl:input message="tns:OTSReciveCostPerDistanceHttpGetIn" />
+      <wsdl:output message="tns:OTSReciveCostPerDistanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <wsdl:input message="tns:OTSCheckPlanStatusHttpGetIn" />
+      <wsdl:output message="tns:OTSCheckPlanStatusHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <wsdl:input message="tns:OTSCancelQDataHttpGetIn" />
+      <wsdl:output message="tns:OTSCancelQDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <wsdl:input message="tns:OTSReqCustomDistanceHttpGetIn" />
+      <wsdl:output message="tns:OTSReqCustomDistanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <wsdl:input message="tns:OTSReqShipToDistanceHttpGetIn" />
+      <wsdl:output message="tns:OTSReqShipToDistanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <wsdl:input message="tns:OTSPlanningHttpGetIn" />
+      <wsdl:output message="tns:OTSPlanningHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <wsdl:input message="tns:OTSAdjustPlanningHttpGetIn" />
+      <wsdl:output message="tns:OTSAdjustPlanningHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <wsdl:input message="tns:OTSAssignVehicleHttpGetIn" />
+      <wsdl:output message="tns:OTSAssignVehicleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <wsdl:input message="tns:OTSCancelPlanHttpGetIn" />
+      <wsdl:output message="tns:OTSCancelPlanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <wsdl:input message="tns:OTSUpdClosePlanHttpGetIn" />
+      <wsdl:output message="tns:OTSUpdClosePlanHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <wsdl:input message="tns:OTSRecvDebtInfoHttpGetIn" />
+      <wsdl:output message="tns:OTSRecvDebtInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <wsdl:input message="tns:OTSRecvCashInfoHttpGetIn" />
+      <wsdl:output message="tns:OTSRecvCashInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <wsdl:input message="tns:OTSCheckDOExistsHttpGetIn" />
+      <wsdl:output message="tns:OTSCheckDOExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <wsdl:input message="tns:OTSCheckShipToFileExistsHttpGetIn" />
+      <wsdl:output message="tns:OTSCheckShipToFileExistsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <wsdl:input message="tns:TestOTSShipToHttpGetIn" />
+      <wsdl:output message="tns:TestOTSShipToHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <wsdl:input message="tns:TestOTSDOHttpGetIn" />
+      <wsdl:output message="tns:TestOTSDOHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <wsdl:input message="tns:TestPlanningHttpGetIn" />
+      <wsdl:output message="tns:TestPlanningHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <wsdl:input message="tns:TestOTSRecvDebtInfoHttpGetIn" />
+      <wsdl:output message="tns:TestOTSRecvDebtInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <wsdl:input message="tns:TestOTSRecvCashInfoHttpGetIn" />
+      <wsdl:output message="tns:TestOTSRecvCashInfoHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <wsdl:input message="tns:TestAdjustRouteHttpGetIn" />
+      <wsdl:output message="tns:TestAdjustRouteHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <wsdl:input message="tns:TestShipToRequestHttpGetIn" />
+      <wsdl:output message="tns:TestShipToRequestHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <wsdl:input message="tns:TestAssignVehicleHttpGetIn" />
+      <wsdl:output message="tns:TestAssignVehicleHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="DHMServiceHttpPost">
+    <wsdl:operation name="OTSReceiveShipTo">
+      <wsdl:input message="tns:OTSReceiveShipToHttpPostIn" />
+      <wsdl:output message="tns:OTSReceiveShipToHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <wsdl:input message="tns:OTSReceiveShipToFromSAPHttpPostIn" />
+      <wsdl:output message="tns:OTSReceiveShipToFromSAPHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <wsdl:input message="tns:OTSReciveQDataHttpPostIn" />
+      <wsdl:output message="tns:OTSReciveQDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <wsdl:input message="tns:OTSReciveValueFuelHttpPostIn" />
+      <wsdl:output message="tns:OTSReciveValueFuelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <wsdl:input message="tns:OTSReciveRealFuelHttpPostIn" />
+      <wsdl:output message="tns:OTSReciveRealFuelHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <wsdl:input message="tns:OTSReciveCostPerDistanceHttpPostIn" />
+      <wsdl:output message="tns:OTSReciveCostPerDistanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <wsdl:input message="tns:OTSCheckPlanStatusHttpPostIn" />
+      <wsdl:output message="tns:OTSCheckPlanStatusHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <wsdl:input message="tns:OTSCancelQDataHttpPostIn" />
+      <wsdl:output message="tns:OTSCancelQDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <wsdl:input message="tns:OTSReqCustomDistanceHttpPostIn" />
+      <wsdl:output message="tns:OTSReqCustomDistanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <wsdl:input message="tns:OTSReqShipToDistanceHttpPostIn" />
+      <wsdl:output message="tns:OTSReqShipToDistanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <wsdl:input message="tns:OTSPlanningHttpPostIn" />
+      <wsdl:output message="tns:OTSPlanningHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <wsdl:input message="tns:OTSAdjustPlanningHttpPostIn" />
+      <wsdl:output message="tns:OTSAdjustPlanningHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <wsdl:input message="tns:OTSAssignVehicleHttpPostIn" />
+      <wsdl:output message="tns:OTSAssignVehicleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <wsdl:input message="tns:OTSCancelPlanHttpPostIn" />
+      <wsdl:output message="tns:OTSCancelPlanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <wsdl:input message="tns:OTSUpdClosePlanHttpPostIn" />
+      <wsdl:output message="tns:OTSUpdClosePlanHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <wsdl:input message="tns:OTSRecvDebtInfoHttpPostIn" />
+      <wsdl:output message="tns:OTSRecvDebtInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <wsdl:input message="tns:OTSRecvCashInfoHttpPostIn" />
+      <wsdl:output message="tns:OTSRecvCashInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <wsdl:input message="tns:OTSCheckDOExistsHttpPostIn" />
+      <wsdl:output message="tns:OTSCheckDOExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <wsdl:input message="tns:OTSCheckShipToFileExistsHttpPostIn" />
+      <wsdl:output message="tns:OTSCheckShipToFileExistsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <wsdl:input message="tns:TestOTSShipToHttpPostIn" />
+      <wsdl:output message="tns:TestOTSShipToHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <wsdl:input message="tns:TestOTSDOHttpPostIn" />
+      <wsdl:output message="tns:TestOTSDOHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <wsdl:input message="tns:TestPlanningHttpPostIn" />
+      <wsdl:output message="tns:TestPlanningHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <wsdl:input message="tns:TestOTSRecvDebtInfoHttpPostIn" />
+      <wsdl:output message="tns:TestOTSRecvDebtInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <wsdl:input message="tns:TestOTSRecvCashInfoHttpPostIn" />
+      <wsdl:output message="tns:TestOTSRecvCashInfoHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <wsdl:input message="tns:TestAdjustRouteHttpPostIn" />
+      <wsdl:output message="tns:TestAdjustRouteHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <wsdl:input message="tns:TestShipToRequestHttpPostIn" />
+      <wsdl:output message="tns:TestShipToRequestHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <wsdl:input message="tns:TestAssignVehicleHttpPostIn" />
+      <wsdl:output message="tns:TestAssignVehicleHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DHMServiceSoap" type="tns:DHMServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OTSReceiveShipTo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReceiveShipTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReceiveShipToFromSAP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveQData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveValueFuel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveRealFuel" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveCostPerDistance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckPlanStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQDriver">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveQDriver" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSCancelQData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReqCustomDistance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSReqShipToDistance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSPlanning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSAdjustPlanning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSAssignVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSCancelPlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSUpdClosePlan" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSRecvDebtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSRecvCashInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckDOExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckShipToFileExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSShipTo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSDO" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestPlanning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSRecvDebtInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSRecvCashInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestAdjustRoute" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestShipToRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <soap:operation soapAction="http://www.onelink.co.th/DHMService/TestAssignVehicle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DHMServiceSoap12" type="tns:DHMServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="OTSReceiveShipTo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReceiveShipTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReceiveShipToFromSAP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveQData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveValueFuel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveRealFuel" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveCostPerDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckPlanStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQDriver">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReciveQDriver" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSCancelQData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReqCustomDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSReqShipToDistance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSPlanning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSAdjustPlanning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSAssignVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSCancelPlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSUpdClosePlan" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSRecvDebtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSRecvCashInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckDOExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/OTSCheckShipToFileExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSShipTo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSDO" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestPlanning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSRecvDebtInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestOTSRecvCashInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestAdjustRoute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestShipToRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <soap12:operation soapAction="http://www.onelink.co.th/DHMService/TestAssignVehicle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DHMServiceHttpGet" type="tns:DHMServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="OTSReceiveShipTo">
+      <http:operation location="/OTSReceiveShipTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <http:operation location="/OTSReceiveShipToFromSAP" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <http:operation location="/OTSReciveQData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <http:operation location="/OTSReciveValueFuel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <http:operation location="/OTSReciveRealFuel" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <http:operation location="/OTSReciveCostPerDistance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <http:operation location="/OTSCheckPlanStatus" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <http:operation location="/OTSCancelQData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <http:operation location="/OTSReqCustomDistance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <http:operation location="/OTSReqShipToDistance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <http:operation location="/OTSPlanning" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <http:operation location="/OTSAdjustPlanning" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <http:operation location="/OTSAssignVehicle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <http:operation location="/OTSCancelPlan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <http:operation location="/OTSUpdClosePlan" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <http:operation location="/OTSRecvDebtInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <http:operation location="/OTSRecvCashInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <http:operation location="/OTSCheckDOExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <http:operation location="/OTSCheckShipToFileExists" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <http:operation location="/TestOTSShipTo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <http:operation location="/TestOTSDO" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <http:operation location="/TestPlanning" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <http:operation location="/TestOTSRecvDebtInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <http:operation location="/TestOTSRecvCashInfo" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <http:operation location="/TestAdjustRoute" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <http:operation location="/TestShipToRequest" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <http:operation location="/TestAssignVehicle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DHMServiceHttpPost" type="tns:DHMServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="OTSReceiveShipTo">
+      <http:operation location="/OTSReceiveShipTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReceiveShipToFromSAP">
+      <http:operation location="/OTSReceiveShipToFromSAP" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveQData">
+      <http:operation location="/OTSReciveQData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveValueFuel">
+      <http:operation location="/OTSReciveValueFuel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveRealFuel">
+      <http:operation location="/OTSReciveRealFuel" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReciveCostPerDistance">
+      <http:operation location="/OTSReciveCostPerDistance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckPlanStatus">
+      <http:operation location="/OTSCheckPlanStatus" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelQData">
+      <http:operation location="/OTSCancelQData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqCustomDistance">
+      <http:operation location="/OTSReqCustomDistance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSReqShipToDistance">
+      <http:operation location="/OTSReqShipToDistance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSPlanning">
+      <http:operation location="/OTSPlanning" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAdjustPlanning">
+      <http:operation location="/OTSAdjustPlanning" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSAssignVehicle">
+      <http:operation location="/OTSAssignVehicle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCancelPlan">
+      <http:operation location="/OTSCancelPlan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSUpdClosePlan">
+      <http:operation location="/OTSUpdClosePlan" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvDebtInfo">
+      <http:operation location="/OTSRecvDebtInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSRecvCashInfo">
+      <http:operation location="/OTSRecvCashInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckDOExists">
+      <http:operation location="/OTSCheckDOExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OTSCheckShipToFileExists">
+      <http:operation location="/OTSCheckShipToFileExists" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSShipTo">
+      <http:operation location="/TestOTSShipTo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSDO">
+      <http:operation location="/TestOTSDO" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestPlanning">
+      <http:operation location="/TestPlanning" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvDebtInfo">
+      <http:operation location="/TestOTSRecvDebtInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestOTSRecvCashInfo">
+      <http:operation location="/TestOTSRecvCashInfo" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAdjustRoute">
+      <http:operation location="/TestAdjustRoute" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestShipToRequest">
+      <http:operation location="/TestShipToRequest" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TestAssignVehicle">
+      <http:operation location="/TestAssignVehicle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DHMService">
+    <wsdl:port name="DHMServiceSoap" binding="tns:DHMServiceSoap">
+      <soap:address location="http://192.168.0.29/test-tmsservice/DHMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DHMServiceSoap12" binding="tns:DHMServiceSoap12">
+      <soap12:address location="http://192.168.0.29/test-tmsservice/DHMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DHMServiceHttpGet" binding="tns:DHMServiceHttpGet">
+      <http:address location="http://192.168.0.29/test-tmsservice/DHMService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DHMServiceHttpPost" binding="tns:DHMServiceHttpPost">
+      <http:address location="http://192.168.0.29/test-tmsservice/DHMService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

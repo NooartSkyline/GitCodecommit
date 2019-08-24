@@ -1,0 +1,317 @@
+﻿using System.Runtime.Serialization;
+using BLToolkit.DataAccess;
+using BLToolkit.Mapping;
+using System.ServiceModel;
+using System.Collections.Generic;
+using BLToolkit.Data;
+using System.Text;
+
+namespace DoHome.MobileService
+{
+    [DataContract]
+    [TableName("TBBARCODE")]
+    public partial class ProductBarcode
+    {
+        /// <summary>
+        /// Gets the Barcode identifier
+        /// </summary>
+        [DataMember]
+        [MapField("BARCODE")]
+        public string Barcode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the PRODUCTCODE
+        /// </summary>
+        [DataMember]
+        [MapField("PRODUCTCODE")]
+        public string ProductCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UNITCODE
+        /// </summary>
+        [DataMember]
+        [MapField("UNITCODE")]
+        public string UnitCode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the STATUS
+        /// </summary>
+        [DataMember]
+        [MapField("STATUS")]
+        public short Status { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProductName
+        /// </summary>
+        [DataMember]
+        [MapValue("ProductName")]
+        public string ProductName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UnitName
+        /// </summary>
+        [DataMember]
+        [MapValue("UnitName")]
+        public string UnitName { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UnitRate
+        /// </summary>
+        [DataMember]
+        [MapValue("UnitRate")]
+        public decimal UnitRate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the StockQuantity
+        /// </summary>
+        [DataMember]
+        [MapValue("StockQuantity")]
+        public double StockQuantity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProductPrice
+        /// </summary>
+        [DataMember]
+        [MapValue("ProductPrice")]
+        public decimal ProductPrice { get; set; }
+
+        /// <summary>
+        /// Gets or sets the ProductPriceText
+        /// </summary>
+        [DataMember]
+        public string ProductPriceText { get; set; }
+
+        /// <summary>
+        /// Gets or sets the StoreLocation
+        /// </summary>
+        [DataMember]
+        [MapValue("StoreLocation")]
+        public string StoreLocation { get; set; }
+
+        [DataMember]
+        [MapIgnore]
+        public decimal Quantity { get; set; }
+
+    }
+
+    public partial interface IMobileService
+    {
+        [OperationContract]
+        List<ProductBarcode> ProductBarcodeGetByProductCodeOrBarcode1(string productCodeOrBarcode, string warehouseCode, string branchCode, bool isShowPrice);
+
+        [OperationContract]
+        List<ProductBarcode> ProductBarcodeGetByProductCodeOrBarcode2(string productCodeOrBarcode, string branchCode);
+
+        [OperationContract]
+        ProductBarcode ProductBarcodeGetByProductCodeOrBarcode3(string branchCode,string productCodeOrBarcode);
+
+        [OperationContract]
+        ProductBarcode ProductBarcodeGetByProductCode(string branchCode,string productCode, string unitCode);
+
+        [OperationContract]
+        string BarcodeGetByProductCode(string branchCode, string productCode, string unitCode);
+
+        [OperationContract]
+        ProductBarcode ProductBarcodeGetByBarcode(string barcode, string branchCode);
+
+    }
+
+
+    public partial class MobileService : IMobileService
+    {
+        public ProductBarcode ProductBarcodeGetByProductCode(string branchCode,string productCode, string unitCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db
+                   .SetCommand("SELECT * FROM TBBarcode WHERE ProductCode = @ProductCode AND UnitCode = @ProductUnitCode",
+                       db.Parameter("@ProductCode", productCode),
+                        db.Parameter("@ProductUnitCode", unitCode))
+                   .ExecuteObject<ProductBarcode>();
+            }
+        }
+
+        public string BarcodeGetByProductCode(string branchCode,string productCode, string unitCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db
+                   .SetCommand("SELECT Barcode FROM TBBarcode WHERE ProductCode = @ProductCode AND UnitCode = @ProductUnitCode",
+                       db.Parameter("@ProductCode", productCode),
+                        db.Parameter("@ProductUnitCode", unitCode))
+                   .ExecuteScalar<string>();
+            }
+        }
+
+        public List<ProductBarcode> ProductBarcodeGetByProductCodeOrBarcode1(string productCodeOrBarcode, string warehouseCode, string branchCode, bool isShowPrice)
+        {
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+                var productBarcode = new List<ProductBarcode>();
+                StringBuilder sql = new StringBuilder();
+                sql.Append("IF(EXISTS(SELECT Barcode FROM TBBarcode WHERE Barcode = @ProductCode)) ");
+                sql.Append("BEGIN SELECT @ProductCode = ProductCode FROM TBBarcode WHERE Barcode = @ProductCode END ");
+                sql.Append("SELECT  b.ProductCode ");
+                sql.Append(",(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName ");
+                sql.Append(",b.Barcode ");
+                sql.Append(",pu.UnitCode ");
+                sql.Append(",(SELECT MyName FROM TBUnit WHERE Code = b.UnitCode) UnitName ");
+                sql.Append(",pu.UnitRate ");
+                sql.Append("FROM    TBBarcode b INNER JOIN TBProductUnit pu ");
+                sql.Append("ON b.ProductCode = pu.ProductCode ");
+                sql.Append("AND b.UnitCode = pu.UnitCode ");
+                sql.Append("WHERE	b.ProductCode = @ProductCode ");
+                sql.Append("AND b.[Status] = 1 ");
+                productBarcode = db
+                    .SetCommand(sql.ToString(),
+                        db.Parameter("@ProductCode", productCodeOrBarcode))
+                    .ExecuteList<ProductBarcode>();
+
+                if (productBarcode != null)
+                {
+                    foreach (var item in productBarcode)
+                    {
+                        if (isShowPrice)
+                        {
+                            item.ProductPrice = GetProductPrice(item.ProductCode, item.UnitCode, branchCode);
+                            item.ProductPriceText = item.ProductPrice.ToString("N2");
+                        }
+                        else
+                        {
+                            item.ProductPriceText = "*******";
+                        }
+
+                        item.StockQuantity = SAPGetBalanceQuantity(item.ProductCode, warehouseCode, item.UnitCode, branchCode);
+                        item.StoreLocation = SAPGetLocation(item.ProductCode, item.UnitCode, warehouseCode, branchCode);
+                    }
+                }
+
+                return productBarcode;
+            }
+
+        }
+
+        public List<ProductBarcode> ProductBarcodeGetByProductCodeOrBarcode2(string productCodeOrBarcode, string branchCode)
+        {
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+                var productBarcode = new List<ProductBarcode>();
+                StringBuilder sql = new StringBuilder();
+                //sql.Append("IF(EXISTS(SELECT Barcode FROM TBBarcode WHERE Barcode = @ProductCode)) ");
+                //sql.Append("BEGIN SELECT @ProductCode = ProductCode FROM TBBarcode WHERE Barcode = @ProductCode END ");
+                //sql.Append("SELECT  b.ProductCode ");
+                //sql.Append(",(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName ");
+                //sql.Append(",b.Barcode ");
+                //sql.Append(",pu.UnitCode ");
+                //sql.Append(",(SELECT MyName FROM TBUnit WHERE Code = b.UnitCode) UnitName ");
+                //sql.Append(",pu.UnitRate ");
+                //sql.Append("FROM    TBBarcode b INNER JOIN TBProductUnit pu ");
+                //sql.Append("ON b.ProductCode = pu.ProductCode ");
+                //sql.Append("AND b.UnitCode = pu.UnitCode ");
+                //sql.Append("WHERE	b.ProductCode = @ProductCode ");
+                //sql.Append("AND b.[Status] = 1 ");
+
+                sql.Append("IF(EXISTS(SELECT Barcode FROM TBBarcode WHERE Barcode = @ProductCode)) ");
+                sql.Append("BEGIN ");
+                sql.Append("SELECT  b.ProductCode ");
+                sql.Append(",(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName ");
+                sql.Append(",b.Barcode ");
+                sql.Append(",pu.UnitCode ");
+                sql.Append(",(SELECT MyName FROM TBUnit WHERE Code = b.UnitCode) UnitName ");
+                sql.Append(",pu.UnitRate ");
+                sql.Append("FROM    TBBarcode b INNER JOIN TBProductUnit pu ");
+                sql.Append("ON b.ProductCode = pu.ProductCode ");
+                sql.Append("AND b.UnitCode = pu.UnitCode ");
+                sql.Append("WHERE	b.Barcode = @ProductCode ");
+                sql.Append("AND b.[Status] = 1 ");
+                sql.Append("END ");
+                sql.Append("ELSE ");
+                sql.Append("BEGIN ");
+                sql.Append("SELECT  b.ProductCode ");
+                sql.Append(",(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName ");
+                sql.Append(",b.Barcode ");
+                sql.Append(",pu.UnitCode ");
+                sql.Append(",(SELECT MyName FROM TBUnit WHERE Code = b.UnitCode) UnitName ");
+                sql.Append(",pu.UnitRate ");
+                sql.Append("FROM    TBBarcode b INNER JOIN TBProductUnit pu ");
+                sql.Append("ON b.ProductCode = pu.ProductCode ");
+                sql.Append("AND b.UnitCode = pu.UnitCode ");
+                sql.Append("WHERE	b.ProductCode = @ProductCode ");
+                sql.Append("AND b.[Status] = 1 ");
+                sql.Append("END ");
+
+
+                productBarcode = db
+                    .SetCommand(sql.ToString(),
+                        db.Parameter("@ProductCode", productCodeOrBarcode))
+                    .ExecuteList<ProductBarcode>();
+
+                if (productBarcode != null)
+                {
+                    foreach (var item in productBarcode)
+                    {
+                        item.ProductPrice = GetProductPrice(item.ProductCode, item.UnitCode, branchCode);
+                        item.ProductPriceText = item.ProductPrice.ToString("N2");
+                    }
+                }
+
+                return productBarcode;
+            }
+
+        }
+
+        public ProductBarcode ProductBarcodeGetByProductCodeOrBarcode3(string branchCode,string productCodeOrBarcode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+              
+                return db
+                    .SetCommand(GetSql(27),
+                        db.Parameter("@ProductCode", productCodeOrBarcode))
+                    .ExecuteObject<ProductBarcode>();
+            }
+        }
+
+        public string GetProductBarcodeByProductCode(string branchCode,string productCode, string unitCode)
+        {
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+
+                return db
+                    .SetCommand("SELECT Barcode FROM TBBarcode WHERE ProductCode = @ProductCode AND UnitCode = @UnitCode;",
+                    db.Parameter("@ProductCode", productCode),
+                        db.Parameter("@UnitCode", unitCode))
+                    .ExecuteScalar<string>();
+            }
+
+        }
+
+        public ProductBarcode ProductBarcodeGetByBarcode(string barcode, string branchCode)
+        {
+            ProductBarcode productBarcode = null;
+            using (DbManager db = new DbManager(branchCode))
+            {
+
+                productBarcode = db
+                    .SetCommand(GetSql(4),
+                        db.Parameter("@Barcode", barcode))
+                    .ExecuteObject<ProductBarcode>();
+
+                if (productBarcode != null)
+                {
+                    productBarcode.ProductPrice = GetProductPrice(productBarcode.ProductCode, productBarcode.UnitCode, branchCode);
+                    productBarcode.ProductPriceText = productBarcode.ProductPrice.ToString("N2");
+                }
+            }
+
+            return productBarcode;
+        }
+
+
+    }
+
+}
+

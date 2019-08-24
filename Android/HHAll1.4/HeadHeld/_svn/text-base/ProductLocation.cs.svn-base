@@ -1,0 +1,25 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text;
+
+namespace DoHome.HandHeld.Client
+{
+    public class ProductLocation
+    {
+        public string ProductCode { get; set; }
+
+        public string ProductBarcode { get; set; }
+
+        public string ProductName { get; set; }
+
+        public int ProductLevel { get; set; }
+
+        public int ProductPin { get; set; }
+
+        public string ProductUnitCode { get; set; }
+
+        public string ProductUnitName { get; set; }
+
+    }
+}

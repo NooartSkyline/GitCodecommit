@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UWREQUESTCONVERTARTICLE" Class="K2_ConvertDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.0.175;Initial Catalog=UWREQUESTCONVERTARTICLE;User ID=udd" SettingsObjectName="K2.Properties.Settings" SettingsPropertyName="UWREQUESTCONVERTARTICLEConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBREQUESTCONVERT_RETURN_WEBSERVICE_TEMP" Member="TBREQUESTCONVERT_RETURN_WEBSERVICE_TEMPs">
+    <Type Name="TBREQUESTCONVERT_RETURN_WEBSERVICE_TEMP">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBER_RUNNING" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="RETURN_TYPE" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="RETURN_MESSAGE" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MATERIALDOCUMENT" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_BARCODE" Member="TBREQUESTCONVERT_BARCODEs">
+    <Type Name="TBREQUESTCONVERT_BARCODE">
+      <Column Name="RUNNING_NUMBER" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="PRODUCTCODE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="UNITCODE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="BARCODE" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="STATUS" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_USERAPPROVE" Member="TBREQUESTCONVERT_USERAPPROVEs">
+    <Type Name="TBREQUESTCONVERT_USERAPPROVE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EMPLOYEE_CODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_NAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_MAIL" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_POSITION" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_DEPARTMENT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_SITE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_LEVEL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_PLANS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_PLSTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_ORGEH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_ORGTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_BRANCH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_BRANCHXT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_STELL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_STLTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_OBJID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_OBJTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EMPLOYEE_NAMEEN" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATE_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="CREATE_USERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATE_USERNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CREATE_TIME" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="EDIT_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EDIT_USERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDIT_USERNAME" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EDIT_TIME" Type="System.TimeSpan" DbType="Time" CanBeNull="true" />
+      <Column Name="EMPLOYEE_INVESTIGATE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_BATCH_SERIALNUMBER" Member="TBREQUESTCONVERT_BATCH_SERIALNUMBERs">
+    <Type Name="TBREQUESTCONVERT_BATCH_SERIALNUMBER">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBERRUNNING" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REQUESTCONVERT_DT_RAWMAT_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLECODE_RAWMAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BATCH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SERIALNUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSTABLE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_BATCH_SERIALNUMBER_LOG" Member="TBREQUESTCONVERT_BATCH_SERIALNUMBER_LOGs">
+    <Type Name="TBREQUESTCONVERT_BATCH_SERIALNUMBER_LOG">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBERRUNNING" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REQUESTCONVERT_DT_RAWMAT_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLECODE_RAWMAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="BATCH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SERIALNUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSTABLE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_CONFIRM_CONVERTARTILCE" Member="TBREQUESTCONVERT_CONFIRM_CONVERTARTILCEs">
+    <Type Name="TBREQUESTCONVERT_CONFIRM_CONVERTARTILCE">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SITECODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SITENAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOCCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOCNMAE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ORDERNO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ORDERDATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="WORKERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="WORKERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CHECKERCODE1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CHECKERNAME1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CHECKERCODE2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CHECKERNAME2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FINISHGOODS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLENAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UNITCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="QUANTITYNEW" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_DT" Member="TBREQUESTCONVERT_DTs">
+    <Type Name="TBREQUESTCONVERT_DT">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBERRUNNING" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DOCUMENTNO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REQUESTCONVERT_HD_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLECODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLENAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="UNITCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UNIT_TH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOC_GR" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOC_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ORDINAL_NUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_CODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COSTOLD_UINT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COSTNEW_UINT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FINSIHEDGOOD_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FINSIHEDGOOD_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CREATEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSTABLE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_DT_RAWMAT" Member="TBREQUESTCONVERT_DT_RAWMATs">
+    <Type Name="TBREQUESTCONVERT_DT_RAWMAT">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBERRUNNING" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REQUESTCONVERT_HD_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REQUESTCONVERT_DT_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLECODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLENAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="QUANTITY" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="SUMQUANTITY" Type="System.Decimal" DbType="Decimal(18,3)" CanBeNull="true" />
+      <Column Name="UNITCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="UNIT_TH" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOC_GR" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOC_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_CODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_NAME" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COSTOLD_UINT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COSTNEW_UINT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="RAW_MAT_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FINSIHEDGOOD_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="FINSIHEDGOOD_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE_COST" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DIFFERENCE_PRICE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CREATEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITBYUSERCODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITBYUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSTABLE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSBUTTONSAVE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_HD" Member="TBREQUESTCONVERT_HDs">
+    <Type Name="TBREQUESTCONVERT_HD">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="NUMBERRUNNING" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DOCUMENTNO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DOCUMENTNOSAP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SITE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SITE_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SLOC" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEDDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CREATEDUSER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEDUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EDITUSER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="EDITUSERNAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SERIALNUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSWORKFLOW" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSWORKFLOWPRINTLV2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STATUSWORKFLOWPRINTLV3" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VIEWFLOW" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REMARK" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_ID" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_CATEGORY" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE_CODE_LV1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE_NAME_LV1" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE1_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USERAPPROVE_CODE_LV2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE_NAME_LV2" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE2_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="USERAPPROVE_CODE_LV3" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE_NAME_LV3" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="USERAPPROVE3_DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MATERIALDOCUMENT_Z21" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MATERIALDOCUMENT_Z22" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USERCODEREJECT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="USERNAMEREJECT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="TIMEREJECT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="STATUSREJECT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_LIST_USER_APPROVE_AUTO" Member="TBREQUESTCONVERT_LIST_USER_APPROVE_AUTOs">
+    <Type Name="TBREQUESTCONVERT_LIST_USER_APPROVE_AUTO">
+      <Column Name="ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="SITE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORQ_UNIT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PERNR" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ENAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PLANS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PLSTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STELL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="STLTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MAIL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="[LEVEL]" Member="LEVEL" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="REQUESTNO" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CREATEDATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="RUNNINGNUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_PRICE_TEMP" Member="TBREQUESTCONVERT_PRICE_TEMPs">
+    <Type Name="TBREQUESTCONVERT_PRICE_TEMP">
+      <Column Name="MARK_HEADER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="ARTICLECODE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VERPR_HEADER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="KBETR_HEADER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="VERPR_RM" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="KBETR_RM" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="QUANTITY_HEADER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="QUANTITY_RAWMAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MULTIPLY_VERPR_RAWMAT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MULTIPLY_VERPR_HEADER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MULTIPLY_KBETR_RAWMAT" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MULTIPLY_KBETR_HEADER" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_RAWMATERIAL_TEMP" Member="TBREQUESTCONVERT_RAWMATERIAL_TEMPs">
+    <Type Name="TBREQUESTCONVERT_RAWMATERIAL_TEMP">
+      <Column Name="POSNR" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="IDNRK" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MAKTX" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MENGE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="dl_Sum_Unit" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MEINS" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MSEHL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="SERNP" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="dl_Batch" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="dl_Serail" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_REASONOFCORNVER" Member="TBREQUESTCONVERT_REASONOFCORNVERs">
+    <Type Name="TBREQUESTCONVERT_REASONOFCORNVER">
+      <Column Name="REASONOFCORNVERT_ID" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ORDINAL_NUMBER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_CATEGORY" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_MOVEMENT_TYPE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="REASONOFCORNVERT_NAME" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_REASONOFCORNVER_BATCH_SERIAL_TEMP" Member="TBREQUESTCONVERT_REASONOFCORNVER_BATCH_SERIAL_TEMPs">
+    <Type Name="TBREQUESTCONVERT_REASONOFCORNVER_BATCH_SERIAL_TEMP">
+      <Column Name="EQUNR" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SERNR" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="WERK" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="LAGER" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="CHARGE" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_RUNNERID" Member="TBREQUESTCONVERT_RUNNERIDs">
+    <Type Name="TBREQUESTCONVERT_RUNNERID">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YEARS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CURRENTNUMBER" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_RUNNINGNUMBER" Member="TBREQUESTCONVERT_RUNNINGNUMBERs">
+    <Type Name="TBREQUESTCONVERT_RUNNINGNUMBER">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YEARS" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MONTHS" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="CURRENTNUMBER" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBREQUESTCONVERT_CHECK_USERLOGNO" Member="TBREQUESTCONVERT_CHECK_USERLOGNOs">
+    <Type Name="TBREQUESTCONVERT_CHECK_USERLOGNO">
+      <Column Name="DOCUMENTNO" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="CODE_USERLOGON" Type="System.String" DbType="NVarChar(150) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NAME_USERLOGON" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="DEPARTMENT" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,492 @@
+﻿using System.Runtime.Serialization;
+using BLToolkit.DataAccess;
+using BLToolkit.Mapping;
+using System.ServiceModel;
+using System.Collections.Generic;
+using BLToolkit.Data;
+using System;
+using SAP.Connector;
+
+namespace DoHome.MobileService
+{
+    ///<summary>
+    ///<para>Date Created: 29/07/2011</para>
+    ///<para>Created By  : Mr.Suchart Joolrat.</para>
+    ///<para>Function    : To create a business tier relating to table TBHANDHELDCOUNTER_HOLD</para>
+    ///<para>This object represents the properties of a HandHeldCounter, and is used to represent a single instance</para>
+    ///</summary>    
+    [DataContract]
+    [TableName("TBHANDHELDCOUNTER_HOLD")]
+    public partial class HandHeldCounterHold
+    {
+        string _uniqeID;
+
+        /// <summary>
+        /// Gets the HandHeldCounter identifier
+        /// </summary>
+        [DataMember]
+        [MapField("DOCNO"), PrimaryKey]
+        public string Docno { get; set; }
+        /// <summary>
+        /// Gets the HandHeldCounter identifier
+        /// </summary>
+        [DataMember]
+        [MapField("ROWORDER"), PrimaryKey]
+        public int Roworder { get; set; }
+
+        /// <summary>
+        /// Gets or sets the DOCDATE
+        /// </summary>
+        [DataMember]
+        [MapField("DOCDATE")]
+        public DateTime? Docdate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the BRANCHCODE
+        /// </summary>
+        [DataMember]
+        [MapField("BRANCHCODE")]
+        public string Branchcode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the WAREHOUSE
+        /// </summary>
+        [DataMember]
+        [MapField("WAREHOUSE")]
+        public string Warehouse { get; set; }
+
+        /// <summary>
+        /// Gets or sets the PRODUCTCODE
+        /// </summary>
+        [DataMember]
+        [MapField("PRODUCTCODE")]
+        public string Productcode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the PRODUCTNAME
+        /// </summary>
+        [DataMember]
+        [MapField("PRODUCTNAME")]
+        public string Productname { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UNITCODE
+        /// </summary>
+        [DataMember]
+        [MapField("UNITCODE")]
+        public string Unitcode { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UNITNAME
+        /// </summary>
+        [DataMember]
+        [MapField("UNITNAME")]
+        public string Unitname { get; set; }
+
+        /// <summary>
+        /// Gets or sets the UNITRATE
+        /// </summary>
+        [DataMember]
+        [MapField("UNITRATE")]
+        public decimal Unitrate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the LOCATION
+        /// </summary>
+        [DataMember]
+        [MapField("LOCATION")]
+        public string Location { get; set; }
+
+        /// <summary>
+        /// Gets or sets the QUANTITY
+        /// </summary>
+        [DataMember]
+        [MapField("QUANTITY")]
+        public decimal Quantity { get; set; }
+
+        /// <summary>
+        /// Gets or sets the BALANCEQTY
+        /// </summary>
+        [DataMember]
+        [MapField("BALANCEQTY")]
+        public decimal Balanceqty { get; set; }
+
+        /// <summary>
+        /// Gets or sets the SAPDOCNO
+        /// </summary>
+        [DataMember]
+        [MapField("SAPDOCNO")]
+        public string Sapdocno { get; set; }
+
+        /// <summary>
+        /// Gets or sets the OFFICERID
+        /// </summary>
+        [DataMember]
+        [MapField("OFFICERID")]
+        public string Officerid { get; set; }
+
+        /// <summary>
+        /// Gets or sets the CREATEUSER
+        /// </summary>
+        [DataMember]
+        [MapField("CREATEUSER")]
+        public string Createuser { get; set; }
+
+        /// <summary>
+        /// Gets or sets the CREATEDATE
+        /// </summary>
+        [DataMember]
+        [MapField("CREATEDATE")]
+        public DateTime? Createdate { get; set; }
+
+        /// <summary>
+        /// Gets or sets the STATUS
+        /// </summary>
+        [DataMember]
+        [MapField("STATUS")]
+        public int Status { get; set; }
+
+        [DataMember]
+        [MapIgnore]
+        public string UniqueID
+        {
+            get
+            {
+                return System.Guid.NewGuid().ToString("N");
+            }
+            set
+            {
+                _uniqeID = value;
+            }
+        }
+
+    }
+
+    public partial interface IMobileService
+    {
+
+        [OperationContract]
+        List<HandHeldCounterHold> HandHeldCounterHoldGetByProductCode(string productCodeOrBarcode, string userCode, string officerID, string warehouseCode, string branchCode, out string messageAlert);
+
+        [OperationContract]
+        List<HandHeldCounterHold> GetHandHeldCounterHoldByDocumentNo(string branchCode,string documentNo);
+
+        [OperationContract]
+        List<HandHeldCounterHold> GetHandHeldCounterHoldByToDay(string branchCode);
+
+        [OperationContract]
+        string AddHandHeldCounterHold(string branchCode, List<HandHeldCounterHold> counters);
+        
+        [OperationContract]
+        void HandHeldCounterHoldGetByProductCode2(string productCodeOrBarcode, string userCode, string officerID, string warehouseCode, string branchCode);
+    }
+
+    public partial class MobileService : IMobileService
+    {
+
+        #region Private Method
+
+
+        private string HandHeldCounterHoldGetDocumentNo(string branchCode)
+        {
+            var documentNo = string.Empty;
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+                documentNo = db.SetCommand(GetSql(17)).ExecuteScalar<string>();
+            }
+
+            var culture = new System.Globalization.CultureInfo("th-TH");
+            int index = 1;
+            if (!string.IsNullOrEmpty(documentNo))
+                index = Convert.ToInt32(documentNo) + 1;
+
+            documentNo = string.Format("HL{0}-{1:0000}", DateTime.Now.Date.ToString("yyMMdd", culture), index);
+
+            return documentNo;
+        }
+
+        private decimal GetUnitRate(string branchCode,string productCode, string unitCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db.SetCommand(GetSql(18), db.Parameter("@ProductCode", productCode), db.Parameter("@UnitCode", unitCode)).ExecuteScalar<decimal>();
+            }
+
+        }
+
+        private List<HandHeldCounterHold> SAPHandHeldCounterHoldGetLocation(string productCode, string sapProductCode, string warehouseCode, string branchCode)
+        {
+            List<HandHeldCounterHold> products = new List<HandHeldCounterHold>();
+            //Zdd_Get_Material_Master
+            using (var sapConnection = new SAPConnection(GlobalContext.SapDestination))
+            {
+                using (var proxy = new SAPProxy.UWProxy())
+                {
+                    proxy.Connection = sapConnection;
+
+
+                    SAPProxy.ZSTRC_MATERIAL_MASTER e_mat_strc = new SAPProxy.ZSTRC_MATERIAL_MASTER();
+                    SAPProxy.MEANTable tb_barcode = new SAPProxy.MEANTable();
+                    SAPProxy.ZMM_ASSIGNLOCTable assign_loc = new SAPProxy.ZMM_ASSIGNLOCTable();
+                    SAPProxy.MARDTable mard = new SAPProxy.MARDTable();
+                    SAPProxy.MARATable mara = new SAPProxy.MARATable();
+                    SAPProxy.MARMTable marm = new SAPProxy.MARMTable();
+                    SAPProxy.MLGTTable mlgt = new SAPProxy.MLGTTable();
+
+                    proxy.Zdd_Get_Material_Master(sapProductCode
+                        , out e_mat_strc
+                        , ref tb_barcode
+                        , ref assign_loc
+                        , ref mard
+                        , ref mara
+                        , ref marm
+                        , ref mlgt);
+
+                    assign_loc.SortBy("Bin_code", "ASC");
+                    string lastLocation = string.Empty;
+                    foreach (SAPProxy.ZMM_ASSIGNLOC item in assign_loc)
+                    {
+                        if (item.Storage_Loc == warehouseCode && lastLocation != item.Bin_Code)
+                        {
+
+                            lastLocation = item.Bin_Code;
+                            ProductLocation product = ProductLocationGetByProductCode(productCode, warehouseCode, branchCode);
+                            if (product != null)
+                            {
+                                products.Add(new HandHeldCounterHold
+                                {
+                                    Productcode = product.ProductCode,
+                                    Productname = product.ProductName,
+                                    Location = item.Bin_Code,
+                                    Unitcode = product.ProductUnitCode,
+                                    Unitname = product.ProductUnitName,
+                                    Quantity = 0
+                                });
+                            }
+                        }
+                    }
+
+
+
+                }
+            }
+
+            return products;
+        }
+
+        #endregion
+
+        public List<HandHeldCounterHold> HandHeldCounterHoldGetByProductCode(string productCode, string userCode, string officerID, string warehouseCode, string branchCode, out string messageAlert)
+        {
+            string sapProductCode = SapProductCodeFormated(productCode);
+            string e_iblnr = "";
+            string e_zcountqi = "";
+
+            string branchShort = "01";
+            switch (branchCode)
+            {
+                case "1100":
+                    branchShort = "01";
+                    break;
+                case "1200":
+                    branchShort = "02";
+                    break;
+                case "1300":
+                    branchShort = "04";
+                    break;
+                default:
+                    branchShort = "03";     //ASM
+                    break;
+            }
+
+            using (var sapConnection = new SAPConnection(GlobalContext.SapDestination))
+            {
+                using (var proxy = new SAPProxyIII.UWProxy())
+                {
+                    proxy.Connection = sapConnection;
+
+                    SAPProxyIII.BAPIRET2Table ret2 = new SAPProxyIII.BAPIRET2Table();
+                    SAPProxyIII.WSELMATNRTable table = new SAPProxyIII.WSELMATNRTable();
+                    SAPProxyIII.WSELMATNR item = new SAPProxyIII.WSELMATNR();
+                    SAPProxyIII.ZCOUNT_ITEMTable itcount = new SAPProxyIII.ZCOUNT_ITEMTable();
+
+                    item.Sign = "I";
+                    item.Option = "EQ";
+                    item.Low = sapProductCode;
+                    table.Add(item);
+                    proxy.Zmm_Inv_Cre_Count_Doc(branchShort
+                        , userCode
+                        , warehouseCode
+                        , string.Empty
+                        , officerID
+                        , string.Empty
+                        , out e_iblnr
+                        , out e_zcountqi
+                        , ref itcount
+                        , ref table
+                        , ref ret2);
+
+                    if (ret2.Count > 0)
+                        if (ret2[0].Type == "E")//I -สร้างได้ E -สร้างไม่ได้
+                        {
+                            messageAlert = "สินค้านี้มีสถานะเป็น E (สร้างไม่ได้)\nหรือสินค้าอาจถูกสร้างใบนับไปแล้วในวันนี้\nไม่สามารถสร้างใบนับได้";
+                            return null;
+                        }
+                }
+            }
+
+            messageAlert = string.Empty;
+            return SAPHandHeldCounterHoldGetLocation(productCode, sapProductCode, warehouseCode, branchCode);
+        }
+
+        public string AddHandHeldCounterHold(string branchCode,List<HandHeldCounterHold> counters)
+        {
+            string documentNo = string.Empty;
+            //check for hold bill
+            var counter = counters.Find(p => !string.IsNullOrEmpty(p.Docno));
+            if (counter != null)
+                documentNo = counter.Docno;
+            else
+                documentNo = HandHeldCounterHoldGetDocumentNo(branchCode);
+
+            var currentDate = DateTime.Now;
+
+            using (DbManager db = new DbManager(branchCode))
+            {
+                SqlQuery<HandHeldCounterHold> counterQuery = new SqlQuery<HandHeldCounterHold>(db);
+                var oldCounter = GetHandHeldCounterHoldByDocumentNo(branchCode,documentNo);
+                if (oldCounter != null)
+                    counterQuery.Delete(oldCounter);
+
+                try
+                {
+                    counterQuery.BeginTransaction();
+                    int displayOrder = 0;
+                    foreach (var item in counters)
+                    {
+                        item.Docno = documentNo;
+                        item.Docdate = currentDate.Date;
+                        item.Roworder = displayOrder;
+                        item.Unitrate = GetUnitRate(branchCode, item.Productcode, item.Unitcode);
+                        item.Balanceqty = Convert.ToDecimal(SAPGetBalanceQuantity(item.Productcode, item.Warehouse, item.Unitcode, item.Branchcode));
+                        item.Createdate = currentDate;
+                        item.Status = 0;
+
+                        counterQuery.Insert(item);
+                        displayOrder++;
+                    }
+
+
+
+                    counterQuery.CommitTransaction();
+                }
+                catch (Exception ex)
+                {
+                    counterQuery.RollbackTransaction();
+                    throw ex;
+                }
+
+
+            }
+
+            return documentNo;
+        }
+
+        public List<HandHeldCounterHold> GetHandHeldCounterHoldByDocumentNo(string branchCode,string documentNo)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db.SetCommand(GetSql(19), db.Parameter("@DocumentNo", documentNo)).ExecuteList<HandHeldCounterHold>();
+            }
+        }
+
+        public List<HandHeldCounterHold> GetHandHeldCounterHoldByToDay(string branchCode)
+        {
+            using (DbManager db = new DbManager(branchCode))
+            {
+                return db.SetCommand(GetSql(20)).ExecuteList<HandHeldCounterHold>();
+            }
+        }
+
+        public void HandHeldCounterHoldGetByProductCode2(string productCode, string userCode, string officerID, string warehouseCode, string branchCode)
+        {
+            //string sapProductCode = SapProductCodeFormated(productCode);
+            //string e_iblnr = "";
+            //string e_zcountqi = "";
+
+            //string branchShort = "01";
+            //switch (branchCode)
+            //{
+            //    case "1100":
+            //        branchShort = "01";
+            //        break;
+            //    case "1200":
+            //        branchShort = "02";
+            //        break;
+            //    case "1300":
+            //        branchShort = "04";
+            //        break;
+            //    default:
+            //        branchShort = "03";     //ASM
+            //        break;
+            //}
+
+            //using (var sapConnection = new SAPConnection(GlobalContext.SapDestination))
+            //{
+            //    List<string> p = new List<string>();
+            //    using (var proxy = new SAPProxyIII.UWProxy())
+            //    {
+            //        proxy.Connection = sapConnection;
+
+            //        List<string> productCodeList;
+            //        using (DbManager db = new DbManager())
+            //        {
+            //            productCodeList = db.SetCommand("Select TOP 5000 Code From TBProduct").ExecuteScalarList<string>();
+            //        }
+
+            //        foreach (var item in productCodeList)
+            //        {
+            //            SAPProxyIII.BAPIRET2Table ret2 = new SAPProxyIII.BAPIRET2Table();
+            //            SAPProxyIII.WSELMATNRTable table = new SAPProxyIII.WSELMATNRTable();
+            //            SAPProxyIII.WSELMATNR items = new SAPProxyIII.WSELMATNR();
+            //            SAPProxyIII.ZCOUNT_ITEMTable itcount = new SAPProxyIII.ZCOUNT_ITEMTable();
+
+            //            items.Sign = "I";
+            //            items.Option = "EQ";
+            //            items.Low = SapProductCodeFormated(item); ;
+            //            table.Add(items);
+            //            proxy.Zmm_Inv_Cre_Count_Doc(branchShort
+            //                , userCode
+            //                , warehouseCode
+            //                , string.Empty
+            //                , officerID
+            //                , string.Empty
+            //                , out e_iblnr
+            //                , out e_zcountqi
+            //                , ref itcount
+            //                , ref table
+            //                , ref ret2);
+
+            //            if (ret2.Count > 0)
+            //                if (ret2[0].Type == "E")//I -สร้างได้ E -สร้างไม่ได้
+            //                {
+            //                    //messageAlert = "สินค้านี้มีสถานะเป็น E (สร้างไม่ได้)\nหรือสินค้าอาจถูกสร้างใบนับไปแล้วในวันนี้\nไม่สามารถสร้างใบนับได้";
+
+            //                }
+            //                else
+            //                {
+            //                    p.Add(item);
+
+            //                }
+            //        }
+
+                    
+
+            //    }
+            //}
+
+        }
+    }
+
+}

@@ -1,0 +1,191 @@
+﻿namespace DoHome.HandHeld.Client
+{
+    partial class LabelLocationPrintForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LabelLocationPrintForm));
+            this.btnAddNew = new System.Windows.Forms.Button();
+            this.txtLocationCode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.grdLocations = new Resco.Controls.SmartGrid.SmartGrid();
+            this.columnLocationCode = new Resco.Controls.SmartGrid.Column();
+            this.columnQuantity = new Resco.Controls.SmartGrid.Column();
+            this.column2 = new Resco.Controls.SmartGrid.Column();
+            this.imageList1 = new System.Windows.Forms.ImageList();
+            this.styleImage = new Resco.Controls.SmartGrid.Style();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnKeyboard = new Resco.Controls.OutlookControls.ImageButton();
+            this.btnRefressQuantity = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.btnKeyboard)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // btnAddNew
+            // 
+            this.btnAddNew.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnAddNew.Location = new System.Drawing.Point(180, 10);
+            this.btnAddNew.Name = "btnAddNew";
+            this.btnAddNew.Size = new System.Drawing.Size(57, 19);
+            this.btnAddNew.TabIndex = 2;
+            this.btnAddNew.Text = "เพิ่ม";
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
+            // 
+            // txtLocationCode
+            // 
+            this.txtLocationCode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtLocationCode.Location = new System.Drawing.Point(54, 10);
+            this.txtLocationCode.Name = "txtLocationCode";
+            this.txtLocationCode.Size = new System.Drawing.Size(103, 19);
+            this.txtLocationCode.TabIndex = 0;
+            this.txtLocationCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLocationCode_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(3, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 16);
+            this.label1.Text = "ตำแหน่ง :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // grdLocations
+            // 
+            this.grdLocations.AutoScroll = true;
+            this.grdLocations.Columns.Add(this.columnLocationCode);
+            this.grdLocations.Columns.Add(this.columnQuantity);
+            this.grdLocations.Columns.Add(this.column2);
+            this.grdLocations.FullRowSelect = true;
+            this.grdLocations.Location = new System.Drawing.Point(3, 35);
+            this.grdLocations.Name = "grdLocations";
+            this.grdLocations.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            this.grdLocations.Size = new System.Drawing.Size(234, 231);
+            this.grdLocations.Styles.Add(this.styleImage);
+            this.grdLocations.TabIndex = 3;
+            this.grdLocations.CellClick += new Resco.Controls.SmartGrid.CellClickHandler(this.grdLocations_CellClick);
+            // 
+            // columnLocationCode
+            // 
+            this.columnLocationCode.DataMember = "LocationCode";
+            this.columnLocationCode.HeaderText = "ตำแหน่ง";
+            this.columnLocationCode.Name = "columnLocationCode";
+            this.columnLocationCode.Width = 120;
+            // 
+            // columnQuantity
+            // 
+            this.columnQuantity.CellEdit = Resco.Controls.SmartGrid.CellEditType.TextBox;
+            this.columnQuantity.DataMember = "Quantity";
+            this.columnQuantity.EditMode = Resco.Controls.SmartGrid.EditMode.Auto;
+            this.columnQuantity.HeaderText = "จำนวน";
+            this.columnQuantity.Name = "columnQuantity";
+            this.columnQuantity.Width = 80;
+            // 
+            // column2
+            // 
+            this.column2.AlternatingStyle = "styleImage";
+            this.column2.HeaderText = "ลบ";
+            this.column2.ImageList = this.imageList1;
+            this.column2.Name = "column2";
+            this.column2.SelectionStyle = "styleImage";
+            this.column2.Style = "styleImage";
+            this.column2.Width = 30;
+            this.imageList1.Images.Clear();
+            this.imageList1.Images.Add(((System.Drawing.Image)(resources.GetObject("resource"))));
+            // 
+            // styleImage
+            // 
+            this.styleImage.ImageAlignment = Resco.Controls.SmartGrid.Alignment.MiddleCenter;
+            this.styleImage.ImagePosition = Resco.Controls.SmartGrid.ImagePosition.Foreground;
+            this.styleImage.Name = "styleImage";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnSave.Location = new System.Drawing.Point(180, 272);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(57, 19);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "บันทึก";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnKeyboard
+            // 
+            this.btnKeyboard.ImageDefault = ((System.Drawing.Image)(resources.GetObject("btnKeyboard.ImageDefault")));
+            this.btnKeyboard.ImagePressed = ((System.Drawing.Image)(resources.GetObject("btnKeyboard.ImagePressed")));
+            this.btnKeyboard.Location = new System.Drawing.Point(159, 8);
+            this.btnKeyboard.Name = "btnKeyboard";
+            this.btnKeyboard.Size = new System.Drawing.Size(21, 21);
+            this.btnKeyboard.TabIndex = 1;
+            this.btnKeyboard.Click += new System.EventHandler(this.btnKeyboard_Click);
+            // 
+            // btnRefressQuantity
+            // 
+            this.btnRefressQuantity.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnRefressQuantity.Location = new System.Drawing.Point(3, 272);
+            this.btnRefressQuantity.Name = "btnRefressQuantity";
+            this.btnRefressQuantity.Size = new System.Drawing.Size(83, 19);
+            this.btnRefressQuantity.TabIndex = 6;
+            this.btnRefressQuantity.Text = "กำหนดจำนวน";
+            this.btnRefressQuantity.Click += new System.EventHandler(this.btnRefressQuantity_Click);
+            // 
+            // LabelLocationPrintForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(240, 294);
+            this.Controls.Add(this.btnRefressQuantity);
+            this.Controls.Add(this.btnKeyboard);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.grdLocations);
+            this.Controls.Add(this.btnAddNew);
+            this.Controls.Add(this.txtLocationCode);
+            this.Controls.Add(this.label1);
+            this.Name = "LabelLocationPrintForm";
+            this.Text = "ขอป้ายตำแหน่งสินค้า";
+            this.Load += new System.EventHandler(this.LabelLocationPrintForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnKeyboard)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnAddNew;
+        private System.Windows.Forms.TextBox txtLocationCode;
+        private System.Windows.Forms.Label label1;
+        private Resco.Controls.SmartGrid.SmartGrid grdLocations;
+        private Resco.Controls.SmartGrid.Column columnLocationCode;
+        private System.Windows.Forms.Button btnSave;
+        private Resco.Controls.SmartGrid.Column column2;
+        private Resco.Controls.SmartGrid.Style styleImage;
+        private System.Windows.Forms.ImageList imageList1;
+        private Resco.Controls.SmartGrid.Column columnQuantity;
+        private Resco.Controls.OutlookControls.ImageButton btnKeyboard;
+        private System.Windows.Forms.Button btnRefressQuantity;
+    }
+}

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="MobileEndpoints" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:64560/MobileService.svc"
+                binding="basicHttpBinding" bindingConfiguration="MobileEndpoints"
+                contract="ServiceReference.IMobileService" name="MobileEndpoints" />
+        </client>
+    </system.serviceModel>
+</configuration>

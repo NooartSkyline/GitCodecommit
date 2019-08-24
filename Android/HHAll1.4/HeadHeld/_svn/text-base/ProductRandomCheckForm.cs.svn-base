@@ -1,0 +1,94 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class ProductRandomCheckForm : Form
+    {
+        public ProductRandomCheckForm(ProductLocation product)
+        {
+            InitializeComponent();
+
+            txtProductCode.Text = product.ProductCode;
+            txtBarcode.Text = product.ProductBarcode;
+            txtProductName.Text = product.ProductName;
+            txtPrice.Text = product.SalePrice.ToString("N2");
+            txtUnit.Text = string.Format("{0} - {1}", product.ProductUnitCode, product.ProductUnitName);
+        }
+
+        private void SearchData()
+        {
+            if (string.IsNullOrEmpty(txtScanBarcode.Text))
+            {
+                GlobalMessageBox.ShowInfomation("กรุณาระบุบาร์โค้ดสินค้า ก่อนทำการค้นหา");
+                return;
+            }
+
+            try
+            {
+                var barcode = txtScanBarcode.Text.Trim();
+                var product = ServiceHelper.MobileServices.ProductBarcodeGetByBarcode(barcode, GlobalContext.BranchCode);
+                if (product != null)
+                    BindData(product);
+                else
+                    ClearControlBindingData();
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex.Message);
+            }
+        }
+
+        private void BindData(ProductBarcode product)
+        {
+            txtScanProductCode.Text = product.ProductCode;
+            txtScanProductBarcode.Text = product.Barcode;
+            txtScanProductName.Text = product.ProductName;
+            txtScanPrice.Text = product.ProductPriceText;
+            txtScanUnit.Text = string.Format("{0} - {1}", product.UnitCode, product.UnitName);
+
+            txtScanBarcode.Text = string.Empty;
+        }
+
+        private void ClearControlBindingData()
+        {
+            txtScanProductCode.Text = string.Empty;
+            txtScanProductBarcode.Text = string.Empty;
+            txtScanProductName.Text = string.Empty;
+            txtScanPrice.Text = string.Empty;
+            txtScanUnit.Text = string.Empty;
+
+            txtScanBarcode.Text = string.Empty;
+        }
+
+
+        private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void ProductRandomCheckForm_Load(object sender, EventArgs e)
+        {
+            txtScanBarcode.Focus();
+        }
+
+        private void txtScanBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                SearchData();
+            }
+        }
+
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            SearchData();
+        }
+    }
+}

@@ -1,0 +1,12 @@
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Release\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Release\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.Properties.Resources.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Release\TestWCF.exe.config
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.Form1.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Release\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Release\TestWCF.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Release\TestWCF.application

@@ -1,0 +1,13 @@
+E:\Work\WebService\TMSWebService\TMSWebService\obj\Release\TMSWebService.dll
+E:\Work\WebService\TMSWebService\TMSWebService\obj\Release\TMSWebService.pdb
+E:\Work\WebService\TMSWebService\TMSWebService\obj\Release\TMSWebService.csprojResolveAssemblyReference.cache
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.csprojResolveAssemblyReference.cache
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.dll
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.pdb
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.csprojResolveAssemblyReference.cache
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.dll
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Release\TMSWebService.pdb
+D:\GitCodecommit\พี่เข้ม\TMSWebService\TMSWebService\obj\Release\TMSWebService.csprojAssemblyReference.cache
+D:\GitCodecommit\พี่เข้ม\TMSWebService\TMSWebService\obj\Release\TMSWebService.csproj.CoreCompileInputs.cache
+D:\GitCodecommit\พี่เข้ม\TMSWebService\TMSWebService\obj\Release\TMSWebService.dll
+D:\GitCodecommit\พี่เข้ม\TMSWebService\TMSWebService\obj\Release\TMSWebService.pdb

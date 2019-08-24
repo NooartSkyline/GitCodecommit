@@ -1,0 +1,14 @@
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\bin\Debug\WindowsForms_Coppy.exe.config
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\bin\Debug\WindowsForms_Coppy.exe
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\bin\Debug\WindowsForms_Coppy.pdb
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.csprojAssemblyReference.cache
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.Form1.resources
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.Properties.Resources.resources
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.csproj.GenerateResource.cache
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.csproj.CoreCompileInputs.cache
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.exe
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.pdb
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\bin\Debug\WindowsForms_Coppy.exe.manifest
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\bin\Debug\WindowsForms_Coppy.application
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.exe.manifest
+C:\Users\withawat.bun\Pictures\WindowsForms_Coppy\WindowsForms_Coppy\obj\Debug\WindowsForms_Coppy.application

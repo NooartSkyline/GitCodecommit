@@ -1,0 +1,549 @@
+﻿namespace DoHome.HandHeld.Client
+{
+    partial class ProductCheckForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.tabDisplayData = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.gvProductInfo = new Resco.Controls.SmartGrid.SmartGrid();
+            this.column4 = new Resco.Controls.SmartGrid.Column();
+            this.column5 = new Resco.Controls.SmartGrid.Column();
+            this.column2StockQuantity = new Resco.Controls.SmartGrid.Column();
+            this.column2StoreLocation = new Resco.Controls.SmartGrid.Column();
+            this.column6 = new Resco.Controls.SmartGrid.Column();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtSaleProfit = new System.Windows.Forms.TextBox();
+            this.txtSaleProductType = new System.Windows.Forms.TextBox();
+            this.txtSaleQuantity = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtSaleRate = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.dgOrderAccrual = new System.Windows.Forms.DataGrid();
+            this.dataGridTableStyle2 = new System.Windows.Forms.DataGridTableStyle();
+            this.dataGridTextBoxColumn6 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn7 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn8 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn9 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.gvOutOfStock = new Resco.Controls.SmartGrid.SmartGrid();
+            this.column1 = new Resco.Controls.SmartGrid.Column();
+            this.column2 = new Resco.Controls.SmartGrid.Column();
+            this.column3 = new Resco.Controls.SmartGrid.Column();
+            this.bsProductOutOfStock = new System.Windows.Forms.BindingSource(this.components);
+            this.btnSaveProductOutOfStock = new System.Windows.Forms.Button();
+            this.txtGroupingofmaterials = new System.Windows.Forms.TextBox();
+            this.txtProductCodeOrBarcode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtProductCode = new System.Windows.Forms.TextBox();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.btnRequest = new System.Windows.Forms.Button();
+            this.cbViewAll = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabDisplayData.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bsProductOutOfStock)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tabDisplayData
+            // 
+            this.tabDisplayData.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tabDisplayData.Controls.Add(this.tabPage1);
+            this.tabDisplayData.Controls.Add(this.tabPage2);
+            this.tabDisplayData.Controls.Add(this.tabPage3);
+            this.tabDisplayData.Controls.Add(this.tabPage4);
+            this.tabDisplayData.Dock = System.Windows.Forms.DockStyle.None;
+            this.tabDisplayData.Location = new System.Drawing.Point(2, 98);
+            this.tabDisplayData.Name = "tabDisplayData";
+            this.tabDisplayData.SelectedIndex = 0;
+            this.tabDisplayData.Size = new System.Drawing.Size(235, 193);
+            this.tabDisplayData.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.gvProductInfo);
+            this.tabPage1.Location = new System.Drawing.Point(0, 0);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(235, 170);
+            this.tabPage1.Text = "สินค้า";
+            // 
+            // gvProductInfo
+            // 
+            this.gvProductInfo.AlternatingBackColor = System.Drawing.Color.PaleGoldenrod;
+            this.gvProductInfo.AutoScroll = true;
+            this.gvProductInfo.Columns.Add(this.column4);
+            this.gvProductInfo.Columns.Add(this.column5);
+            this.gvProductInfo.Columns.Add(this.column2StockQuantity);
+            this.gvProductInfo.Columns.Add(this.column2StoreLocation);
+            this.gvProductInfo.Columns.Add(this.column6);
+            this.gvProductInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gvProductInfo.FullRowSelect = true;
+            this.gvProductInfo.KeyNavigation = true;
+            this.gvProductInfo.Location = new System.Drawing.Point(0, 0);
+            this.gvProductInfo.Name = "gvProductInfo";
+            this.gvProductInfo.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            this.gvProductInfo.Size = new System.Drawing.Size(235, 170);
+            this.gvProductInfo.TabIndex = 50;
+            // 
+            // column4
+            // 
+            this.column4.DataMember = "Barcode";
+            this.column4.HeaderText = "บาร์โค้ด";
+            this.column4.Name = "column4";
+            // 
+            // column5
+            // 
+            this.column5.DataMember = "UnitName";
+            this.column5.HeaderText = "หน่วย";
+            this.column5.Name = "column5";
+            this.column5.Width = 50;
+            // 
+            // column2StockQuantity
+            // 
+            this.column2StockQuantity.DataMember = "StockQuantity";
+            this.column2StockQuantity.HeaderText = "จำนวน";
+            this.column2StockQuantity.Name = "column2StockQuantity";
+            this.column2StockQuantity.Width = 50;
+            // 
+            // column2StoreLocation
+            // 
+            this.column2StoreLocation.DataMember = "StoreLocation";
+            this.column2StoreLocation.HeaderText = "ที่เก็บ";
+            this.column2StoreLocation.Name = "column2StoreLocation";
+            // 
+            // column6
+            // 
+            this.column6.DataMember = "ProductPriceText";
+            this.column6.HeaderText = "ราคา";
+            this.column6.Name = "column6";
+            this.column6.Width = 80;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.label7);
+            this.tabPage2.Controls.Add(this.label6);
+            this.tabPage2.Controls.Add(this.txtSaleProfit);
+            this.tabPage2.Controls.Add(this.txtSaleProductType);
+            this.tabPage2.Controls.Add(this.txtSaleQuantity);
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.txtSaleRate);
+            this.tabPage2.Location = new System.Drawing.Point(0, 0);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(227, 167);
+            this.tabPage2.Text = "ขาย";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label8.Location = new System.Drawing.Point(6, 120);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(153, 14);
+            this.label8.Text = "กำไรที่ได้ :";
+            this.label8.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label7.Location = new System.Drawing.Point(7, 83);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(153, 14);
+            this.label7.Text = "ประเภทสินค้า :";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label6.Location = new System.Drawing.Point(3, 47);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(153, 14);
+            this.label6.Text = "จำนวนขาย 1 เดือนล่าสุด :";
+            // 
+            // txtSaleProfit
+            // 
+            this.txtSaleProfit.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSaleProfit.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtSaleProfit.Location = new System.Drawing.Point(7, 136);
+            this.txtSaleProfit.Name = "txtSaleProfit";
+            this.txtSaleProfit.ReadOnly = true;
+            this.txtSaleProfit.Size = new System.Drawing.Size(221, 19);
+            this.txtSaleProfit.TabIndex = 18;
+            this.txtSaleProfit.Visible = false;
+            // 
+            // txtSaleProductType
+            // 
+            this.txtSaleProductType.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSaleProductType.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtSaleProductType.Location = new System.Drawing.Point(7, 99);
+            this.txtSaleProductType.Name = "txtSaleProductType";
+            this.txtSaleProductType.ReadOnly = true;
+            this.txtSaleProductType.Size = new System.Drawing.Size(221, 19);
+            this.txtSaleProductType.TabIndex = 17;
+            // 
+            // txtSaleQuantity
+            // 
+            this.txtSaleQuantity.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSaleQuantity.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtSaleQuantity.Location = new System.Drawing.Point(7, 62);
+            this.txtSaleQuantity.Name = "txtSaleQuantity";
+            this.txtSaleQuantity.ReadOnly = true;
+            this.txtSaleQuantity.Size = new System.Drawing.Size(221, 19);
+            this.txtSaleQuantity.TabIndex = 16;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label5.Location = new System.Drawing.Point(5, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(153, 14);
+            this.label5.Text = "อัตราหมุนเวียน (คิดตามจำนวน) :";
+            // 
+            // txtSaleRate
+            // 
+            this.txtSaleRate.BackColor = System.Drawing.SystemColors.Info;
+            this.txtSaleRate.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtSaleRate.Location = new System.Drawing.Point(7, 25);
+            this.txtSaleRate.Name = "txtSaleRate";
+            this.txtSaleRate.ReadOnly = true;
+            this.txtSaleRate.Size = new System.Drawing.Size(221, 19);
+            this.txtSaleRate.TabIndex = 14;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.dgOrderAccrual);
+            this.tabPage3.Location = new System.Drawing.Point(0, 0);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(227, 167);
+            this.tabPage3.Text = "ใบสั่งซื้อ";
+            // 
+            // dgOrderAccrual
+            // 
+            this.dgOrderAccrual.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgOrderAccrual.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgOrderAccrual.Location = new System.Drawing.Point(0, 0);
+            this.dgOrderAccrual.Name = "dgOrderAccrual";
+            this.dgOrderAccrual.Size = new System.Drawing.Size(227, 167);
+            this.dgOrderAccrual.TabIndex = 1;
+            this.dgOrderAccrual.TableStyles.Add(this.dataGridTableStyle2);
+            // 
+            // dataGridTableStyle2
+            // 
+            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn6);
+            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn7);
+            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn8);
+            this.dataGridTableStyle2.GridColumnStyles.Add(this.dataGridTextBoxColumn9);
+            this.dataGridTableStyle2.MappingName = "OrderAccrual[]";
+            // 
+            // dataGridTextBoxColumn6
+            // 
+            this.dataGridTextBoxColumn6.Format = "";
+            this.dataGridTextBoxColumn6.FormatInfo = null;
+            this.dataGridTextBoxColumn6.HeaderText = "เลขที่เอกสาร";
+            this.dataGridTextBoxColumn6.MappingName = "OrderNo";
+            this.dataGridTextBoxColumn6.Width = 100;
+            // 
+            // dataGridTextBoxColumn7
+            // 
+            this.dataGridTextBoxColumn7.Format = "dd/MM/yyyy";
+            this.dataGridTextBoxColumn7.FormatInfo = null;
+            this.dataGridTextBoxColumn7.HeaderText = "วันที่เอกสาร";
+            this.dataGridTextBoxColumn7.MappingName = "OrderDate";
+            this.dataGridTextBoxColumn7.Width = 70;
+            // 
+            // dataGridTextBoxColumn8
+            // 
+            this.dataGridTextBoxColumn8.Format = "dd/MM/yyyy";
+            this.dataGridTextBoxColumn8.FormatInfo = null;
+            this.dataGridTextBoxColumn8.HeaderText = "วันที่นัดรับ";
+            this.dataGridTextBoxColumn8.MappingName = "AppointDate";
+            this.dataGridTextBoxColumn8.Width = 70;
+            // 
+            // dataGridTextBoxColumn9
+            // 
+            this.dataGridTextBoxColumn9.Format = "";
+            this.dataGridTextBoxColumn9.FormatInfo = null;
+            this.dataGridTextBoxColumn9.HeaderText = "พนักงาน";
+            this.dataGridTextBoxColumn9.MappingName = "EmployeeNo";
+            this.dataGridTextBoxColumn9.Width = 100;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.gvOutOfStock);
+            this.tabPage4.Controls.Add(this.btnSaveProductOutOfStock);
+            this.tabPage4.Location = new System.Drawing.Point(0, 0);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(227, 167);
+            this.tabPage4.Text = "*หมดชั่วคราว";
+            // 
+            // gvOutOfStock
+            // 
+            this.gvOutOfStock.AlternatingBackColor = System.Drawing.Color.PaleGoldenrod;
+            this.gvOutOfStock.AutoScroll = true;
+            this.gvOutOfStock.Columns.Add(this.column1);
+            this.gvOutOfStock.Columns.Add(this.column2);
+            this.gvOutOfStock.Columns.Add(this.column3);
+            this.gvOutOfStock.DataSource = this.bsProductOutOfStock;
+            this.gvOutOfStock.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gvOutOfStock.FullRowSelect = true;
+            this.gvOutOfStock.KeyNavigation = true;
+            this.gvOutOfStock.Location = new System.Drawing.Point(0, 0);
+            this.gvOutOfStock.Name = "gvOutOfStock";
+            this.gvOutOfStock.SelectionBackColor = System.Drawing.SystemColors.Desktop;
+            this.gvOutOfStock.Size = new System.Drawing.Size(227, 143);
+            this.gvOutOfStock.TabIndex = 49;
+            // 
+            // column1
+            // 
+            this.column1.DataMember = "WarehouseName";
+            this.column1.HeaderText = "คลัง/ที่เก็บ";
+            this.column1.Name = "column1";
+            this.column1.Width = 100;
+            // 
+            // column2
+            // 
+            this.column2.DataMember = "BalanceQuantityText";
+            this.column2.HeaderText = "จำนวน ";
+            this.column2.Name = "column2";
+            // 
+            // column3
+            // 
+            this.column3.DataMember = "LocationCode";
+            this.column3.HeaderText = "ตำแหน่ง ";
+            this.column3.Name = "column3";
+            this.column3.Width = 120;
+            // 
+            // btnSaveProductOutOfStock
+            // 
+            this.btnSaveProductOutOfStock.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnSaveProductOutOfStock.Location = new System.Drawing.Point(95, 149);
+            this.btnSaveProductOutOfStock.Name = "btnSaveProductOutOfStock";
+            this.btnSaveProductOutOfStock.Size = new System.Drawing.Size(137, 19);
+            this.btnSaveProductOutOfStock.TabIndex = 21;
+            this.btnSaveProductOutOfStock.Text = "บันทึกสินค้าหมดชั่วคราว";
+            this.btnSaveProductOutOfStock.Click += new System.EventHandler(this.btnSaveProductOutOfStock_Click);
+            // 
+            // txtGroupingofmaterials
+            // 
+            this.txtGroupingofmaterials.BackColor = System.Drawing.SystemColors.Info;
+            this.txtGroupingofmaterials.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtGroupingofmaterials.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtGroupingofmaterials.Location = new System.Drawing.Point(67, 76);
+            this.txtGroupingofmaterials.Name = "txtGroupingofmaterials";
+            this.txtGroupingofmaterials.ReadOnly = true;
+            this.txtGroupingofmaterials.Size = new System.Drawing.Size(170, 19);
+            this.txtGroupingofmaterials.TabIndex = 21;
+            // 
+            // txtProductCodeOrBarcode
+            // 
+            this.txtProductCodeOrBarcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductCodeOrBarcode.Location = new System.Drawing.Point(76, 3);
+            this.txtProductCodeOrBarcode.Name = "txtProductCodeOrBarcode";
+            this.txtProductCodeOrBarcode.Size = new System.Drawing.Size(115, 19);
+            this.txtProductCodeOrBarcode.TabIndex = 1;
+            this.txtProductCodeOrBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductCode_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(-16, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(91, 16);
+            this.label1.Text = "รหัส/บาร์โค๊ด :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnSearch.Location = new System.Drawing.Point(4, 22);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(40, 19);
+            this.btnSearch.TabIndex = 2;
+            this.btnSearch.Text = "ค้นหา";
+            this.btnSearch.Visible = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtProductCode
+            // 
+            this.txtProductCode.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProductCode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtProductCode.Location = new System.Drawing.Point(3, 56);
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.ReadOnly = true;
+            this.txtProductCode.Size = new System.Drawing.Size(63, 19);
+            this.txtProductCode.TabIndex = 8;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProductName.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.txtProductName.Location = new System.Drawing.Point(67, 56);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.ReadOnly = true;
+            this.txtProductName.Size = new System.Drawing.Size(170, 19);
+            this.txtProductName.TabIndex = 9;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label3.ForeColor = System.Drawing.Color.Maroon;
+            this.label3.Location = new System.Drawing.Point(1, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 14);
+            this.label3.Text = "รหัสสินค้า";
+            // 
+            // btnRequest
+            // 
+            this.btnRequest.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnRequest.Location = new System.Drawing.Point(197, 3);
+            this.btnRequest.Name = "btnRequest";
+            this.btnRequest.Size = new System.Drawing.Size(40, 19);
+            this.btnRequest.TabIndex = 12;
+            this.btnRequest.Text = "ขอซื้อ";
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
+            // 
+            // cbViewAll
+            // 
+            this.cbViewAll.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.cbViewAll.Location = new System.Drawing.Point(76, 22);
+            this.cbViewAll.Name = "cbViewAll";
+            this.cbViewAll.Size = new System.Drawing.Size(119, 20);
+            this.cbViewAll.TabIndex = 17;
+            this.cbViewAll.Text = "แสดงข้อมูลทุกแท็บ";
+            this.cbViewAll.CheckStateChanged += new System.EventHandler(this.cbViewAll_CheckStateChanged);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label4.ForeColor = System.Drawing.Color.Maroon;
+            this.label4.Location = new System.Drawing.Point(74, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(79, 14);
+            this.label4.Text = "ชื่อสินค้า";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label2.ForeColor = System.Drawing.Color.Maroon;
+            this.label2.Location = new System.Drawing.Point(4, 78);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 14);
+            this.label2.Text = "ผู้ดูแลขาย";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ProductCheckForm
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(240, 294);
+            this.Controls.Add(this.tabDisplayData);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtGroupingofmaterials);
+            this.Controls.Add(this.btnRequest);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtProductName);
+            this.Controls.Add(this.txtProductCode);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtProductCodeOrBarcode);
+            this.Controls.Add(this.cbViewAll);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ProductCheckForm";
+            this.Text = "ตรวจสอบสินค้า";
+            this.Load += new System.EventHandler(this.ProductCheckForm_Load);
+            this.tabDisplayData.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bsProductOutOfStock)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TabControl tabDisplayData;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TextBox txtProductCodeOrBarcode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtProductCode;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.DataGrid dgOrderAccrual;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtSaleProfit;
+        private System.Windows.Forms.TextBox txtSaleProductType;
+        private System.Windows.Forms.TextBox txtSaleQuantity;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtSaleRate;
+        private System.Windows.Forms.DataGridTableStyle dataGridTableStyle2;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn6;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn7;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn8;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn9;
+        private System.Windows.Forms.Button btnRequest;
+        private System.Windows.Forms.CheckBox cbViewAll;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btnSaveProductOutOfStock;
+        private System.Windows.Forms.BindingSource bsProductOutOfStock;
+        private Resco.Controls.SmartGrid.SmartGrid gvProductInfo;
+        private Resco.Controls.SmartGrid.Column column2StockQuantity;
+        private Resco.Controls.SmartGrid.Column column2StoreLocation;
+        private Resco.Controls.SmartGrid.SmartGrid gvOutOfStock;
+        private Resco.Controls.SmartGrid.Column column1;
+        private Resco.Controls.SmartGrid.Column column2;
+        private Resco.Controls.SmartGrid.Column column3;
+        private Resco.Controls.SmartGrid.Column column4;
+        private Resco.Controls.SmartGrid.Column column5;
+        private Resco.Controls.SmartGrid.Column column6;
+        private System.Windows.Forms.TextBox txtGroupingofmaterials;
+        private System.Windows.Forms.Label label2;
+
+
+    }
+}

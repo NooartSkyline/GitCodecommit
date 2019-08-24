@@ -1,0 +1,241 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class ProductCheckForm : Form
+    {
+        private void PrepareData()
+        {
+            //cbWarehouse.DataSource = ServiceHelper.MobileServices.WareHouseGetAllByBranch(GlobalContext.BranchCode);
+
+            ////default warehouse
+            //if (GlobalContext.BranchCode == "1100")//Ubon
+            //    cbWarehouse.SelectedValue = "1111";// DoHome warehouse.
+
+            //this.BindTitle();
+        }
+
+        private void CleareData()
+        {
+            gvProductInfo.DataSource = null;
+            gvProductInfo.Rows.Clear();
+            dgOrderAccrual.DataSource = null;
+            bsProductOutOfStock.DataSource = null;
+            bsProductOutOfStock.ResetBindings(false);
+            txtProductCode.Text = null;
+            txtProductName.Text = null;
+            txtSaleRate.Text = null;
+            txtSaleQuantity.Text = null;
+            txtSaleProductType.Text = null;
+            txtSaleProfit.Text = null;
+            txtGroupingofmaterials.Text = null;
+        }
+
+        private void BindData()
+        {
+            //clear datasource on datagrid.
+            //dgMasterData.DataSource = null;
+            gvProductInfo.DataSource = null;
+            dgOrderAccrual.DataSource = null;
+            bsProductOutOfStock.DataSource = null;
+            bsProductOutOfStock.ResetBindings(false);
+            txtProductCode.Text = null;
+            txtProductName.Text = null;
+            txtSaleRate.Text = null;
+            txtSaleQuantity.Text = null;
+            txtSaleProductType.Text = null;
+            txtSaleProfit.Text = null;
+            txtGroupingofmaterials.Text = null;
+
+            string productCodeOrBarcode = txtProductCodeOrBarcode.Text.Trim();
+            
+            var productBarcodes = ServiceHelper.MobileServices.ProductBarcodeGetByProductCodeOrBarcode1(productCodeOrBarcode, GlobalContext.WarehouseCode, GlobalContext.BranchCode, GlobalContext.IsShowPrice);            
+
+            if (productBarcodes != null && productBarcodes.Length > 0)
+            {
+                
+                txtGroupingofmaterials.Text = ServiceHelper.MobileServices.SapDepartmentTextGetByProductCode(GlobalContext.BranchCode, productCodeOrBarcode);
+                var productBarcode = (ProductBarcode)productBarcodes.GetValue(0);
+                txtProductCode.Text = productBarcode.ProductCode;
+                txtProductName.Text = productBarcode.ProductName;
+
+                if (cbViewAll.Checked)
+                {
+                    
+                    var salesDetail = ServiceHelper.MobileServices.ProductSaleDetailGetByProductCode(productBarcode.ProductCode, GlobalContext.BranchCode, GlobalContext.IsShowSaleProfit);
+                    if (salesDetail != null)
+                    {
+                        txtSaleRate.Text = salesDetail.SaleRate.ToString("N2");
+                        txtSaleQuantity.Text = salesDetail.SaleQuantity.ToString("N2");
+                        txtSaleProductType.Text = salesDetail.SaleProductType;
+                        txtSaleProfit.Text = salesDetail.SaleProfit;
+                    }
+                    
+                    dgOrderAccrual.DataSource = ServiceHelper.MobileServices.OrderAccrualGetByProductCode(productBarcode.ProductCode, GlobalContext.BranchCode);
+                    this.BindGridViewProductOutOfStock(productBarcode.Barcode);
+                }
+                
+            }
+
+            //binding datasource on gridview.
+            //dgMasterData.DataSource = productBarcodes;
+            gvProductInfo.DataSource = productBarcodes;
+            txtProductCodeOrBarcode.Text = null;
+        }
+
+        private void BindGridViewProductOutOfStock(string barcode)
+        {
+            var productBarcode = ServiceHelper.MobileServices.ProductBarcodeGetByBarcode(barcode, GlobalContext.BranchCode);
+            if (productBarcode == null)
+                return;
+            else
+            {
+                List<ProductLocation> productLocations = new List<ProductLocation>();
+                var productLocationResult = ServiceHelper.MobileServices.ProductLocationGetAllByBarcode(barcode, GlobalContext.BranchCode, GlobalContext.WarehouseCode);
+                productLocations.AddRange(productLocationResult);
+                if (productLocationResult != null)
+                {
+                    bsProductOutOfStock.DataSource = productLocations;
+                    btnSaveProductOutOfStock.Enabled = true;
+                }
+            }
+        }
+
+
+        public ProductCheckForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void ProductCheckForm_Load(object sender, EventArgs e)
+        {
+
+            this.txtProductCodeOrBarcode.Focus();
+            this.PrepareData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            CleareData();
+            // validate control.
+            if (string.IsNullOrEmpty(txtProductCodeOrBarcode.Text))
+            {
+                MessageBox.Show("กรุณาระบุ รหัสสินค้า หรือ บาร์โค๊ด ก่อนค้นหาข้อมูล", "เกิดข้อผิดพลาด");
+                return;
+            }
+            if (txtProductCodeOrBarcode.Text.IndexOf(Convert.ToChar(".")) > -1)
+            {
+                txtProductCodeOrBarcode.Text = null;
+                txtProductCodeOrBarcode.Focus();
+                return;
+            }
+            // set focus on textbox barcode.
+            this.txtProductCodeOrBarcode.Focus();
+
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                this.BindData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "พบข้อผิดพลาด");
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void txtProductCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnSearch_Click(sender, e);
+            }
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string productCode = txtProductCode.Text;
+                string productName = txtProductName.Text;
+                if (!string.IsNullOrEmpty(productCode))
+                {
+                    var oForm = new ProductOrderRequest(productCode, productName);
+                    oForm.ShowDialog();
+                }
+                else
+                    throw new Exception("กรุณาระบุสินค้าก่อน ทำการขอซื้อ");
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "พบข้อผิดพลาด");
+            }
+        }
+
+        private void BindTitle()
+        {
+            this.Text = GlobalContext.ApplicationTitle("ตรวจสอบสินค้า");
+        }
+
+        private void smartGridDesc_CustomizeCell(object sender, Resco.Controls.SmartGrid.CustomizeCellEventArgs e)
+        {
+
+        }
+
+        private void smartGridDesc_CheckBoxEdit(object sender, Resco.Controls.SmartGrid.CheckBoxEditEventArgs e)
+        {
+
+        }
+
+        private void btnSaveProductOutOfStock_Click(object sender, EventArgs e)
+        {
+            if (GlobalMessageBox.ShowQuestion("คุณต้องการบันทึกสินค้าหมดชั่วคราว\nใช่หรือไม่") == DialogResult.Yes)
+            {
+                try
+                {
+                    Cursor.Current = Cursors.WaitCursor;
+                    var productLocations = (List<ProductLocation>)bsProductOutOfStock.DataSource;
+                    foreach (var item in productLocations)
+                    {
+                        item.ProductCode = txtProductCode.Text;
+                        //item.ProductUnitCode = txtUnitCode.Text;
+                        item.ProductName = txtProductName.Text;
+                        item.BalanceQuantitySpecified = true;
+                    }
+                    ServiceHelper.MobileServices.ProductLocationBlankAdd(GlobalContext.BranchCode, productLocations.ToArray());
+
+                    GlobalMessageBox.ShowInfomation("บันทึกข้อมูลเรียบร้อยแล้ว");
+                }
+                catch (Exception ex)
+                {
+                    GlobalMessageBox.ShowError(ex.Message);
+                }
+                finally
+                {
+                    Cursor.Current = Cursors.Default;
+                }
+            }
+        }
+
+        private void cbViewAll_CheckStateChanged(object sender, EventArgs e)
+        {
+            txtProductCodeOrBarcode.Focus();
+        }
+    }
+}

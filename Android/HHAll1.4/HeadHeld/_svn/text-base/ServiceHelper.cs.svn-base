@@ -1,0 +1,55 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Text;
+using System.ServiceModel;
+
+namespace DoHome.HandHeld.Client
+{
+    class ServiceHelper
+    {
+        static MobileServiceClient mobileServices;
+
+        public static MobileServiceClient MobileServices
+        {
+            get
+            {
+                if (mobileServices == null)
+                {
+                    var binding = MobileServiceClient.CreateDefaultBinding();
+
+                    //public static System.ServiceModel.Channels.Binding CreateDefaultBinding()
+                    //{
+                    //System.ServiceModel.Channels.CustomBinding binding = new System.ServiceModel.Channels.CustomBinding();
+                    //binding.Elements.Add(new System.ServiceModel.Channels.TextMessageEncodingBindingElement(System.ServiceModel.Channels.MessageVersion.Soap11, System.Text.Encoding.UTF8));
+                    ////binding.Elements.Add(new System.ServiceModel.Channels.HttpTransportBindingElement());
+                    //var httpTransportBindingElement = new System.ServiceModel.Channels.HttpTransportBindingElement();
+                    //httpTransportBindingElement.MaxBufferSize = int.MaxValue;
+                    //httpTransportBindingElement.MaxReceivedMessageSize = int.MaxValue;
+                    //httpTransportBindingElement.MaxBufferPoolSize = int.MaxValue;
+                    //binding.Elements.Add(httpTransportBindingElement);
+
+                    //return binding;
+                    //}
+
+                    string remoteAddress = MobileServiceClient.EndpointAddress.Uri.ToString();
+                    //remoteAddress = remoteAddress.Replace("localhost", "10.0.20.212");
+                    EndpointAddress endpoint = new EndpointAddress(remoteAddress);
+                    binding.OpenTimeout = TimeSpan.FromMinutes(15);
+                    binding.ReceiveTimeout = TimeSpan.FromMinutes(15);
+                    binding.SendTimeout = TimeSpan.FromMinutes(30);
+                    MobileServiceClient client = new MobileServiceClient(binding, endpoint);
+                    mobileServices = client;
+                }
+                return mobileServices;
+            }
+        }
+
+        public static void MobileServicesDispose()
+        {
+            if (mobileServices != null)
+                mobileServices = null;
+        }
+
+    }
+}

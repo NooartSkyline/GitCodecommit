@@ -1,0 +1,13 @@
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\DohomeAppWebService.dll.config
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\DohomeAppWebService.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\DohomeAppWebService.pdb
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\dev.lib.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\MoreLinq.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\Newtonsoft.Json.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\SourceCode.SmartObjects.Client.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\SourceCode.HostClientAPI.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\MoreLinq.xml
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\bin\Newtonsoft.Json.xml
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\obj\Debug\DohomeAppWebService.csprojResolveAssemblyReference.cache
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\obj\Debug\DohomeAppWebService.dll
+D:\ProjectDoHome\Source Code\DohomeAppWebService\DohomeAppWebService\obj\Debug\DohomeAppWebService.pdb

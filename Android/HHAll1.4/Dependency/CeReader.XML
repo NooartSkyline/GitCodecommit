@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CeReader</name>
+    </assembly>
+    <members>
+        <member name="T:CeReader.Camera">
+            <summary>
+            package the operation of the camera
+            </summary>
+        </member>
+        <member name="M:CeReader.Camera.#ctor(System.String)">
+            <summary>
+            operation declaration of the camera
+            </summary>
+            <param name="phoPath">path to save the photo</param>
+        </member>
+        <member name="M:CeReader.Camera.PreviewCamera(System.IntPtr,System.Int32)">
+            <summary>
+            preview
+            </summary>
+            <param name="hVideoWnd">the control handle of the previewing image</param>
+            <param name="resolution">for the resolution, the value differs between 0~3 (0 for 320*240，1 for 640*480，2 for 1024*768，3 for 2048*1536)</param>
+            <returns>for success, it returns TRUE，for failure, it returns FALSE</returns>
+        </member>
+        <member name="M:CeReader.Camera.takepicture(System.String)">
+            <summary>
+            photo
+            </summary>
+            <param name="fileName">file name of the new phote</param>
+            <returns>for success, it returns TRUE,for failure, it returns FALSE</returns>
+        </member>
+        <member name="M:CeReader.Camera.Free">
+            <summary>
+            release the source
+            </summary>
+        </member>
+        <member name="M:CeReader.Camera.getPicName">
+            <summary>
+            if we do not define the name of the photo, we can get it automatically by using the function
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.Camera.creatPath(System.String)">
+            <summary>
+            create the catalogue of the folder
+            </summary>
+            <param name="pathMsg">catalogue of the photo folder</param>
+        </member>
+        <member name="T:CeReader.WIFI">
+            <summary>
+            the class has packaged the power of WIFI module, you have to add the gprsdll.dll file to the device under the catalogue of window
+            </summary>
+        </member>
+        <member name="M:CeReader.WIFI.PowerOn">
+            <summary>
+            power on WIFI module
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.WIFI.PowerOff">
+            <summary>
+            power off WIFI module
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.WIFI.getValue">
+            <summary>
+            obtain the signal strength of the WIFI, -1 stands for no available AP, normal value should be from 0 to 100, the larger, the stronger strength
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CeReader.GPS">
+            <summary>
+            the class packages the power operation of the GPS module
+            </summary>
+        </member>
+        <member name="M:CeReader.GPS.PowerOn">
+            <summary>
+            GPS module powers on
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPS.PowerOff">
+            <summary>
+            GPS module powers off
+            </summary>
+        </member>
+        <member name="T:CeReader.RFID_15693">
+            <summary>
+            the class packages the operation of HF 15693
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_15693.RF_ISO15693_writeAFI(System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            write AFI to the tag, AFI（Application family identifier）
+            </summary>
+            <param name="iMode">range of the mode choice: 0 ~ 7</param>
+            <param name="pszUID">card number</param>
+            <param name="iLenUID">length of the card number</param>
+            <param name="iAFI">AFI to be written, value range: 0~255</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.RF_ISO15693_lockAFI(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            lock the AFI of the tag
+            </summary>
+            <param name="iMode">mode choose</param>
+            <param name="pszUID">card number</param>
+            <param name="iLenUID">length of the card number</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.RF_ISO15693_writeDSFID(System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            write DSFID to the tag
+            </summary>
+            <param name="iMode">value range of the mode choice: 0 ~ 7</param>
+            <param name="pszUID">card number</param>
+            <param name="iLenUID">length of the card number</param>
+            <param name="iDSFID">DSFID to be written: 0~255</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.RF_ISO15693_lockDSFID(System.Int32,System.Byte[],System.Int32)">
+            <summary>
+            lock the DSFID of the tag
+            </summary>
+            <param name="iMode">mode choose</param>
+            <param name="pszUID">card number</param>
+            <param name="iLenUID">length of the card number</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.RF_ISO15693_getSystemInformation(System.Int32,System.Byte[],System.Int32,System.Byte[])">
+            <summary>
+            obtain the information of the tag
+            </summary>
+            <param name="iMode">mode choice</param>
+            <param name="pszUID">card number</param>
+            <param name="iLenUID">length of the card number</param>
+            <param name="pszData">tag information</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.InitModule">
+            <summary>
+            module powers on, enable the port source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.freeMode">
+            <summary>
+            power off the module and release the port source
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_15693.ScanSingleTag(System.Byte[]@)">
+            <summary>
+            search，mode：no AFI for single card
+            </summary>
+            <param name="dataUid">tag information</param>
+            <returns>true stands for obtainning successfully，false stands for operating failture</returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.SearchMultipleTags(System.Collections.Generic.List{System.Byte[]}@)">
+            <summary>
+            search mode：multiple cards，no AFI
+            </summary>
+            <param name="UIDArray">tag information</param>
+            <returns>true stands for obtaining card success,false stands for operating failure</returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.getByteData(System.String,System.Byte[]@)">
+            <summary>
+            change the character to the type of byte,for the length of character that is more than 8, choose the lower 8 characters, for that less than 8 characters, add 0 to the higher position
+            </summary>
+            <param name="dataToWrite"></param>
+            <param name="data"></param>
+            <returns>true stands for operating successfully，false stands for operating failure</returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.WriteBlockByString(System.String,System.Int32)">
+            <summary>
+            write the hex character to the specified block, for the length of character that is more than 8, choose the lower 8 characters, for that less than 8 characters, add 0 to the higher position
+            </summary>
+            <param name="dataText">hex character16</param>
+            <param name="nBlock">block number</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.WriteBlock(System.Byte[],System.Int32)">
+            <summary>
+            write data to the block
+            </summary>
+            <param name="bWrite">add 0x00 ahead for the data length that is less than 4, for that larger than 4, choose the front 4 bytes</param>
+            <param name="bolck">the specified block number</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.WriteAFI(System.Byte)">
+            <summary>
+            write AFI
+            </summary>
+            <param name="iAFI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.LockAFI">
+            <summary>
+            lock AFI
+            </summary>
+            <param name="iAFI"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.WriteDSFID(System.Byte)">
+            <summary>
+            write DSFID
+            </summary>
+            <param name="iDSFID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.LockDSFID">
+            <summary>
+            lock DSFID
+            </summary>
+            <param name="iDSFID"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_15693.ReadBlockData(System.Int32,System.Byte[]@)">
+            <summary>
+            read the data of the specified block
+            </summary>
+            <param name="iblock">block number</param>
+            <param name="data">save the obtained data</param>
+            <returns></returns>
+        </member>
+        <member name="T:CeReader.GPRS">
+            <summary>
+            the class has packaged the operation of GPRS
+            </summary>
+        </member>
+        <member name="M:CeReader.GPRS.changeName(System.String,System.String)">
+            <summary>
+            更改拨号连接的名称
+            </summary>
+            <param name="oldName"></param>
+            <param name="NewName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPRS.EnumerateConnections">
+            <summary>
+            List the activities  RAS connection
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPRS.initMode">
+             <summary>
+            power on the module
+             </summary>
+        </member>
+        <member name="M:CeReader.GPRS.freeMode">
+             <summary>
+            power off the module
+             </summary>
+        </member>
+        <member name="M:CeReader.GPRS.resetMode">
+            <summary>
+            reset the module when the dialing fails, and then re-dial-up
+            </summary>
+        </member>
+        <member name="M:CeReader.GPRS.myRasDial(System.String,System.String,System.String,System.IntPtr@)">
+            <summary>
+            GPRS Connect    
+            </summary>
+            <param name="EntryName">Entry Name  </param>
+            <param name="UserName">UserName     </param>
+            <param name="Password">Pass word    </param>
+            <param name="RasConn">out Intptr    </param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPRS.DicConnectAll">
+            <summary>
+            disconnect all the active connections
+            </summary>
+        </member>
+        <member name="M:CeReader.GPRS.disConnect(System.String)">
+            <summary>
+            disconnect the specified connection that has connected
+            </summary>
+            <param name="mEntryName">the name of active connection that has established</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPRS.IsCurrentConnection(System.String)">
+            <summary>
+            judge if the connection has established
+            </summary>
+            <param name="mEntryName">the name of the dialing connection to be inquired</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.GPRS.Connect(System.String)">
+            <summary>
+            dial-up
+            </summary>
+            <param name="mEntryName">the name of the connection</param>
+            <returns></returns>
+        </member>
+        <member name="T:CeReader.RFID_LF">
+            <summary>
+            the class packages the operation of LF 
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_LF.InitModule">
+            <summary>
+            power on the module and enable the port source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_LF.freeMode">
+            <summary>
+            power off the module and release the port source
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_LF.ReadHiTag(System.Byte[]@)">
+            <summary>
+            read HiTag tag
+            </summary>
+            <param name="data_ID">tag information</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_LF.ReadIDCard(System.Byte[]@)">
+            <summary>
+            read IDCard
+            </summary>
+            <param name="data_ID">tag information</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_LF.readAnimalTags(CeReader.RFID_LF.animalCard@)">
+            <summary>
+            read animal tag
+            </summary>
+            <param name="animalCardInfo">animal tag information</param>
+            <returns></returns>
+        </member>
+        <member name="T:CeReader.RFID_LF.animalCard">
+            <summary>
+            the total information of the animal tag
+            </summary>
+        </member>
+        <member name="F:CeReader.RFID_LF.animalCard.NationalID">
+            <summary>
+            NationalID information of the animal tag
+            </summary>
+        </member>
+        <member name="F:CeReader.RFID_LF.animalCard.CountryID">
+            <summary>
+            country code of the animal tag
+            </summary>
+        </member>
+        <member name="F:CeReader.RFID_LF.animalCard.Reserved">
+            <summary>
+            Reserved information of the animal tag
+            </summary>
+        </member>
+        <member name="F:CeReader.RFID_LF.animalCard.DataBlock">
+            <summary>
+            DataBlock of the animal tag
+            </summary>
+        </member>
+        <member name="F:CeReader.RFID_LF.animalCard.AnimalFlag">
+            <summary>
+            AnimalFlag of the animal tag
+            </summary>
+        </member>
+        <member name="T:CeReader.RFID_14443A">
+            <summary>
+            the class packages the operation of HF 14443A
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_14443A.InitModule">
+            <summary>
+            power on 14443A and enable port source
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.freeMode">
+            <summary>
+            power off 14443A module and release the port source
+            </summary>
+        </member>
+        <member name="M:CeReader.RFID_14443A.M1_GetBlockData(System.String,System.Byte[]@)">
+            <summary>
+            change the character to the type of byte, for the length of characters that is more than 32, choose the lower 32, for that is less than 8, add 0 to the high position 
+            </summary>
+            <param name="dataToWrite"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.GetID(System.Byte[]@)">
+            <summary>
+            the function only obtains the ID information 
+            </summary>
+            <param name="UID">save the ID information onces scanning successfully</param>
+            <returns>true stands for scanning success，false stands for scanning failure</returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.GetTagID(System.Byte[]@,CeReader.RFID_14443A.tagType@)">
+            <summary>
+            obtain the ID information and type of the tag，
+            </summary>
+            <param name="UID">save the ID information once scanning successfully</param>
+            <param name="type">save the type information once scanning successfully</param>
+            <returns>true stands for scanning success，false stands for scanning failure </returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.VerifySector(System.Int32,System.String,CeReader.RFID_14443A.KeyType)">
+            <summary>
+            authenticate the section, the function will be used by S50 and S70 tags, it can only be written after passed the password authentication.
+            </summary>
+            <param name="sector">value area of S50 tags：0 ~ 15 ; value area of S70 tags: 0 ~ 39</param>
+            <param name="key">key：12 hexes</param>
+            <param name="keyType">key type</param>
+            <returns>true stands for authentication pasted，false stands for authentication failed</returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.M1_WriteData(System.Int32,System.Int32,System.Byte[])">
+            <summary>
+            write data to the specified block of the section，it is applicative to S50 and S70 tags, please ensure that the password of the section has been authenticated before using the function.
+            </summary>
+            <param name="sector">section number</param>
+            <param name="block">block number</param>
+            <param name="dataW">each block has a capacity of 16 bytes，if the length of dataw is less than 16 bytes,add 0; if it is more than 16 bytes, choose the 16 bytes ahead.</param>
+            <returns>true stands for operating success，false stands for operating failure</returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.M1_ReadData(System.Int32,System.Int32,System.Byte[]@)">
+            <summary>
+            read the information of the specified block and section，is applicative to S50 and S70 tags, please ensure the password of the section has been authenticated before using the function.
+            </summary>
+            <param name="sector">section number</param>
+            <param name="block">block number</param>
+            <param name="dataInBlock">send back the data of the block once operating successfully</param>
+            <returns>true stands for operating success，false stands for operating failure</returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.readUltData(System.Int32,System.Byte[]@)">
+            <summary>
+            read the specified blcock，be applicative to Urltra light tag
+            </summary>
+            <param name="nBlock">value area：0~15。</param>
+            <param name="dataInBlcok">save the obtained data, the capacity of each block is 4 bytes</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.getUltData(System.String,System.Byte[]@)">
+            <summary>
+            change the character to the type of byte, for the length of the character that is more than 8, choose the lower 8, for that is less than 8, add 0 to the high position
+            </summary>
+            <param name="dataToWrite"></param>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.RFID_14443A.data_ul_write(System.Int32,System.Byte[])">
+            <summary>
+            write data to the specified block, be applicative to Ultra light tags
+            </summary>
+            <param name="nBlock">value area：3~15, we do not recommand block 3 for those not familiar with tag</param>
+            <param name="pszData">data to be written, the capacity of each block is 4 bytes</param>
+            <returns></returns>
+        </member>
+        <member name="T:CeReader.RFID_14443A.KeyType">
+            <summary>
+            key type, applicative to S50 and S70 tags
+            </summary>
+        </member>
+        <member name="T:CeReader.RFID_14443A.tagType">
+            <summary>
+            define the type of the tag
+            </summary>
+        </member>
+        <member name="T:CeReader.Barcode">
+            <summary>
+            the class has packaged the operation of the scanning engine which is applicative to 1D barcode and 2D barcode.
+            </summary>
+        </member>
+        <member name="M:CeReader.Barcode.InitModule">
+            <summary>
+            power on the module and enable the port.For 2D scanning engine, there will be a wait for 2 to 5 seconds after the initialization before scanning
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.Barcode.FreeModule">
+            <summary>
+            power off the module and release the port source
+            </summary>
+        </member>
+        <member name="M:CeReader.Barcode.Scan">
+            <summary>
+            scan the barcode
+            </summary>
+            <returns>get the barcode information once scanning successfully,get null character string once failing</returns>
+        </member>
+        <member name="T:CeReader.Coredll">
+            <summary>
+            the class quotes the Coredll.dll function of wince bottom layer dll
+            </summary>
+        </member>
+        <member name="T:CeReader.Common">
+            <summary>
+            the class of comon has packaged the operation of the bottom layer IO
+            </summary>
+        </member>
+        <member name="M:CeReader.Common.SerialPortSwitch_Ex(System.Int32)">
+            <summary>
+             port choose, used for port switch； 
+            </summary>
+            <param name="iPort">port number，value area 0~4 （0 RFID；1 external port；2 Barcode；3 GPS）</param>
+        </member>
+        <member name="M:CeReader.Common.PortOn(System.Byte)">
+            <summary>
+            set the specified IO level higher
+            </summary>
+            <param name="nPort">IO serial number：0 for EN,1 stands for +5v output pin</param>
+            <returns></returns>
+        </member>
+        <member name="M:CeReader.Common.PortOff(System.Byte)">
+            <summary>
+            set the specified IO level lower
+            </summary>
+            <param name="nPort">IO serial number：0 for EN,1 stands for +5v output pin </param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

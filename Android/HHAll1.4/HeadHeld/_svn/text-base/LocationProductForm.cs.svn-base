@@ -1,0 +1,260 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class LocationProductForm : Form
+    {
+        private bool _offlineMode;
+
+        private int _putLevel
+        {
+            get
+            {
+                try
+                {
+                    return Utils.Int32Parse(txtPutLevel.Text);
+                }
+                catch
+                {
+                    return 1;
+                }
+            }
+        }
+
+        private int _putQty
+        {
+            get
+            {
+                try
+                {
+                    return Utils.Int32Parse(txtPutQty.Text);
+                }
+                catch
+                {
+                    return 1;
+                }
+            }
+        }
+
+        public ProductLocation ProductLocation { get; set; }
+
+        private void BindData()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                //ddlProductUnit.Items.Clear();
+                ddlProductUnit.DataSource = null;
+                ddlProductUnit.ValueMember = "Code";
+                ddlProductUnit.DisplayMember = "Name";
+                txtProductName.Text = null;
+
+                var productBarcode = GetProduct();
+
+                if (productBarcode.Length > 0)
+                {
+
+                    txtProductCodeOrBarcode.Text = null;
+                    var product = (ProductBarcode)productBarcode.GetValue(0);
+                    //ddlProductUnit.Enabled = true;
+                    if (productBarcode.Length == 1)
+                    {
+                        List<ProductUnit> productUnit = new List<ProductUnit>();
+                        productUnit.Add(new ProductUnit { ProductCode = product.ProductCode, Code = product.UnitCode, Name = product.UnitName, IsSelected = false });
+                        ddlProductUnit.DataSource = productUnit;
+                    }
+                    else
+                    {
+                        ddlProductUnit.DataSource = ServiceHelper.MobileServices.ProductUnitGetByProductCode(GlobalContext.BranchCode, product.ProductCode);
+                    }
+
+                    txtProductName.Text = product.ProductName;
+                    txtProductCode.Text = product.ProductCode;
+                    txtPutLevel.Focus();
+                }
+
+                Cursor.Current = Cursors.Default;
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                MessageBox.Show(ex.Message, "พบข้อผิดพลาด");
+            }
+        }
+
+        private Array GetProduct()
+        {
+
+            string productCodeOrBarcode = txtProductCodeOrBarcode.Text.Trim();
+
+            return ServiceHelper.MobileServices.ProductBarcodeGetByProductCodeOrBarcode2(productCodeOrBarcode, GlobalContext.BranchCode);
+        }
+
+        public LocationProductForm(bool offlineMode)
+        {
+            InitializeComponent();
+
+            _offlineMode = offlineMode;
+
+            if (_offlineMode)
+            {
+                ddlProductUnit.Enabled = false;
+            }
+        }
+
+        public LocationProductForm(ProductLocation productLocation, bool offlineMode)
+        {
+            InitializeComponent();
+
+            _offlineMode = offlineMode;
+
+            if (_offlineMode)
+            {
+                ddlProductUnit.Enabled = false;
+            }
+
+            if (productLocation != null)
+            {
+                this.ProductLocation = productLocation;
+                this.txtProductCodeOrBarcode.Text = productLocation.ProductBarcode;
+                if (!_offlineMode)
+                {
+                    this.BindData();
+                    this.ddlProductUnit.SelectedValue = productLocation.ProductUnitCode;
+                }
+                this.txtPutLevel.Text = productLocation.PutLevel.ToString();
+                this.txtPutQty.Text = productLocation.PutQuantity.ToString();
+                this.chkRequestPrintLabel.Checked = productLocation.RequestPrintLabel;
+            }
+        }
+
+        private void LocationProductForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //private void txtProductBarcode_KeyDown(object sender, KeyEventArgs e)
+        //{
+        //    if (e.KeyCode == Keys.Enter)
+        //    {
+        //        if (!_offlineMode)
+        //            this.BindData();
+
+        //        if (string.IsNullOrEmpty(txtProductCodeOrBarcode.Text))
+        //        { 
+        //        }
+        //    }
+        //}
+
+        private void LocationProductForm_Activated(object sender, EventArgs e)
+        {
+            this.Location = new Point(
+            (Screen.PrimaryScreen.WorkingArea.Width / 2) - (this.Width / 2),
+            (Screen.PrimaryScreen.WorkingArea.Height / 2) - (this.Height / 2));
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (_offlineMode)
+            {
+                this.ProductLocation = new ProductLocation();
+                this.ProductLocation.ProductBarcode = txtProductCodeOrBarcode.Text;
+                this.ProductLocation.PutLevel = this._putLevel;
+                this.ProductLocation.PutQuantity = this._putQty;
+                this.ProductLocation.RequestPrintLabel = chkRequestPrintLabel.Checked;
+                this.DialogResult = DialogResult.OK;
+            }
+            else
+            {
+                if (string.IsNullOrEmpty(txtProductCode.Text))
+                {
+                    MessageBox.Show("กรุณาระบุสินค้าก่อนทำการบันทึก", "แจ้งเตือน");
+                    return;
+                }
+
+                this.ProductLocation = new ProductLocation();
+                var unitCode = ddlProductUnit.SelectedValue.ToString();
+                this.ProductLocation.ProductCode = txtProductCode.Text;
+
+                this.ProductLocation.ProductBarcode = ServiceHelper.MobileServices.BarcodeGetByProductCode(GlobalContext.BranchCode, this.ProductLocation.ProductCode, unitCode);
+                this.ProductLocation.PutLevel = this._putLevel;
+                this.ProductLocation.PutQuantity = this._putQty;
+                this.ProductLocation.ProductUnitCode = unitCode;
+                this.ProductLocation.ProductName = txtProductName.Text;
+                this.ProductLocation.ProductUnitName = ddlProductUnit.Text;
+                this.ProductLocation.RequestPrintLabel = chkRequestPrintLabel.Checked;
+                this.DialogResult = DialogResult.OK;
+            }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            this.ProductLocation = null;
+            this.DialogResult = DialogResult.OK;
+        }
+
+        private void txtProductCodeOrBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var barcode = txtProductCodeOrBarcode.Text;
+                if (barcode.IndexOf(Convert.ToChar(".")) > -1)
+                {
+                    // if price no scan.
+                    return;
+                }
+                if (Utils.CheckLocationIsLocation(barcode))
+                {
+                    // if location no scan
+                    return;
+                }
+
+                if (!_offlineMode)
+                {
+                    this.BindData();
+                }
+                if (!string.IsNullOrEmpty(txtProductCodeOrBarcode.Text))
+                {
+                    txtPutLevel.Focus();
+                }
+            }
+        }
+
+        private void txtPutLevel_TextChanged(object sender, EventArgs e)
+        {
+            txtPutQty.Focus();
+        }
+
+        private void txtPutQty_TextChanged(object sender, EventArgs e)
+        {
+            //txtDeep.Focus();
+            //btnSave.Focus();
+            chkRequestPrintLabel.Focus();
+        }
+
+        private void txtDeep_TextChanged(object sender, EventArgs e)
+        {
+            btnSave.Focus();
+        }
+
+        private void chkRequestPrintLabel_CheckStateChanged(object sender, EventArgs e)
+        {
+            btnSave.Focus();
+        }
+
+    }
+}

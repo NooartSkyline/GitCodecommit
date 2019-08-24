@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="TestWCF.exe" version="1.0.0.0" publicKeyToken="b9f4cbb9428acbed" language="neutral" processorArchitecture="x86" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="TestWCF" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <commandLine file="TestWCF.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="TestWCF.exe" size="111616">
+      <assemblyIdentity name="TestWCF" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>7vWjVeF2XGWzD4iAsyF9Z7wYBog=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="TestWCF.exe.config" size="570">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+      <dsig:DigestValue>nohgzAVPhynrmLQ5SQBuWbJhDfQ=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=PG-UB-05\Administrator" issuerKeyHash="bec15f84452067e5d33ad0c56cb6412790ea0cd2" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>5kGRbY+dar1hLH28e8EEzabb5lU=</DigestValue></Reference></SignedInfo><SignatureValue>FZp9we9utFlkN9FqYXR6kq2y7d2J/6ZzyvlP58kG1z9OObeBF0L3SQtywYaqjV5iJHz0e6Y6OFhtmfZO5RJF8Q4GBQ9mHIEyeDlMekvLvFvMd+Vuv5f7jAJ+WfH34F2LLc3hJJ1CaCG2rCqTwtCy9lcuUqMAYR7IGDN+GZjc+rU=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>xiLNTrtRg4C+LElVV2uiSp8pexkAg3Jq+aWqhyaszI15ImNu7kaNRi1uPX5kamZotn880g3+GExo9h/16O9w57lewBRMJPmrel9wxwqH+y1CdwBc6aPkv/uySn1dq5RmP4KhAzZaWLfB4jii/nUZsMTccE8RjenOEgZjdPyzhe8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="55e6dba6cd04c17bbc7d2c61bd6a9d8f6d9141e6" Description="" Url=""><as:assemblyIdentity name="TestWCF.exe" version="1.0.0.0" publicKeyToken="b9f4cbb9428acbed" language="neutral" processorArchitecture="x86" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PG-UB-05\Administrator</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>M6TNzJFUflejigFNcWYDXviVlNI=</DigestValue></Reference></SignedInfo><SignatureValue>f+Qo/ZgWoIyqEqHbNlP6YDGx6neR7liSyhj6IusPR6rcm2Sfwl5CinU7IfcQLjNTW0Bi9rze1GW/15SVcvDo0IDpVF6lHya0eGLU/gXX11gSHQnuC/S0bTGmqFICf0bXqDyStLOItxUBiqkcRmVBO5ourKX+zoQVZcdcmUaPrj0=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>xiLNTrtRg4C+LElVV2uiSp8pexkAg3Jq+aWqhyaszI15ImNu7kaNRi1uPX5kamZotn880g3+GExo9h/16O9w57lewBRMJPmrel9wxwqH+y1CdwBc6aPkv/uySn1dq5RmP4KhAzZaWLfB4jii/nUZsMTccE8RjenOEgZjdPyzhe8=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB8TCCAVqgAwIBAgIQKMFLy1s0boVGBbo6TAHuEzANBgkqhkiG9w0BAQUFADA3MTUwMwYDVQQDHiwAUABHAC0AVQBCAC0AMAA1AFwAQQBkAG0AaQBuAGkAcwB0AHIAYQB0AG8AcjAeFw0xNDA0MDMxMTU0MDlaFw0xNTA0MDMxNzU0MDlaMDcxNTAzBgNVBAMeLABQAEcALQBVAEIALQAwADUAXABBAGQAbQBpAG4AaQBzAHQAcgBhAHQAbwByMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDGIs1Ou1GDgL4sSVVXa6JKnyl7GQCDcmr5paqHJqzMjXkiY27uRo1GLW49fmRqZmi2fzzSDf4YTGj2H/Xo73DnuV7AFEwk+at6X3DHCof7LUJ3AFzpo+S/+7JKfV2rlGY/gqEDNlpYt8HiOKL+dRmwxNxwTxGN6c4SBmN0/LOF7wIDAQABMA0GCSqGSIb3DQEBBQUAA4GBAJo5ZXXqImCYH8gA271xDZCYWp46tjSJCwUZuShvkBJbiDKhIBjr/NnMjGMNOUxTfRTfU+rY9MLdoM5dQdsVHZrTkNVQ+dw0ie7+8EamdeCqU5R1fZZwTT7Vw8hrE8npFNmoKLPlr32RWbfEGpxwSCTAZCPYaCvKdvg5VkwnHtRd</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

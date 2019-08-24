@@ -1,0 +1,79 @@
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\MobileService.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\MobileService.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\BLToolkit.4.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\EnDeCode.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\log4net.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAP.Connector.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPGetShipmentForPC.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPProxy.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPProxyII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPProxyIII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPProxyIV.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SetPassword.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\obj\Debug\DoHome.MobileService.Properties.Resources.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\obj\Debug\MobileService.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\obj\Debug\MobileService.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\obj\Debug\MobileService.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\obj\Debug\MobileService.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MobileService\bin\SAPProxyAssignloc.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\MobileService.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\MobileService.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\BLToolkit.4.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\EnDeCode.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\log4net.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SAP.Connector.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SAPProxy.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SAPProxyAssignloc.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SAPProxyII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SAPProxyIII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\bin\SetPassword.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\obj\Debug\DoHome.MobileService.Properties.Resources.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\MobileService.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\MobileService.pdb
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\BLToolkit.4.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\EnDeCode.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\log4net.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\SAP.Connector.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\SAPProxy.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\SAPProxyII.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\SAPProxyIII.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\bin\SetPassword.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\obj\Debug\DoHome.MobileService.Properties.Resources.resources
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.dll
+D:\LogOnRMoonchai\WebService\WebApiWCF\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\MobileService.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\MobileService.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\BLToolkit.4.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\EnDeCode.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\log4net.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\SAP.Connector.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\SAPProxy.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\SAPProxyII.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\SAPProxyIII.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\bin\SetPassword.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\obj\Debug\DoHome.MobileService.Properties.Resources.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\MobileService.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\MobileService.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\BLToolkit.4.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\EnDeCode.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\log4net.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\SAP.Connector.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\SAPProxy.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\SAPProxyII.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\SAPProxyIII.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\bin\SetPassword.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\obj\Debug\DoHome.MobileService.Properties.Resources.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.dll
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.4\MobileServices - 1.2\src\MobileService\obj\Debug\MobileService.pdb

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\@Project\MobileServices\src\MobileService\Publish" deleteExistingFiles="False" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="True" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="12/29/2011 13:04:04" />
+    <file relUrl="bin/SAP.Connector.dll" publishTime="09/05/2004 21:11:28" />
+    <file relUrl="bin/SetPassword.dll" publishTime="03/02/2006 09:07:16" />
+    <file relUrl="bin/MobileService.pdb" publishTime="12/21/2011 16:53:55" />
+    <file relUrl="bin/BLToolkit.4.dll" publishTime="10/14/2011 09:39:02" />
+    <file relUrl="bin/SAPProxyII.dll" publishTime="11/28/2010 15:43:10" />
+    <file relUrl="bin/SAPProxy.dll" publishTime="12/04/2009 08:30:04" />
+    <file relUrl="MobileService.svc" publishTime="07/05/2011 09:20:15" />
+    <file relUrl="bin/log4net.dll" publishTime="10/06/2011 19:44:20" />
+    <file relUrl="bin/EnDeCode.dll" publishTime="02/18/2006 11:58:26" />
+    <file relUrl="bin/sapnco.dll" publishTime="11/08/2011 05:40:18" />
+    <file relUrl="bin/SAPProxyIII.dll" publishTime="07/22/2011 10:24:44" />
+    <file relUrl="bin/sapnco_utils.dll" publishTime="11/08/2011 05:40:16" />
+    <file relUrl="bin/MobileService.dll" publishTime="12/21/2011 16:53:55" />
+  </publishProfile>
+</publishData>

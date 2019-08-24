@@ -1,0 +1,931 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sql>
+  <query id="1">
+    SELECT TOP 10 DOCDATE,COUNT(*) AS DATAQUANTITY
+    FROM TBHANDHELDCOUNTER_QUICKSCAN
+    WHERE	CREATEUSER = @CREATEUSER
+    GROUP BY DOCDATE ORDER BY DOCDATE DESC
+  </query>
+  <query id="2">
+    IF (EXISTS(SELECT [PRODUCTCODE] FROM [TBHANDHELDCOUNTER_QUICKSCAN] WHERE [LOCATION]=@LOCATION AND [DOCDATE]=@DOCDATE AND [BRANCHCODE] = @BRANCHCODE AND [WAREHOUSE] = @WAREHOUSE AND [ROWORDER] = @ROWORDER AND [CREATEUSER] = @CREATEUSER))
+    BEGIN
+    UPDATE [TBHANDHELDCOUNTER_QUICKSCAN]
+    SET [PRODUCTCODE] = @PRODUCTCODE,
+    [PRODUCTNAME] = @PRODUCTNAME,
+    [UNITCODE] = @UNITCODE,
+    [BARCODE] = @BARCODE,
+    [STATUS] = @STATUS,
+    [OFFICERID] = @OFFICERID
+    WHERE [LOCATION] = @LOCATION
+    AND [DOCDATE] = @DOCDATE
+    AND [BRANCHCODE] = @BRANCHCODE
+    AND [WAREHOUSE] = @WAREHOUSE
+    AND [ROWORDER] = @ROWORDER
+    AND [CREATEUSER] = @CREATEUSER
+    END
+    ELSE
+    BEGIN
+    INSERT INTO [TBHANDHELDCOUNTER_QUICKSCAN]
+    ([BRANCHCODE]
+    ,[WAREHOUSE]
+    ,[LOCATION]
+    ,[DOCDATE]
+    ,[ROWORDER]
+    ,[PRODUCTCODE]
+    ,[PRODUCTNAME]
+    ,[UNITCODE]
+    ,[BARCODE]
+    ,[STATUS]
+    ,[OFFICERID]
+    ,[CREATEUSER]
+    ,[DepartmentCode]
+    ,[DepartmentName])
+    VALUES
+    (@BRANCHCODE
+    ,@WAREHOUSE
+    ,@LOCATION
+    ,@DOCDATE
+    ,@ROWORDER
+    ,@PRODUCTCODE
+    ,@PRODUCTNAME
+    ,@UNITCODE
+    ,@BARCODE
+    ,@STATUS
+    ,@OFFICERID
+    ,@CREATEUSER
+    ,@DepartmentCode
+    ,@DepartmentName)
+    END
+  </query>
+  <query id="3">
+    SELECT Count(Barcode) cnt
+    FROM TBHANDHELDCOUNTER_QUICKSCAN
+    WHERE Location = @LocationCode AND CreateUser = @CreatedBy AND CONVERT(VARCHAR(8),DocDate,112) = CONVERT(VARCHAR(8),GETDATE(),112)
+  </query>
+  <query id="4">
+    SELECT Barcode,ProductCode,UnitCode,[Status]
+    ,(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName
+    ,(SELECT MyName FROM TBUnit WHERE Code = b.UnitCode) UnitName
+    FROM TBBarcode b
+    WHERE Barcode = @Barcode
+    AND [Status] = 1
+  </query>
+  <query  id="5">
+    SELECT  *
+    FROM    TBWAREHOUSE
+    WHERE Code = @Code
+    AND BranchCode = @BranchCode
+  </query>
+  <query id="6">
+    SELECT *
+    FROM TBWareHouse
+    WHERE [Status] = 1
+    AND BranchCode = @BranchCode;
+  </query>
+  <query id="7">
+    DELETE
+    FROM   [dbo].[TBHANDHELDCOUNTER_BLANKBOX]
+    WHERE  [DOCDATE] = @DOCDATE
+    AND [PRODUCTCODE] = @PRODUCTCODE
+    AND [UNITCODE] = @UNITCODE
+  </query>
+  <query id="8">
+    INSERT INTO [dbo].[TBHANDHELDCOUNTER_BLANKBOX] ([DOCDATE], [PRODUCTCODE], [ROWORDER], [UNITCODE], [PRODUCTNAME], [WAREHOUSE], [QTY], [LOCATION])
+    SELECT @DOCDATE, @PRODUCTCODE, @ROWORDER, @UNITCODE, @PRODUCTNAME, @WAREHOUSE, @QTY, @LOCATION
+  </query>
+  <query id="9">
+    SELECT  a.Code,a.MyName,CASE WHEN Pwd IS NULL THEN '' ELSE Pwd END PWD
+    FROM    TBUser a INNER JOIN TBUserBranch b
+    ON b.UserCode = a.Code
+    WHERE	b.BranchCode = @BranchCode
+    AND [Status] = 1
+    <!--SELECT Code,MyName,CASE WHEN Pwd IS NULL THEN '' ELSE Pwd END PWD
+    FROM    TBUser
+    WHERE	 [Status] = 1-->
+  </query>
+  <query id="10">
+    SELECT  Code,MyName
+    FROM    TBUserBranch ub INNER JOIN TBUser u
+    ON ub.UserCode = u.Code
+    WHERE	BranchCode = @BranchCode
+    AND [Status] = 1
+  </query>
+  <query id="11">
+    SELECT	p.Code BARCODE
+    ,p.Code ProductCode
+    ,p.Nameth ProductName
+    ,p.StockUnit UNITCODE
+    ,u.MyName UNITNAME
+    FROM	  TBProduct p INNER JOIN TBUnit u
+    ON p.StockUnit = u.Code
+    WHERE	  p.[Status] = 1 AND p.Code = @ProductCode
+  </query>
+  <query id="12">
+    SELECT TOP 10 DOCDATE,COUNT(*) AS DATAQUANTITY
+    FROM TBHANDHELDLOCATION
+    WHERE	UserID = @UserID
+    GROUP BY DOCDATE ORDER BY DOCDATE DESC
+  </query>
+  <!--<query id="13">
+    INSERT INTO [dbo].[TBHANDHELDLOCATION] ([DOCNO], [ROWORDER], [DOCDATE], [CREATEDATE], [PRODUCTCODE], [PRODUCTNAME], [WAREHOUSE], [LOCATION], [UNITCODE], [UNITNAME], [BARCODE], [SYS_PRICE], [POS_PRICE], [REMARK], [USERID], [OFFICERID], [RES_LOCATION], [RES_PRICE])
+    SELECT @DOCNO, @ROWORDER, @DOCDATE, @CREATEDATE, @PRODUCTCODE, @PRODUCTNAME, @WAREHOUSE, @LOCATION, @UNITCODE, @UNITNAME, @BARCODE, @SYS_PRICE, @POS_PRICE, @REMARK, @USERID, @OFFICERID, @RES_LOCATION, @RES_PRICE
+  </query>-->
+  <query id="13">
+    <!--SELECT  TOP 1 RIGHT(DOCNO,4)
+    FROM    dbo.TBHANDHELDLOCATION
+    WHERE	  DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'CK'
+    ORDER BY CreateDate DESC-->
+    SELECT  ISNULL(MAX(CONVERT(INT, RIGHT(DOCNO,4))),0)
+    FROM    dbo.TBHANDHELDLOCATION
+    WHERE	  DocDate ={fn curdate()}
+    AND		LEFT(DocNo,2) = 'CK'
+  </query>
+  <query id="14">
+    SELECT CASE WHEN
+    EXISTS (
+    SELECT	*
+    FROM	TBHANDHELDLOCATION
+    WHERE	DocDate = {fn curdate()}
+    AND Warehouse = @WarehouseCode
+    AND Location = @LocationCode
+    ) THEN 1 ELSE 0 END
+  </query>
+  <query id="15">
+    SELECT  Barcode
+    ,ProductCode
+    ,(SELECT NameTH FROM TBProduct WHERE Code = ProductCode) ProductName
+    ,UnitCode
+    ,(SELECT MyName FROM TBUnit WHERE Code = UnitCode) UnitName
+    FROM    TBBarcode
+    WHERE	Barcode = @Barcode AND [Status] = 1
+  </query>
+  <query id="16">
+    IF EXISTS(SELECT  Code ProductCode FROM TBProduct WHERE Code = @ProductOrBarcode AND [Status] = 1)
+    BEGIN
+    SELECT  Code ProductCode FROM TBProduct WHERE Code = @ProductOrBarcode AND [Status] = 1
+    END
+    ELSE
+    BEGIN
+    SELECT TOP 1 ProductCode FROM TBBarcode WHERE Barcode = @ProductOrBarcode AND [Status] = 1
+    END
+  </query>
+  <query id="17">
+    SELECT  ISNULL(MAX(CONVERT(INT, RIGHT(DOCNO,4))),0)
+    FROM    TBHANDHELDCOUNTER_HOLD
+    WHERE	DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'HL'
+  </query>
+  <query id="18">
+    SELECT  TOP 1 UnitRate
+    FROM    TBProductUnit
+    WHERE	  ProductCode = @ProductCode
+    AND UnitCode = @UnitCode
+  </query>
+  <query id="19">
+    SELECT  *
+    FROM	  TBHANDHELDCOUNTER_HOLD
+    WHERE	  DocNo = @DocumentNo
+  </query>
+  <query id="20">
+    <!--SELECT  DocNo,MAX(CreateDate) CreateDate,Remark-->
+    SELECT  DocNo,MAX(CreateDate) CreateDate
+    FROM	TBHANDHELDCOUNTER_HOLD
+    WHERE	DocDate = {fn Curdate()}
+    AND [Status] = 0
+    GROUP BY DocNo
+  </query>
+  <query id="21">
+    <!--SELECT	TOP 10 DOCDATE,COUNT(*) AS DATAQUANTITY-->
+    SELECT	TOP 10 Convert(Varchar(10),DOCDATE,111) DocDate,COUNT(*) AS DATAQUANTITY
+    FROM	TBHANDHELDCOUNTER
+    WHERE	CreateUser = @CreateUser
+    GROUP BY DOCDATE
+    ORDER BY DOCDATE DESC
+  </query>
+  <query id="22">
+    SELECT	DISTINCT ProductCode
+    FROM    TBHANDHELDCOUNTER_HOLD
+    WHERE	DocNo = @DocumentNo
+  </query>
+  <query id="23">
+    INSERT INTO [dbo].[TBHANDHELDCOUNTER] ([DOCNO], [ROWORDER], [DOCDATE], [BRANCHCODE], [WAREHOUSE], [PRODUCTCODE], [PRODUCTNAME], [UNITCODE], [UNITNAME], [UNITRATE], [LOCATION], [QUANTITY], [BALANCEQTY], [SAPDOCNO], [OFFICERID], [CREATEUSER], [ISTRUE])
+    SELECT @DOCNO, @ROWORDER, @DOCDATE, @BRANCHCODE, @WAREHOUSE, @PRODUCTCODE, @PRODUCTNAME, @UNITCODE, @UNITNAME, @UNITRATE, @LOCATION, @QUANTITY, @BALANCEQTY, @SAPDOCNO, @OFFICERID, @CREATEUSER, @ISTRUE
+  </query>
+  <query id="24">
+    UPDATE TBHANDHELDCOUNTER_HOLD SET [Status] = 1 WHERE DocNo = @DocumentNo;
+  </query>
+  <query id="25">
+    INSERT INTO TBHANDHELDCOUNTER_HEADER(docno, docdate, productcode, productname, warehouse, branchcode, countqty, balanceqty)
+    SELECT docno, docdate, productcode, productname, warehouse, branchcode, ISNULL(SUM(quantity*unitrate),0.00) AS qty, ISNULL(MAX(balanceqty*unitrate),0.00) AS balance
+    FROM tbhandheldcounter
+    WHERE docno = @DocumentNo
+    GROUP BY docno, docdate, productcode, productname, warehouse, branchcode
+  </query>
+  <query id="26">
+    SELECT  MAX(RIGHT(DOCNO,4))
+    FROM    TBHANDHELDCOUNTER
+    WHERE	DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'CT'
+  </query>
+  <query id="27">
+    <!--IF(EXISTS(SELECT Barcode FROM TBBarcode WHERE Barcode = @ProductCode AND [Status] = 1))
+    BEGIN
+    SELECT  ProductCode,Barcode,b.UnitCode,MyName UnitName
+    ,(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName
+    FROM    TBBarcode b INNER JOIN TBUnit u
+    ON b.UnitCode = u.Code
+    WHERE	Barcode = @ProductCode
+    AND b.[Status] = 1
+    AND u.[Status] = 1
+    END
+    ELSE
+    BEGIN
+    SELECT  Code ProductCode
+    ,(SELECT MAX(Barcode) FROM TBBarcode WHERE ProductCode = Code AND UnitCode = StockUnit AND [Status]=1) Barcode
+    ,NameTh ProductName
+    ,StockUnit UnitCode
+    ,(SELECT MyName FROM TBUnit WHERE Code = StockUnit AND [Status]=1) UnitName
+    FROM    TBProduct
+    WHERE	Code = @ProductCode
+    END-->
+    IF(EXISTS(SELECT Barcode FROM TBBarcode WHERE Barcode = @ProductCode AND [Status] = 1))
+    BEGIN
+    SELECT  ProductCode,Barcode,b.UnitCode,MyName UnitName
+    ,(SELECT NameTh FROM TBProduct WHERE Code = b.ProductCode) ProductName
+    FROM    TBBarcode b INNER JOIN TBUnit u
+    ON b.UnitCode = u.Code
+    WHERE	Barcode = @ProductCode
+    AND b.[Status] = 1
+    AND u.[Status] = 1
+    AND Barcode NOT LIKE '0%'
+    END
+    ELSE
+    BEGIN
+    SELECT  Code ProductCode
+    ,(SELECT MAX(Barcode) FROM TBBarcode WHERE ProductCode = Code AND UnitCode = StockUnit AND [Status]=1 AND Barcode NOT LIKE '0%') Barcode
+    ,NameTh ProductName
+    ,StockUnit UnitCode
+    ,(SELECT MyName FROM TBUnit WHERE Code = StockUnit AND [Status]=1) UnitName
+    FROM    TBProduct
+    WHERE	Code = @ProductCode
+    END
+  </query>
+  <query id="28">
+    INSERT INTO [dbo].[TBHANDHELDCOUNTER_CHECKPRODUCT] ([DOCNO], [LOCATION], [DOCDATE], [USERID], [OFFICERID], [CHKAREANO])
+    SELECT @DOCNO, @LOCATION, @DOCDATE, @USERID, @OFFICERID, @CHKAREANO
+  </query>
+  <query id="29">
+    SELECT  MAX(RIGHT(DOCNO,4))
+    FROM    TBHANDHELDCOUNTER_CHECKPRODUCT
+    WHERE	DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'CK'
+  </query>
+  <query id="30">
+    SELECT  MAX(RIGHT(DOCNO,4))
+    FROM    TBHANDHELDCOUNTER_MAIN_HOLDBILL
+    WHERE	DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'HL'
+  </query>
+  <query id="31">
+    SELECT  *
+    FROM    TBHANDHELDCOUNTER_MAIN_HOLDBILL
+    WHERE	DocNo = @DocumentNo
+  </query>
+  <query id="32">
+    SELECT DocNo,MAX(IBLNR) IBLNR
+    FROM TBHANDHELDCOUNTER_MAIN_HOLDBILL
+    WHERE Docdate={fn curdate()}
+    AND [Status] = ''
+    AND CreateUser = @UserCode
+    GROUP BY docno
+  </query>
+  <query id="33">
+    UPDATE TBHANDHELDCOUNTER_MAIN_HOLDBILL SET [Status] = 'CLOSEED' WHERE DocNo = @DocumentNo
+  </query>
+  <query id="34">
+    DELETE TBHANDHELDCOUNTER_MAIN_HOLDBILL WHERE DocNo = @DocumentNo
+  </query>
+  <query id="35">
+    <!--SELECT	DOCDATE,COUNT(*) AS DATAQUANTITY
+    FROM	TBHANDHELDCOUNTER_CHECKPRODUCT
+    WHERE	UserID = @CreateUser
+    GROUP BY DOCDATE
+    ORDER BY DOCDATE DESC-->
+    SELECT	CheckDate DOCDATE,COUNT(*) AS DATAQUANTITY
+    FROM	LocationCheck
+    WHERE	CheckerCode = @CreateUser
+    GROUP BY CheckDate
+    ORDER BY CheckDate DESC
+  </query>
+  <query id="36">
+    SELECT *,CASE [Status] WHEN 'FOUND' THEN N'พบ' ELSE N'ไม่พบ' END StatusText
+    ,(SELECT Max(MyName) FROM TBUNIT where Code = UnitCode) UNITNAME
+    FROM TBHANDHELDCOUNTER_QUICKSCAN
+    WHERE CONVERT(VARCHAR(8),DocDate,112) = CONVERT(VARCHAR(8),GETDATE(),112)
+    AND BranchCode = @BranchCode
+    AND Warehouse = @WarehouseCode
+    AND Location = @LocationCode
+    AND CreateUser = @UserCode
+  </query>
+  <query id="37">
+    DELETE FROM TBHANDHELDCOUNTER_QUICKSCAN
+    WHERE CONVERT(VARCHAR(8),DocDate,112) = CONVERT(VARCHAR(8),GETDATE(),112)
+    AND BranchCode = @BranchCode
+    AND Warehouse = @WarehouseCode
+    AND Location = @LocationCode
+    AND CreateUser = @UserCode
+    AND ProductCode = @ProductCode
+    AND UnitCode = @UnitCode
+    AND RowOrder = @RowOrder
+  </query>
+  <query id="38">
+    UPDATE TBHANDHELDCOUNTER_QUICKSCAN SET RowOrder = @RowOrder
+    WHERE CONVERT(VARCHAR(8),DocDate,112) = CONVERT(VARCHAR(8),GETDATE(),112)
+    AND BranchCode = @BranchCode
+    AND Warehouse = @WarehouseCode
+    AND Location = @LocationCode
+    AND CreateUser = @UserCode
+    AND ProductCode = @ProductCode
+    AND UnitCode = @UnitCode
+  </query>
+  <query id="39">
+    SELECT  *
+    FROM    TBHANDHELDLOCATION
+    WHERE  CONVERT(VARCHAR(8),DocDate,112) = CONVERT(VARCHAR(8),GETDATE(),112)
+    AND Location = @LocationCode
+    AND OfficerID = @EmployeeCode
+  </query>
+  <query id="40">
+    DELETE
+    FROM    TBHANDHELDLOCATION
+    WHERE   DocNo = @DocumentNo
+  </query>
+  <query id="41">
+    IF(NOT EXISTS(SELECT * FROM ProductLocation WHERE LocationCode = @LocationCode AND WarehouseCode = @WarehouseCode))
+    BEGIN
+    INSERT INTO ProductLocation (LocationCode,WarehouseCode,UpdatedOn) VALUES (@LocationCode,@WarehouseCode,GETDATE())
+    END
+  </query>
+  <query id="42">
+    SELECT * FROM ProductLocation WHERE WarehouseCode = @WarehouseCode
+  </query>
+  <query id="43">
+    SELECT * FROM ProductLocation WHERE LocationCode = @LocationCode AND WarehouseCode = @WarehouseCode
+  </query>
+  <query id="44">
+   /* SELECT m.MenuID MenuName
+    FROM TBUser u
+    INNER JOIN TBPermission p ON u.UserGroup = p.GroupID
+    INNER JOIN TBMenu m ON p.MenuID = m.MenuID
+    WHERE Menu_Sel = 1
+    AND u.Code= @UserCode
+  </query>
+  <query id="45">
+    SELECT * FROM ProductLocation WHERE WarehouseCode = @WarehouseCode
+  </query>
+  <query id="46">
+    SELECT * FROM ProductLocation WHERE BranchCode = @BranchCode
+  </query>
+  <query id="47">
+    <!--SELECT  *
+    FROM    TBSALEPRICE q1 INNER JOIN
+    (
+    SELECT  MAX(BeginDate) BeginDate,MIN(EndDate) EndDate
+    FROM    TBSALEPRICE
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @UnitCode
+    AND	GETDATE() BETWEEN BeginDate AND EndDate
+    ) q2 ON q1.BeginDate = q2.BeginDate AND q1.EndDate = q2.EndDate
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @UnitCode-->
+    SELECT  TOP 1 *
+    FROM    TBSALEPRICE
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @UnitCode AND PaymentCode='0000'
+    AND {fn curdate()} BETWEEN BeginDate AND EndDate
+    ORDER BY CreateDate DESC
+  </query>
+  <query id="48">
+    SELECT  *
+    FROM    TBSALEPRICE
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @UnitCode
+  </query>
+  <query id="49">
+    SELECT  lcpa.*
+    FROM    LocationCheckPeriodAgenda lcpa INNER JOIN LocationCheckPeriod lcp
+    ON lcpa.PeriodId = lcp.Id
+    WHERE lcp.Published = 1
+  </query>
+  <query id="50">
+    SELECT  *
+    FROM    TBUser
+    WHERE	Code = @UserCode
+  </query>
+  <query id="51">
+    <!--SELECT  TOP 1 RIGHT(DOCNO,4)
+    FROM    [TBPRINTLABEL_LOCATION]
+    WHERE	  DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'PL'
+    ORDER BY CreateDate DESC-->
+    SELECT  ISNULL(MAX(CONVERT(INT, RIGHT(DOCNO,4))),0)
+    FROM    [TBPRINTLABEL_LOCATION]
+    WHERE	  DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'PL'
+  </query>
+  <query id="52">
+    INSERT INTO [TBPRINTLABEL_LOCATION] (DocNo,DocDate,CreateDate,CreateUser,Remark) VALUES (@DocumentNo,{fn CurDate()},GetDate(),@CreatedBy,@Remark)
+  </query>
+  <query id="53">
+    INSERT INTO [TBPRINTLABELSUB_LOCATION]
+    ([DOCNO]
+    ,[DOCDATE]
+    ,[ROWORDER]
+    ,[WAREHOUSE]
+    ,[LOCATION]
+    ,[SCANLOCATION]
+    ,[LOCTYPE]
+    ,[LOCZONE]
+    ,[LOCSHELF]
+    ,[LOCSIDE]
+    ,[LOCHOLD]
+    ,[LOCCLASS]
+    ,[PRODUCTCODE]
+    ,[PRODUCTNAME]
+    ,[UNITCODE]
+    ,[UNITNAME]
+    ,[ISHANG]
+    ,[Remark])
+    VALUES
+    (@DocumentNo
+    ,{fn CurDate()}
+    ,@DisplayOrder
+    ,@WarehouseCode
+    ,@LocationCode
+    ,@LocationCode
+    ,@LocationType
+    ,@LocationZone
+    ,@LocationShelf
+    ,@LocationSide
+    ,@LocationHold
+    ,@LocationClass
+    ,@ProductCode
+    ,@ProductName
+    ,@UnitCode
+    ,@UnitName
+    ,''
+    ,@Remark)
+  </query>
+  <query id="54">
+    IF EXISTS(SELECT  ProductCode FROM TBBarcode WHERE Barcode = @ProductOrBarcode AND [Status] = 1)
+    BEGIN
+    SELECT  TOP 1 ProductCode FROM TBBarcode WHERE Barcode = @ProductOrBarcode AND [Status] = 1
+    END
+    ELSE
+    BEGIN
+    SELECT TOP 1 Code ProductCode FROM TBProduct WHERE Code = @ProductOrBarcode AND [Status] = 1
+    END
+  </query>
+  <query id="55">
+    SELECT  m.DocNo,MAX(Location) LocationCode,COUNT(*) QuantityOfLabel
+    FROM    TBPRINTLABEL_LOCATION m INNER JOIN TBPRINTLABELSUB_LOCATION d
+    ON m.DocNo = d.DocNo
+    WHERE	CreateUser = @UserCode
+    AND m.DocDate = {fn Curdate()}
+    GROUP BY m.DocNo
+  </query>
+  <query id="56">
+    DELETE FROM [LocationCheckDetail] WHERE LocationCheckId = @LocationCheckId
+  </query>
+  <query id="57">
+    UPDATE [LocationCheck]
+    SET OfficerCode=@OfficerCode,OfficerName=@OfficerName,Remark=@Remark
+    WHERE Id = @Id
+  </query>
+  <query id="58">
+    UPDATE [LocationCheckDetail]
+    SET AgendaValue=@AgendaValue,IsChecked=@IsChecked
+    WHERE Id = @Id
+  </query>
+  <query id="59">
+    IF(EXISTS(SELECT BARCODE FROM TBBARCODE WHERE BARCODE = @ProductCode AND [STATUS] = 1))
+    BEGIN
+    SELECT  ProductCode,Barcode,b.UnitCode,MYNAME UNITNAME
+    ,(SELECT NAMETH FROM TBPRODUCT WHERE CODE = b.ProductCode) PRODUCTNAME
+    ,(SELECT MAX(UNITRATE) FROM TBPRODUCTUNIT WHERE UNITCODE = b.UnitCode) UnitRate
+    FROM    TBBARCODE b INNER JOIN TBUNIT u
+    ON b.UnitCode = u.Code
+    WHERE	BARCODE = @ProductCode
+    AND b.[Status] = 1
+    AND u.[Status] = 1
+    END
+    ELSE
+    BEGIN
+    SELECT  CODE ProductCode
+    ,ISNULL((SELECT MAX(BARCODE) FROM TBBARCODE WHERE PRODUCTCODE = CODE AND UNITCODE = STOCKUNIT AND [STATUS]=1),'') Barcode
+    ,NAMETH PRODUCTNAME
+    ,STOCKUNIT UnitCode
+    ,(SELECT MYNAME FROM TBUNIT WHERE CODE = STOCKUNIT AND [STATUS]=1) UNITNAME
+    ,(SELECT MAX(UNITRATE) FROM TBPRODUCTUNIT WHERE UNITCODE = STOCKUNIT) UnitRate
+    FROM    TBPRODUCT
+    WHERE	CODE = @ProductCode
+    END
+  </query>
+  <query id="60">
+    INSERT INTO [dbo].[TBHANDHELD_PO] ([ID], [BRANCHCODE], [PRODUCTCODE], [PRODUCTNAME], [UNITCODE], [BARCODE], [QUANTITY], [CREATEDATE], [CREATETIME], [CREATEUSERCODE], [CREATEUSERNAME])
+    SELECT @ID, @BRANCHCODE, @PRODUCTCODE, @PRODUCTNAME, @UNITCODE, @BARCODE, @QUANTITY, @CREATEDATE, @CREATETIME, @CREATEUSERCODE, @CREATEUSERNAME
+  </query>
+  <query id="61">
+    SELECT b.ProductCode
+    ,(SELECT MAX(NameTH) FROM TBProduct WHERE Code = b.ProductCode) ProductName
+    ,b.Barcode
+    ,b.UnitCode
+    ,(SELECT MAX(MyName) FROM TBUnit WHERE Code = b.UnitCode) UnitName
+    ,(SELECT UnitRate FROM TBProductUnit WHERE ProductCode = b.ProductCode AND UnitCode = b.UnitCode) UnitRate
+    FROM    TBBarcode b
+    WHERE	b.[Status] = 1
+    AND b.Barcode = @ProductCode
+    AND b.Barcode NOT LIKE '0%'
+    UNION
+    SELECT b.ProductCode
+    ,(SELECT MAX(NameTH) FROM TBProduct WHERE Code = b.ProductCode) ProductName
+    ,b.Barcode
+    ,b.UnitCode
+    ,(SELECT MAX(MyName) FROM TBUnit WHERE Code = b.UnitCode) UnitName
+    ,(SELECT UnitRate FROM TBProductUnit WHERE ProductCode = b.ProductCode AND UnitCode = b.UnitCode) UnitRate
+    FROM    TBBarcode b
+    WHERE	b.[Status] = 1
+    AND b.ProductCode = @ProductCode
+    AND b.Barcode NOT LIKE '0%'
+    UNION
+    SELECT p.Code ProductCode
+    ,NameTH ProductName
+    ,'' Barcode
+    ,p.StockUnit UnitCode
+    ,(SELECT MAX(MyName) FROM TBUnit WHERE Code = p.StockUnit) UnitName
+    ,(SELECT UnitRate FROM TBProductUnit WHERE ProductCode = p.Code AND UnitCode = p.StockUnit) UnitRate
+    FROM    TBPRODUCT p
+    WHERE	p.[Status] = 1
+    AND p.Code = @ProductCode
+    AND p.Code NOT IN (SELECT PRODUCTCODE FROM TBBARCODE WHERE [STATUS] = 1 AND PRODUCTCODE = @ProductCode AND BARCODE NOT LIKE '0%')
+  </query>
+  <query id="62">
+    SELECT *
+    FROM [ProductInLocation]
+    WHERE LocationCode = @LocationCode
+    AND WarehouseCode = @WarehouseCode
+    ORDER BY CONVERT(INT,DisplayOrder)
+  </query>
+  <query id="63">
+    DELETE
+    FROM [ProductInLocation]
+    WHERE LocationCode = @LocationCode
+    AND WarehouseCode = @WarehouseCode
+  </query>
+  <query id="64">
+    INSERT INTO [dbo].[ProductInLocation] ([ProductCode],[Uom],[LocationCode],[WarehouseCode],[MaxStock],[PutLevel],[PutQuantity],[DisplayOrder],UpdatedOn)
+    VALUES (RIGHT(@ProductCode,8),@Uom,@LocationCode,@WarehouseCode,@MaxStock,@PutLevel,@PutQuantity,@DisplayOrder,GETDATE());
+  </query>
+  <query id="65">
+    SELECT  ProductCode
+    ,(SELECT NameTh FROM TBProduct WHERE Code=ProductCode) ProductName
+    ,Barcode,UnitCode Uom
+    ,(SELECT MyName FROM TBUnit WHERE Code=UnitCode) UomName
+    FROM    TBBarcode
+    WHERE	ProductCode = @ProductCode
+    AND Barcode NOT LIKE '0%'
+    AND		(@Uom IS NULL OR @Uom = '' OR UnitCode = @Uom)
+    AND		[Status] = 1
+  </query>
+  <query id="66">
+    SELECT  Code ProductCode
+    ,NameTh ProductName
+    ,'' Barcode
+    ,StockUnit Uom
+    ,(SELECT MyName FROM TBUnit WHERE Code=StockUnit) UomName
+    FROM    TBProduct
+    WHERE	Code = @ProductCode
+    AND		(@Uom IS NULL OR @Uom = '' OR StockUnit = @Uom)
+    AND		[Status] = 1
+  </query>
+  <query id="67">
+    <!--SELECT  SalePrice
+    FROM    TBSALEPRICE q1 INNER JOIN
+    (
+    SELECT  MAX(BeginDate) BeginDate,MIN(EndDate) EndDate
+    FROM    TBSALEPRICE
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @Uom
+    AND	GETDATE() BETWEEN BeginDate AND EndDate
+    ) q2 ON q1.BeginDate = q2.BeginDate AND q1.EndDate = q2.EndDate
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @Uom AND PaymentCode='0000'-->
+    SELECT  TOP 1 SalePrice
+    FROM    TBSALEPRICE
+    WHERE	BranchCode = @BranchCode AND ProductCode = @ProductCode AND UnitCode = @Uom AND PaymentCode='0000'
+    AND {fn curdate()} BETWEEN BeginDate AND EndDate
+    ORDER BY CreateDate DESC
+  </query>
+  <query id="68">
+    SELECT *
+    FROM [ProductInLocation]
+    WHERE LocationCode = @LocationCode
+    AND WarehouseCode = @WarehouseCode
+    AND ProductCode = @ProductCode
+  </query>
+  <query id="69">
+    SELECT *
+    FROM [ProductInLocation]
+    WHERE LocationCode = @LocationCode
+    AND WarehouseCode = @WarehouseCode
+    AND ProductCode = @ProductCode
+    AND Uom = @Uom
+  </query>
+  <query id="70">
+    SELECT  ProductCode
+    ,(SELECT NameTh FROM TBProduct WHERE Code=ProductCode) ProductName
+    ,Barcode,UnitCode Uom
+    ,(SELECT MyName FROM TBUnit WHERE Code=UnitCode) UomName
+    FROM    TBBarcode
+    WHERE	Barcode = @Barcode
+    AND Barcode NOT LIKE '0%'
+    AND		[Status] = 1
+  </query>
+  <query id="71">
+    DELETE FROM ProductInLocation WHERE LocationCode=@LocationCode AND WarehouseCode=@WarehouseCode
+  </query>
+  <query id="72">
+    SELECT  LocationCode,WarehouseCode,Uom,
+    (SELECT MyName FROM [UWCSQL].[UWPOS].[dbo].TBUnit WHERE Code = Uom) UomName
+    FROM    ProductInLocation
+    WHERE	ProductCode = @ProductCode
+    AND LEFT(WarehouseCode,2) = LEFT(@WarehouseCode,2)
+    ORDER BY WarehouseCode,LocationCode ASC;
+  </query>
+  <query id="73">    
+    SELECT  *,(SELECT MAX(PRINTDATE) FROM TBPRINTLABELSUB_LOCATION WHERE DOCNO = p.DOCNO) PRINTDATE
+    FROM    [TBPRINTLABEL_LOCATION] p
+    WHERE	CONVERT(VARCHAR, DOCDATE,112) = CONVERT(VARCHAR, @DocumentDate,112)
+    AND LEFT(DOCNO,2) = 'PL'
+    AND (@DocumentNo IS NULL OR @DocumentNo = '' OR DOCNO LIKE @DocumentNo)
+    ORDER BY DOCNO ASC
+  </query>
+  <query id="74">
+    SELECT  *
+    FROM    TBPRINTLABELSUB_LOCATION
+    WHERE	DOCNO = @DocumentNo
+    ORDER BY RowOrder ASC
+  </query>
+  <query id="75">
+    SELECT TOP 1 WarehouseCode
+    FROM ProductInLocation
+    WHERE LocationCode = @LocationCode
+  </query>
+  <query id ="76">
+    INSERT INTO TBHANDHELDLOCATION (RowOrder,Docno,Docdate,Warehouse,Location,UserId,OfficerId)
+    VALUES (0,@Docno,@Docdate,@Warehouse,@Location,@UserId,@OfficerId)
+  </query>
+  <query id="77">
+    SELECT  Docno,Docdate,Warehouse,UserId,OfficerId,Location
+    FROM    TBHANDHELDLOCATION
+    WHERE	  UserId=@UserId
+    AND     (@Docno IS NULL OR @Docno='' OR Docno = @Docno)
+    AND		  CONVERT(VARCHAR(8),Docdate,112)=CONVERT(VARCHAR(8),@Docdate,112)
+    AND     Warehouse=@WarehouseCode
+    GROUP   BY Docno,Docdate,Warehouse,UserId,OfficerId,Location
+  </query>
+  <query id="78">
+    SELECT  *
+    FROM    TBHANDHELDLOCATION
+    WHERE   Docno = @Docno
+    AND     ProductCode IS NOT NULL
+    AND		  Barcode IS NOT NULL
+  </query>
+  <query id="79">
+    <!--SELECT  TOP 1 RIGHT(DOCNO,4)
+    FROM    TBPRINTLABEL
+    WHERE	  DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'PR'
+    ORDER BY CreateDate DESC-->
+    SELECT  ISNULL(MAX(CONVERT(INT, RIGHT(DOCNO,4))),0)
+    FROM    TBPRINTLABEL
+    WHERE	  DocDate ={fn curdate()}
+    AND LEFT(DocNo,2) = 'PR'
+  </query>
+  <query id="80">
+    SELECT  *,(SELECT Remark FROM TBPRINTLABEL_CONFIG WHERE Code=PrintLabelType AND BranchCode=m.BranchCode) PrintlabeltypeName
+    FROM    TBPRINTLABEL m
+    WHERE	(@Docno IS NULL OR @Docno='' OR Docno LIKE @Docno)
+    AND		CONVERT(VARCHAR(8),Docdate,112) = CONVERT(VARCHAR(8),@Docdate,112)
+    AND   CreateUser=@CreatedBy
+  </query>
+  <query id="81">
+    DELETE
+    FROM    TBPRINTLABELSUB
+    WHERE	  Docno = @Docno AND RowOrder = @Roworder
+  </query>
+  <query id="82">
+    SELECT  *
+    FROM    TBPRINTLABELSUB
+    WHERE   docno = @Docno
+  </query>
+  <query id="83">
+    SELECT  *
+    FROM    TBPRINTLABEL_CONFIG
+    WHERE	BranchCode=@BranchCode
+  </query>
+  <query id="84">
+    DELETE FROM TBPRINTLABEL WHERE docno=@Docno;
+    DELETE FROM TBPRINTLABELSUB WHERE docno=@Docno;
+  </query>
+  <query id="85">
+    SELECT m.Docno,Location LocationCode,CASE IsPrinted WHEN 0 THEN N'ยังไม่พิมพ์' ELSE N'พิมพ์แล้ว'END PrintedStatus
+    FROM TBPRINTLABEL_LOCATION m INNER JOIN TBPRINTLABELSUB_LOCATION d
+    ON m.Docno = d.Docno
+    WHERE m.docdate ={fn curdate()}
+    AND CreateUser = @CreatedBy
+    ORDER BY m.Docno ASC;
+  </query>
+  <query id="86">
+    SELECT LocationCode
+    FROM ProductLocation
+    WHERE	LocationCode LIKE @LocationCode AND WarehouseCode=@WarehouseCode
+    ORDER BY LocationCode
+  </query>
+  <query id="87">
+    DELETE FROM TBPRINTLABELSUB_LOCATION WHERE Docno=@Docno;
+    DELETE FROM TBPRINTLABEL_LOCATION WHERE Docno=@Docno;
+  </query>
+  <query id="88">
+    INSERT INTO [dbo].[ProductLocation] ([LocationCode],[WarehouseCode],[UpdatedOn],[IsUse])
+    VALUES (UPPER(@LocationCode),@WarehouseCode,GETDATE(),@isUse);
+  </query>
+  <query id="89">
+    SELECT * FROM OrderedSet WHERE OrderNo = @OrderNo;
+  </query>
+  <query id="90">
+    INSERT INTO OrderedSet(OrderNo,ForkliftNumber,DriverName,StartOn,CreatedBy,BranchCode,ShippointCode)
+    VALUES(@OrderNo,@ForkliftNumber,@DriverName,GETDATE(),@CreatedBy,@BranchCode,@ShippointCode);
+  </query>
+  <query id="91">
+    UPDATE OrderedSet SET FinishOn=GETDATE() WHERE OrderNo=@OrderNo;
+  </query>
+  <query id="92">
+    DELETE FROM OrderedSet WHERE Id=@Id;
+  </query>
+  <query id="93">
+    SELECT  ForkLiftNumber,EmployeeCode,EmployeeName,BranchCode,WarehouseCode
+    FROM    ForkLift fl LEFT JOIN ForkLiftDriver fld
+    ON fl.Id=fld.ForkLiftId
+    WHERE	BranchCode = @BranchCode AND (@WarehouseCode IS NULL OR @WarehouseCode='' OR WarehouseCode = @WarehouseCode)
+  </query>
+  <query id="94">
+    SELECT  DocNo,MAX(CreateDate) CreateDate
+    FROM	TBHANDHELDCOUNTER_HOLD
+    WHERE	DocDate = {fn Curdate()}
+    AND [Status] = 0
+    AND (ProductCode IS NULL OR ProductCode='' OR ProductCode LIKE @ProductCode)
+    GROUP BY DocNo
+  </query>
+  <query id="95">
+    <!--SELECT  *
+    FROM OrderedSet os INNER JOIN ForkLift fl ON os.ForkliftNumber = fl.ForkLiftNumber
+    WHERE	CONVERT(DATE,StartOn)=CONVERT(DATE,GETDATE())
+    AND (fl.BranchCode=@BranchCode)
+    AND (fl.WarehouseCode=@WarehouseCode)-->
+    SELECT  *
+    FROM OrderedSet
+    WHERE	CONVERT(DATE,StartOn)=CONVERT(DATE,GETDATE())
+    AND (BranchCode=@BranchCode)
+    AND (ShippointCode=@WarehouseCode)
+  </query>
+  <query id="96">
+    <!--SELECT  *
+    FROM OrderedSet os INNER JOIN ForkLift fl ON os.ForkliftNumber = fl.ForkLiftNumber
+    WHERE	CONVERT(DATE,StartOn)=CONVERT(DATE,GETDATE())
+    AND (fl.BranchCode=@BranchCode)
+    AND (fl.WarehouseCode=@WarehouseCode)
+    AND (FinishOn IS NULL)-->
+    SELECT  *
+    FROM OrderedSet
+    WHERE	CONVERT(DATE,StartOn)=CONVERT(DATE,GETDATE())
+    AND (BranchCode=@BranchCode)
+    AND (ShippointCode=@WarehouseCode)
+    AND (FinishOn IS NULL)
+  </query>
+  <query id="97">
+    SELECT * FROM ForkLiftShippoint WHERE BranchCode=@BranchCode;
+  </query>
+  <query id="98">
+    IF(EXISTS(SELECT Id FROM OrderedSet WHERE OrderNo=@OrderNo))
+    BEGIN
+    UPDATE OrderedSet SET FinishOn=@FinishOn,CreatedOn=GETDATE() WHERE OrderNo=@OrderNo
+    END
+    ELSE
+    BEGIN
+    INSERT INTO OrderedSet (OrderNo,ForkliftNumber,DriverName,StartOn,FinishOn,CreatedBy,BranchCode,ShippointCode,CreatedOn)VALUES(@OrderNo,@ForkliftNumber,@DriverName,@StartOn,@FinishOn,@CreatedBy,@BranchCode,@ShippointCode,GETDATE())
+    END
+  </query>
+  <query id="99">
+    declare @productcode varchar(20)
+    set @productcode=@Barcode
+    if (exists(select barcode from tbbarcode where barcode=@Barcode and status=1))
+    begin
+    select top 1 @productcode = productcode from tbbarcode where barcode=@Barcode and status=1
+    end
+
+    select a.ProductCode,
+    isnull((select top 1 barcode from tbbarcode where productcode=a.productcode and unitcode=a.unitcode and status=1 and barcode not like '0%'), '') as Barcode,
+    b.nameth as ProductName, a.UnitCode, (select myname from tbunit where code = a.unitcode and status=1) as UnitName
+    from tbproductunit a
+    left join tbproduct b on a.productcode=b.code
+    where a.productcode = @productcode
+    and a.status = 1
+  </query>
+  <query id="100">
+    INSERT INTO [dbo].[TBCHECKPRODUCT] ([PRODUCTCODE], [PRODUCTNAME], [UNITNAME], [DOCDATE])
+    VALUES (@PRODUCTCODE,@PRODUCTNAME,@UNITCODE,@DOCDATE);
+  </query>
+  <query id="101">
+    SELECT  NAMETH
+    FROM    TBCUSTOMER
+    WHERE   Code = @customerid
+  </query>
+  <query id="102">
+    SELECT  * FROM TBPRDLOCATION
+    WHERE   LOCATION=@location and BRANCHCODE=@branchcode and PRODUCTCODE=@productcode and WAREHOUSE=@warehouse
+  </query>
+  <query id="103">
+    declare @productcode varchar(20)
+    set @productcode=@Barcode
+    if (exists(select barcode from tbbarcode where barcode=@Barcode and status=1))
+    begin
+    select top 1 @productcode = productcode from tbbarcode where barcode=@Barcode and status=1
+    end
+
+    select distinct a.ProductCode,
+    isnull((select top 1 barcode from tbbarcode where productcode=a.productcode and unitcode=a.unitcode and status=1 and barcode not like '0%'), '') as Barcode,
+    b.nameth as ProductName, a.UnitCode, (select myname from tbunit where code = a.unitcode and status=1) as UnitName
+    from tbproductunit a
+    left join tbproduct b on a.productcode=b.code
+    inner join tbproductwarehouse c on c.productcode = a.productcode
+    where a.productcode = @productcode and c.branchcode = @Branchcode  and c.warehouse =  @Warehousecode
+    and a.status = 1 
+  </query>
+
+  <query id="104">
+    declare @productcode varchar(20)
+    declare @Unit varchar(20)
+    set @productcode=@Barcode
+    if (exists(select barcode from tbbarcode where barcode=@Barcode and status=1))
+    begin
+    select top 1 @productcode = productcode , @Unit = unitcode  from tbbarcode where barcode=@Barcode and status=1
+    end
+    if not(@productcode = @Barcode)
+    begin
+    select distinct a.ProductCode,
+    isnull((
+    select top 1 barcode from tbbarcode
+    where productcode=a.productcode and unitcode=a.unitcode and status=1 and barcode not like '0%'
+    ), '') as Barcode,
+    b.nameth as ProductName, a.UnitCode, (select myname from tbunit where code = a.unitcode and status=1) as UnitName
+    from tbproductunit a
+    left join tbproduct b on a.productcode=b.code
+    where a.productcode = @productcode
+    and a.status = 1 and a.UnitCode in
+    (
+    select distinct unit.code
+    from tbproductunit punit
+    inner join tbunit unit on punit.unitcode=unit.code
+    where punit.status=1    and productcode in (@productcode)
+    )
+    union  ( select distinct a.ProductCode,
+    isnull((
+    select top 1 barcode from tbbarcode
+    where productcode=a.productcode and unitcode=a.unitcode and status=1 and barcode  =  @Barcode
+    ), '') as Barcode,
+    b.nameth as ProductName, a.UnitCode, (select myname from tbunit where code = a.unitcode and status=1) as UnitName
+    from tbproductunit a
+    left join tbproduct b on a.productcode=b.code
+    where a.productcode = @productcode
+    and a.status = 1 and a.UnitCode   = @Unit
+    )
+    end
+    else
+    begin
+    select distinct a.ProductCode,
+    isnull((select top 1 barcode from tbbarcode where productcode=a.productcode and unitcode=a.unitcode and status=1 and barcode not like '0%'), '') as Barcode,
+    b.nameth as ProductName, a.UnitCode, (select myname from tbunit where code = a.unitcode and status=1) as UnitName
+    from tbproductunit a
+    left join tbproduct b on a.productcode=b.code
+    where a.productcode = @productcode
+    and a.status = 1 and a.UnitCode in
+    (
+    select distinct unit.code
+    from tbproductunit punit
+    inner join tbunit unit on punit.unitcode=unit.code
+    where punit.status = 1    and productcode in (@productcode)
+    )
+    end
+  </query>
+  <query id="105">
+    select TOP 1 dbo.TBPRODUCTUNIT.UNITCODE  , Myname As UnitName FROM  dbo.TBPRODUCTUNIT
+    INNER JOIN dbo.TBUNIT  ON  dbo.TBPRODUCTUNIT.UNITCODE = dbo.TBUNIT.CODE
+    WHERE dbo.TBPRODUCTUNIT.PRODUCTCODE  =  @ProductCode   AND  dbo.TBPRODUCTUNIT.STATUS = 1 AND dbo.TBUNIT.STATUS = 1 AND dbo.TBPRODUCTUNIT.UNITCODE not like  @UnitCode
+  </query>
+</sql>

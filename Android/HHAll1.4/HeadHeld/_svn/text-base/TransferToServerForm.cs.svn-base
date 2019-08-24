@@ -1,0 +1,86 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using System.Data.SqlServerCe;
+using System.Threading;
+using DoHome.HandHeld.Client.DataAccess;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class TransferToServerForm : Form
+    {
+        static bool _imported = false;
+
+        private static void TransferToServer()
+        {
+
+            LocationCheckProductManager.TransferToServer();
+
+            _imported = true;
+
+
+        }
+
+        public TransferToServerForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.Cancel;
+            this.Close();
+        }
+
+        private void btnImport_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                btnImport.Enabled = false;
+                btnClose.Enabled = false;
+                timer1.Enabled = true;
+                _imported = false;
+                Thread t = new Thread(TransferToServer);// Kick off a new thread
+                t.Start();
+            }
+            catch (Exception ex)
+            {
+                progressBar3.Value = 0;
+                timer1.Enabled = false;
+                btnImport.Enabled = true;
+                btnClose.Enabled = true;
+                GlobalMessageBox.ShowError(ex);
+            }
+        }
+
+        private void TransferToServerForm_Load(object sender, EventArgs e)
+        {
+            Utils.FormSetCenterSceen(this);
+        }
+
+        private void OnTimer(object sender, EventArgs e)
+        {
+
+            if (progressBar3.Value == progressBar3.Maximum)
+            {
+                progressBar3.Value = progressBar3.Minimum;
+            }
+            progressBar3.Increment(5);
+
+            if (_imported)
+            {
+                progressBar3.Value = 100;
+                timer1.Enabled = false;
+                //btnImport.Enabled = true;
+                btnClose.Enabled = true;
+                GlobalMessageBox.ShowInfomation("บันทึกข้อมูลไปยัง Server สำเร็จ");
+            }
+        }
+
+    }
+}

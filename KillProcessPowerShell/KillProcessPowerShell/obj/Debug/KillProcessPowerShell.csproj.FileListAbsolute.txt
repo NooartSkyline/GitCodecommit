@@ -1,0 +1,8 @@
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\bin\Debug\KillProcessPowerShell.exe
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\bin\Debug\KillProcessPowerShell.pdb
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\obj\Debug\KillProcessPowerShell.Form1.resources
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\obj\Debug\KillProcessPowerShell.Properties.Resources.resources
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\obj\Debug\KillProcessPowerShell.csproj.GenerateResource.Cache
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\obj\Debug\KillProcessPowerShell.exe
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\obj\Debug\KillProcessPowerShell.pdb
+E:\myWork\C#\KillProcessPowerShell\KillProcessPowerShell\bin\Debug\KillProcessPowerShell.exe.config

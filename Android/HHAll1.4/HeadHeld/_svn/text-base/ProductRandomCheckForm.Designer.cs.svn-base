@@ -1,0 +1,425 @@
+﻿namespace DoHome.HandHeld.Client
+{
+    partial class ProductRandomCheckForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.txtProductCode = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtUnit = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.txtBarcode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtScanUnit = new System.Windows.Forms.TextBox();
+            this.txtScanPrice = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtScanProductName = new System.Windows.Forms.TextBox();
+            this.txtScanProductBarcode = new System.Windows.Forms.TextBox();
+            this.txtScanProductCode = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.txtScanBarcode = new System.Windows.Forms.TextBox();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // txtProductCode
+            // 
+            this.txtProductCode.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProductCode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductCode.Location = new System.Drawing.Point(39, 6);
+            this.txtProductCode.Name = "txtProductCode";
+            this.txtProductCode.ReadOnly = true;
+            this.txtProductCode.Size = new System.Drawing.Size(89, 19);
+            this.txtProductCode.TabIndex = 29;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(3, 7);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(36, 16);
+            this.label4.Text = "รหัส :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.GrayText;
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txtUnit);
+            this.panel1.Controls.Add(this.txtPrice);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.txtProductName);
+            this.panel1.Controls.Add(this.txtBarcode);
+            this.panel1.Controls.Add(this.txtProductCode);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(317, 81);
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(3, 31);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 16);
+            this.label2.Text = "ชื่อ :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtUnit
+            // 
+            this.txtUnit.BackColor = System.Drawing.SystemColors.Info;
+            this.txtUnit.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtUnit.Location = new System.Drawing.Point(180, 53);
+            this.txtUnit.Name = "txtUnit";
+            this.txtUnit.ReadOnly = true;
+            this.txtUnit.Size = new System.Drawing.Size(131, 19);
+            this.txtUnit.TabIndex = 40;
+            // 
+            // txtPrice
+            // 
+            this.txtPrice.BackColor = System.Drawing.SystemColors.Info;
+            this.txtPrice.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtPrice.Location = new System.Drawing.Point(39, 53);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.ReadOnly = true;
+            this.txtPrice.Size = new System.Drawing.Size(89, 19);
+            this.txtPrice.TabIndex = 39;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(3, 53);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 16);
+            this.label5.Text = "ราคา :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProductName.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductName.Location = new System.Drawing.Point(39, 29);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.ReadOnly = true;
+            this.txtProductName.Size = new System.Drawing.Size(272, 19);
+            this.txtProductName.TabIndex = 34;
+            // 
+            // txtBarcode
+            // 
+            this.txtBarcode.BackColor = System.Drawing.SystemColors.Info;
+            this.txtBarcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtBarcode.Location = new System.Drawing.Point(180, 5);
+            this.txtBarcode.Name = "txtBarcode";
+            this.txtBarcode.ReadOnly = true;
+            this.txtBarcode.Size = new System.Drawing.Size(131, 19);
+            this.txtBarcode.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(126, 8);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Text = "บาร์โค้ด :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(126, 53);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 16);
+            this.label3.Text = "หน่วย :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.textBox2);
+            this.panel2.Controls.Add(this.label13);
+            this.panel2.Controls.Add(this.textBox1);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.txtScanUnit);
+            this.panel2.Controls.Add(this.txtScanPrice);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtScanProductName);
+            this.panel2.Controls.Add(this.txtScanProductBarcode);
+            this.panel2.Controls.Add(this.txtScanProductCode);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Location = new System.Drawing.Point(3, 120);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(317, 99);
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label6.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label6.Location = new System.Drawing.Point(3, 31);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(36, 16);
+            this.label6.Text = "ชื่อ :";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtScanUnit
+            // 
+            this.txtScanUnit.BackColor = System.Drawing.SystemColors.Info;
+            this.txtScanUnit.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanUnit.Location = new System.Drawing.Point(180, 53);
+            this.txtScanUnit.Name = "txtScanUnit";
+            this.txtScanUnit.ReadOnly = true;
+            this.txtScanUnit.Size = new System.Drawing.Size(131, 19);
+            this.txtScanUnit.TabIndex = 40;
+            // 
+            // txtScanPrice
+            // 
+            this.txtScanPrice.BackColor = System.Drawing.SystemColors.Info;
+            this.txtScanPrice.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanPrice.Location = new System.Drawing.Point(39, 53);
+            this.txtScanPrice.Name = "txtScanPrice";
+            this.txtScanPrice.ReadOnly = true;
+            this.txtScanPrice.Size = new System.Drawing.Size(89, 19);
+            this.txtScanPrice.TabIndex = 39;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label7.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label7.Location = new System.Drawing.Point(3, 53);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 16);
+            this.label7.Text = "ราคา :";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtScanProductName
+            // 
+            this.txtScanProductName.BackColor = System.Drawing.SystemColors.Info;
+            this.txtScanProductName.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanProductName.Location = new System.Drawing.Point(39, 29);
+            this.txtScanProductName.Name = "txtScanProductName";
+            this.txtScanProductName.ReadOnly = true;
+            this.txtScanProductName.Size = new System.Drawing.Size(272, 19);
+            this.txtScanProductName.TabIndex = 34;
+            // 
+            // txtScanProductBarcode
+            // 
+            this.txtScanProductBarcode.BackColor = System.Drawing.SystemColors.Info;
+            this.txtScanProductBarcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanProductBarcode.Location = new System.Drawing.Point(180, 5);
+            this.txtScanProductBarcode.Name = "txtScanProductBarcode";
+            this.txtScanProductBarcode.ReadOnly = true;
+            this.txtScanProductBarcode.Size = new System.Drawing.Size(131, 19);
+            this.txtScanProductBarcode.TabIndex = 31;
+            // 
+            // txtScanProductCode
+            // 
+            this.txtScanProductCode.BackColor = System.Drawing.SystemColors.Info;
+            this.txtScanProductCode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanProductCode.Location = new System.Drawing.Point(39, 6);
+            this.txtScanProductCode.Name = "txtScanProductCode";
+            this.txtScanProductCode.ReadOnly = true;
+            this.txtScanProductCode.Size = new System.Drawing.Size(89, 19);
+            this.txtScanProductCode.TabIndex = 29;
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label8.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label8.Location = new System.Drawing.Point(3, 7);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(36, 16);
+            this.label8.Text = "รหัส :";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label9.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label9.Location = new System.Drawing.Point(126, 8);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 16);
+            this.label9.Text = "บาร์โค้ด :";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label10.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label10.Location = new System.Drawing.Point(126, 53);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(53, 16);
+            this.label10.Text = "ราคา :";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label11.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label11.Location = new System.Drawing.Point(-22, 96);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(73, 16);
+            this.label11.Text = "บาร์โค้ด :";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtScanBarcode
+            // 
+            this.txtScanBarcode.BackColor = System.Drawing.Color.White;
+            this.txtScanBarcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtScanBarcode.Location = new System.Drawing.Point(53, 95);
+            this.txtScanBarcode.Name = "txtScanBarcode";
+            this.txtScanBarcode.Size = new System.Drawing.Size(207, 19);
+            this.txtScanBarcode.TabIndex = 46;
+            this.txtScanBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtScanBarcode_KeyDown);
+            // 
+            // btnScan
+            // 
+            this.btnScan.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnScan.Location = new System.Drawing.Point(266, 94);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(54, 20);
+            this.btnScan.TabIndex = 48;
+            this.btnScan.Text = "ค้นหา";
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.textBox1.Location = new System.Drawing.Point(80, 77);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(48, 19);
+            this.textBox1.TabIndex = 46;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label12.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label12.Location = new System.Drawing.Point(28, 77);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(53, 16);
+            this.label12.Text = "ถูก :";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.Info;
+            this.textBox2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.textBox2.Location = new System.Drawing.Point(180, 77);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.ReadOnly = true;
+            this.textBox2.Size = new System.Drawing.Size(48, 19);
+            this.textBox2.TabIndex = 49;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label13.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.label13.Location = new System.Drawing.Point(154, 79);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(25, 16);
+            this.label13.Text = "ผิด :";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // ProductRandomCheckForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(323, 222);
+            this.Controls.Add(this.btnScan);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.txtScanBarcode);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.label11);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ProductRandomCheckForm";
+            this.Text = "สุ่มตรวจสินค้า";
+            this.Load += new System.EventHandler(this.ProductRandomCheckForm_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtProductCode;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtBarcode;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtUnit;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtScanUnit;
+        private System.Windows.Forms.TextBox txtScanPrice;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtScanProductName;
+        private System.Windows.Forms.TextBox txtScanProductBarcode;
+        private System.Windows.Forms.TextBox txtScanProductCode;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox txtScanBarcode;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label12;
+    }
+}

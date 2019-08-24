@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="19a38c4a-0c31-43f6-991f-eeae7d311be4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.0.37/MobileAPI/MobileService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="MobileService5.xsd" MetadataType="Schema" ID="6ddd308d-c2fd-4b2e-8159-fcedbc4950e8" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?xsd=xsd0" />
+    <MetadataFile FileName="MobileService51.xsd" MetadataType="Schema" ID="09e49785-c27a-42a2-ab73-81fb02654a4f" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?xsd=xsd4" />
+    <MetadataFile FileName="MobileService1.disco" MetadataType="Disco" ID="28558ad9-8b70-40f7-9f1a-735ae921926c" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?disco" />
+    <MetadataFile FileName="MobileService52.xsd" MetadataType="Schema" ID="a348c9aa-a183-449a-bdf5-5797426c6f07" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?xsd=xsd1" />
+    <MetadataFile FileName="MobileService1.wsdl" MetadataType="Wsdl" ID="a0b793e4-b4bd-435e-b9fb-81eeaa6d763f" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?wsdl" />
+    <MetadataFile FileName="MobileService53.xsd" MetadataType="Schema" ID="8ee54bb2-14fd-49ff-ba7b-e3a533c09d76" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?xsd=xsd2" />
+    <MetadataFile FileName="MobileService54.xsd" MetadataType="Schema" ID="39bd18fa-058a-4645-a044-e3e3304b2eb3" SourceId="1" SourceUrl="http://192.168.0.37/MobileAPI/MobileService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

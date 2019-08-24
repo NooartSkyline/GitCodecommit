@@ -1,0 +1,11 @@
+<?xml version="1.0" standalone="yes"?>
+<NARGUS>
+  <SYSCONFIG>
+	<K2Server>192.168.0.159</K2Server>
+	<K2User>UWC\k2adm</K2User>
+	<K2Password>UOqYFegAcJcm/nwgKj3RODBgmZ0HH7KF</K2Password>
+	<Domain>UWC</Domain>
+	<Port>5555</Port>
+	<SecurityLabel>K2</SecurityLabel>
+  </SYSCONFIG>
+</NARGUS>

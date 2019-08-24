@@ -1,0 +1,334 @@
+﻿using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Text;
+using System.Windows.Forms;
+using DoHome.HandHeld.Client.MobileServices;
+using DataGridCustomColumns;
+
+namespace DoHome.HandHeld.Client
+{
+    public partial class LocationCheckForm : Form
+    {
+        private int _currentRowIndex;
+
+        private void BindLocationData()
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+
+                var locationCode = txtLocationCode.Text.Trim().ToUpper();
+                var location = ServiceHelper.MobileServices.LocationGetByCode(locationCode, GlobalContext.WarehouseCode);
+                if (location == null)
+                {
+                    GlobalMessageBox.ShowInfomation("ไม่พบตำแหน่งจัดเก็บสินค้านี้ ในระบบ");
+                    return;
+                }
+
+                if (!CheckIsCreateLocationToday())
+                    return;
+
+                txtLocationCode.Text = location.Code;
+                txtLocationCode.Enabled = false;
+                txtProductCode.Enabled = true;
+                btnFind.Enabled = true;
+                txtProductCode.Focus();
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex.Message);
+            }
+            finally { Cursor.Current = Cursors.Default; }
+        }
+
+        private void BindGridDescription()
+        {
+            var locationDescription = ServiceHelper.MobileServices.GetAllLocationDescription();
+            bdsLocationDescription.DataSource = locationDescription;
+        }
+
+        private void BindGridProduct()
+        {
+            if (string.IsNullOrEmpty(txtProductCode.Text.Trim()))
+            {
+                GlobalMessageBox.ShowInfomation("กรุณาระบุรหัสสินค้า ก่อนทำการค้นหา");
+                txtProductCode.Focus();
+                return;
+            }
+
+            try
+            {
+                if (bdsProduct.DataSource == null)
+                    bdsProduct.DataSource = new List<ProductBarcode>();
+
+                ProductBarcode product = null;
+                var barcode = txtProductCode.Text.Trim();
+                product = ServiceHelper.MobileServices.ProductBarcodeGetByProductCodeOrBarcode3(GlobalContext.BranchCode, barcode);
+
+                if (product != null)
+                {
+                    ((List<ProductBarcode>)bdsProduct.DataSource).Add(product);
+                    bdsProduct.ResetBindings(false);
+                    this.btnSave.Enabled = true;
+                    this.dgProduct.Enabled = true;
+                    //this.dgLocationDescription.Enabled = true;
+                    this.smartGridDesc.Enabled = true;
+                    this.txtDescription.Enabled = true;
+                }
+
+                this.txtProductCode.Text = null;
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex.Message);
+            }
+        }
+
+        private bool ValidateForm()
+        {
+            if (string.IsNullOrEmpty(txtEmployeeCode.Text))
+            {
+                GlobalMessageBox.ShowInfomation("กรุณาเลือกพนักงานประจำล็อก ก่อนทำการบันทึก");
+                return false;
+            }
+
+            return true;
+        }
+
+        private void Add()
+        {
+            if (this.ValidateForm())
+            {
+                if (GlobalMessageBox.ShowQuestion("คุณต้องการบันทึกข้อมูล ใช่หรือไม่") == DialogResult.Yes)
+                {
+                    try
+                    {
+                        Cursor.Current = Cursors.WaitCursor;
+
+                        var products = (List<ProductBarcode>)bdsProduct.DataSource;
+                        LocationDescription[] descriptions = (LocationDescription[])bdsLocationDescription.DataSource;
+                        foreach (var item in descriptions)
+                        {
+                            item.CheckedSpecified = true;
+                        }
+
+                        ServiceHelper.MobileServices.AddHandHeldCheckProduct(GlobalContext.UserCode
+                            , GlobalContext.UserName
+                            , txtEmployeeCode.Text
+                            , txtLocationCode.Text.Trim()
+                            , GlobalContext.WarehouseCode
+                            , GlobalContext.BranchCode
+                            , descriptions
+                            , products.ToArray()
+                            , txtDescription.Text.Trim());
+
+                        //clear controls
+                        this.ClearBindingControl();
+
+                        GlobalMessageBox.ShowInfomation("บันทึกข้อมูลเรียบร้อย");
+                    }
+                    catch (Exception ex)
+                    {
+                        var message = "เกิดข้อผิดพลาดในการบันทึกข้อมูล ดังนี้ \n" + ex.Message;
+                        GlobalMessageBox.ShowError(message);
+                    }
+                    finally
+                    {
+                        Cursor.Current = Cursors.Default;
+                    }
+
+                }
+            }
+        }
+
+        private void ClearBindingControl()
+        {
+            this.txtLocationCode.Text = null;
+
+            this.txtLocationCode.Enabled = true;
+            this.txtProductCode.Enabled = false;
+            this.txtProductCode.Text = null;
+            //this.ddlEmployee.Enabled = false;
+            this.txtEmployeeCode.Text = null;
+            this.txtEmployeeName.Text = null;
+            this.btnFind.Enabled = false;
+            this.bdsProduct.DataSource = null;
+            this.bdsProduct.ResetBindings(false);
+            this.btnSave.Enabled = false;
+
+            this.BindGridDescription();
+            this.txtDescription.Text = null;
+            this.txtDescription.Enabled = false;
+            this.txtLocationCode.Focus();
+        }        
+
+        private bool CheckIsCreateLocationToday()
+        {
+
+            var locationCode = txtLocationCode.Text.Trim();
+            bool checkIsCreateLocationToday = false;
+            bool checkIsCreateLocationTodaySpecific = true;
+            ServiceHelper.MobileServices.CheckIsCreateLocationToday(GlobalContext.BranchCode, locationCode
+                 , GlobalContext.WarehouseCode
+                 , out checkIsCreateLocationToday
+                 , out checkIsCreateLocationTodaySpecific);
+
+            if (checkIsCreateLocationToday)
+            {
+                if (GlobalMessageBox.ShowQuestion("ตำแหน่ง " + locationCode + " เคยทำแล้วในวันนี้ ต้องการทำซ้ำอีกครั้งหรือไม่?") == DialogResult.Yes)
+                    return true;
+                else
+                    return false;
+            }
+
+            return true;
+        }
+
+        public LocationCheckForm()
+        {
+            InitializeComponent();
+        }
+
+        private void txtLocationCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                BindLocationData();
+            }
+        }
+
+        private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.BindGridProduct();
+                txtProductCode.Focus();
+            }
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearBindingControl();
+        }
+
+        private void btnCheckLists_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                var displayList = ServiceHelper.MobileServices.DisplayListGetByLocationCheck(GlobalContext.BranchCode, GlobalContext.UserCode);
+                var oForm = new DisplayListForm(displayList);
+                Cursor.Current = Cursors.Default;
+                oForm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                GlobalMessageBox.ShowError(ex.Message);
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            Add();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Cursor.Current = Cursors.WaitCursor;
+                var employee = ServiceHelper.MobileServices.GetUserByBranch(GlobalContext.BranchCode);
+                var oForm = new ChooseFromListForm(employee, "Code", "Name");
+                Cursor.Current = Cursors.Default;
+                if (oForm.ShowDialog() == DialogResult.OK)
+                {
+                    this.txtEmployeeCode.Text = oForm.SelectedValue;
+                    this.txtEmployeeName.Text = oForm.SelectedText;
+                }
+            }
+            catch (Exception ex)
+            {
+                Cursor.Current = Cursors.Default;
+                GlobalMessageBox.ShowError(ex);
+            }
+        }
+
+        private void ProductCheckPriceForm_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                txtLocationCode.Focus();
+                Cursor.Current = Cursors.WaitCursor;
+                // initialize dropdown controls.
+                //this.PrepareEmployeeDropdown();
+                this.BindGridDescription();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally { Cursor.Current = Cursors.Default; }
+        }
+
+
+        private void dgProduct_Click(object sender, EventArgs e)
+        {
+            _currentRowIndex = dgProduct.CurrentRowIndex;
+            if (_currentRowIndex > -1)
+                dgProduct.Select(_currentRowIndex);
+        }
+
+        private void smartGridDesc_CheckBoxEdit(object sender, Resco.Controls.SmartGrid.CheckBoxEditEventArgs e)
+        {
+
+            var cell = this.smartGridDesc.SelectedCell;
+            if (cell.RowIndex == 9 || cell.RowIndex == 19)
+            {
+
+                if (e.OldState == false)
+                {
+
+                    var cellPoint = smartGridDesc.Cells[cell.RowIndex, 3].Data;
+                    var oForm = new InputNumberForm();
+                    oForm.SelectedValue = cellPoint as string;
+                    if (oForm.ShowDialog() == DialogResult.OK)
+                    {
+                        smartGridDesc.Cells[cell.RowIndex, 3].Data = oForm.SelectedValue;
+                        smartGridDesc.Cells[cell.RowIndex, 1].Data = true;
+                    }
+                    else
+                    {
+                        e.Cancel = true;
+                    }
+                }
+                else
+                {
+                    smartGridDesc.Cells[cell.RowIndex, 3].Data = 0;
+                    smartGridDesc.Cells[cell.RowIndex, 1].Data = false;
+                }
+            }
+
+            smartGridDesc.UpdateLayout();
+        }
+
+        private void smartGridDesc_CustomizeCell(object sender, Resco.Controls.SmartGrid.CustomizeCellEventArgs e)
+        {
+            var cell = e.Cell;
+            if (cell.ColumnIndex == 3 && (cell.RowIndex == 9 || cell.RowIndex == 19))
+            {
+                cell.Style = this.smartGridDesc.Styles["Number"];
+
+            }
+            //else
+            //{
+            //    cell.Style = this.smartGridDesc.Styles["Disable"];
+            //}
+        }
+
+
+    }
+}

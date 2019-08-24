@@ -1,0 +1,39 @@
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Debug\TestWCF.exe.config
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Debug\TestWCF.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Debug\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\bin\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.Form1.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.Properties.Resources.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\TestWCF\obj\x86\Debug\TestWCF.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe.config
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.Form1.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.Properties.Resources.resources
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.application
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe.config
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.exe
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.application
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.exe
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\bin\Debug\TestWCF.pdb
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.Form1.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.Properties.Resources.resources
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.csproj.GenerateResource.Cache
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.exe.manifest
+D:\LogOnRMoonchai\HHsrc_ce_Chainway_2D\HHAll1.3\MobileServices - 1.2\src\TestWCF\obj\x86\Debug\TestWCF.application

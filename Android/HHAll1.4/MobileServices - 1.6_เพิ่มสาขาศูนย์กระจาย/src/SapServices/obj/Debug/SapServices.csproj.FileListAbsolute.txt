@@ -1,0 +1,7 @@
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\bin\Debug\SapServices.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\bin\Debug\SapServices.pdb
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\bin\Debug\sapnco.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\bin\Debug\sapnco_utils.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\obj\Debug\SapServices.csprojResolveAssemblyReference.cache
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\obj\Debug\SapServices.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\SapServices\obj\Debug\SapServices.pdb

@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HandHeldDB" Class="DBSQLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.0.37;Initial Catalog=HandHeldDB;User ID=abc" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HandHeldDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.[_LocationCheckAgenda]" Member="_LocationCheckAgendas">
+    <Type Name="_LocationCheckAgenda">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="IsValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="PeriodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="MaxPoint" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Warehouse" Member="Warehouses">
+    <Type Name="Warehouse">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.demo" Member="demos">
+    <Type Name="demo">
+      <Column Name="StockCode" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="Qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Type" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ForkLift" Member="ForkLifts">
+    <Type Name="ForkLift">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForkLiftNumber" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DriverName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="WarehouseCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ForkLiftDriver" Member="ForkLiftDrivers">
+    <Type Name="ForkLiftDriver">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ForkLiftId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="EmployeeName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ForkLiftShippoint" Member="ForkLiftShippoints">
+    <Type Name="ForkLiftShippoint">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="ShippointCode" Type="System.String" DbType="Char(4)" CanBeNull="true" />
+      <Column Name="ShippointName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheck" Member="LocationChecks">
+    <Type Name="LocationCheck">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Location" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="OfficerCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="OfficerName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CheckerCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="CheckerName" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="CheckDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="WarehouseCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="PeriodId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckAgenda" Member="LocationCheckAgendas">
+    <Type Name="LocationCheckAgenda">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="GroupOfAgenda" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckAgendaGroup" Member="LocationCheckAgendaGroups">
+    <Type Name="LocationCheckAgendaGroup">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportTitle" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="IsSelfCode" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDepartment" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckAgendaTemplate" Member="LocationCheckAgendaTemplates">
+    <Type Name="LocationCheckAgendaTemplate">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsValue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="MaxPoint" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckDepartment" Member="LocationCheckDepartments">
+    <Type Name="LocationCheckDepartment">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocationCheckId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Code" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(255) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckDetail" Member="LocationCheckDetails">
+    <Type Name="LocationCheckDetail">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocationCheckID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PeriodAgendaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="AgendaCode" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="AgendaName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="AgendaValue" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="IsChecked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckPeriod" Member="LocationCheckPeriods">
+    <Type Name="LocationCheckPeriod">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Published" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="BeginDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UpdatedBy" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="UpdatedDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckPeriodAgenda" Member="LocationCheckPeriodAgendas">
+    <Type Name="LocationCheckPeriodAgenda">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="PeriodId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaTemplateId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaTemplateCode" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaTemplateName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="IsValue" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="MaxPoint" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckRetail" Member="LocationCheckRetails">
+    <Type Name="LocationCheckRetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CheckerCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckerName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="CheckDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ShelfCode" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="DepartmentCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="DepartmentName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ZoneCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="GroupOfAgendaId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WarehouseCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckRetailDetail" Member="LocationCheckRetailDetails">
+    <Type Name="LocationCheckRetailDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="RetailId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaName" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="AgendaValue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Score" Type="System.Decimal" DbType="Decimal(18,1) NOT NULL" CanBeNull="false" />
+      <Column Name="IsChecked" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsValue" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LocationCheckState" Member="LocationCheckStates">
+    <Type Name="LocationCheckState">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.OrderedSet" Member="OrderedSets">
+    <Type Name="OrderedSet">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="OrderNo" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="ForkliftNumber" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="DriverName" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StartOn" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="FinishOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="CreatedBy" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="ShippointCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="CreatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductInfo" Member="ProductInfos">
+    <Type Name="ProductInfo">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ProductBarcode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="ProductName" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="ProductUnitCode" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ProductPrice" Type="System.Decimal" DbType="Money" CanBeNull="true" />
+      <Column Name="BranchCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductInLocation" Member="ProductInLocations">
+    <Type Name="ProductInLocation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProductCode" Type="System.String" DbType="VarChar(18)" CanBeNull="true" />
+      <Column Name="Uom" Type="System.String" DbType="VarChar(3)" CanBeNull="true" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="WarehouseCode" Type="System.String" DbType="VarChar(4)" CanBeNull="true" />
+      <Column Name="MaxStock" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="PutLevel" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="PutQuantity" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="DisplayOrder" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ProductLocation" Member="ProductLocations">
+    <Type Name="ProductLocation">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LocationCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseCode" Type="System.String" DbType="VarChar(25) NOT NULL" CanBeNull="false" />
+      <Column Name="UpdatedOn" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBCOUNTSTOCKNEW_LISTSTOCK" Member="TBCOUNTSTOCKNEW_LISTSTOCKs">
+    <Type Name="TBCOUNTSTOCKNEW_LISTSTOCK">
+      <Column Name="DOCNO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="DATETIME" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="USERCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="USERNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ORDERNO" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBCOUNTSTOCKNEW_POSTCOUNT" Member="TBCOUNTSTOCKNEW_POSTCOUNTs">
+    <Type Name="TBCOUNTSTOCKNEW_POSTCOUNT">
+      <Column Name="barcode" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="numberof" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="roworder" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="is_trans" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="docno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="branchcode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="whcode" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="matching" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="location" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="timescan" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBCUSTOMERBID_LISTBID" Member="TBCUSTOMERBID_LISTBIDs">
+    <Type Name="TBCUSTOMERBID_LISTBID">
+      <Column Name="CUSTOMERNAME" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DATETIME" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DOCNO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IS_TRANS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBCUSTOMERBID_POSTBID" Member="TBCUSTOMERBID_POSTBIDs">
+    <Type Name="TBCUSTOMERBID_POSTBID">
+      <Column Name="BARCODE" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NUMBEROF" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DOCNO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ROWORDER" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BRANCHCODE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="WHCODE" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="MATCHING" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

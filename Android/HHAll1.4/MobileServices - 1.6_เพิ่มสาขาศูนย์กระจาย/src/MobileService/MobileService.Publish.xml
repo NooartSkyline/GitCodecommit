@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<publishData>
+  <publishProfile publishUrl="D:\DeployWCF" deleteExistingFiles="True" ftpAnonymousLogin="False" ftpPassiveMode="True" msdeploySite="" msdeploySiteID="" msdeployRemoteSitePhysicalPath="" msdeployAllowUntrustedCertificate="False" msdeploySkipExtraFilesOnServer="True" msdeployMarkAsApp="False" profileName="Profile1" publishMethod="FileSystem" replaceMatchingFiles="False" userName="" savePWD="False" userPWD="" SelectedForPublish="True">
+    <file relUrl="Web.config" publishTime="12/03/2014 09:23:55" />
+    <file relUrl="bin/SetPassword.dll" publishTime="03/02/2006 09:07:16" />
+    <file relUrl="bin/SAPProxyAssignloc.dll" publishTime="05/16/2014 08:56:19" />
+    <file relUrl="bin/MobileService.pdb" publishTime="12/03/2014 09:20:34" />
+    <file relUrl="bin/SAPProxyII.dll" publishTime="11/28/2010 15:43:10" />
+    <file relUrl="bin/SAPProxy.dll" publishTime="12/04/2009 08:30:04" />
+    <file relUrl="bin/SubSonic.Core.dll" publishTime="05/10/2012 09:38:41" />
+    <file relUrl="MobileService.svc" publishTime="12/29/2011 14:25:35" />
+    <file relUrl="bin/Castle.Core.dll" publishTime="11/23/2011 22:57:32" />
+    <file relUrl="bin/log4net.dll" publishTime="10/06/2011 19:44:20" />
+    <file relUrl="bin/SAPGetShipmentForPC.dll" publishTime="05/09/2014 09:51:13" />
+    <file relUrl="bin/EnDeCode.dll" publishTime="02/18/2006 11:58:26" />
+    <file relUrl="bin/SAP.Connector.dll" publishTime="09/05/2004 21:11:28" />
+    <file relUrl="bin/SAPProxyReqTopstock.dll" publishTime="04/03/2014 08:12:32" />
+    <file relUrl="bin/sapnco.dll" publishTime="11/08/2011 05:40:18" />
+    <file relUrl="bin/SAPProxyIV.dll" publishTime="12/17/2012 14:17:51" />
+    <file relUrl="bin/BLToolkit.4.dll" publishTime="10/14/2011 09:39:02" />
+    <file relUrl="bin/SAPProxyIII.dll" publishTime="07/22/2011 10:24:44" />
+    <file relUrl="bin/sapnco_utils.dll" publishTime="11/08/2011 05:40:16" />
+    <file relUrl="bin/MobileService.dll" publishTime="12/03/2014 09:20:34" />
+  </publishProfile>
+</publishData>

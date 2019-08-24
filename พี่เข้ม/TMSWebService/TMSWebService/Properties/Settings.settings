@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TMSWebService.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TMSWebService_WebReference_Test_DHMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://192.168.0.29/test-tmsservice/DHMService.asmx</Value>
+    </Setting>
+    <Setting Name="TMSWebService_DO_WebReferencePRD_DHMService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://tmsloadbalancer-2116169864.ap-southeast-1.elb.amazonaws.com/TMSSERVICE/DHMService.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

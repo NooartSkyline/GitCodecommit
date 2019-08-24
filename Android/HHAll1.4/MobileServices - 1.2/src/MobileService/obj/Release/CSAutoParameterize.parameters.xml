@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="1100-Web.config Connection String" description="1100 Connection String used in web.config by the application to access the database." defaultvalue="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LogOnRMoonchai\\WebApiWFC\\MobileServices\\src\\MobileService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='1100']/@connectionString" />
+  </parameter>
+  <parameter name="1200-Web.config Connection String" description="1200 Connection String used in web.config by the application to access the database." defaultvalue="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LogOnRMoonchai\\WebApiWFC\\MobileServices\\src\\MobileService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='1200']/@connectionString" />
+  </parameter>
+  <parameter name="1300-Web.config Connection String" description="1300 Connection String used in web.config by the application to access the database." defaultvalue="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LogOnRMoonchai\\WebApiWFC\\MobileServices\\src\\MobileService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='1300']/@connectionString" />
+  </parameter>
+  <parameter name="1400-Web.config Connection String" description="1400 Connection String used in web.config by the application to access the database." defaultvalue="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LogOnRMoonchai\\WebApiWFC\\MobileServices\\src\\MobileService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='1400']/@connectionString" />
+  </parameter>
+  <parameter name="HandHeldDB-Web.config Connection String" description="HandHeldDB Connection String used in web.config by the application to access the database." defaultvalue="Server=.;Database=HandHeldDB;User ID=sa;Password=minadadmin;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\LogOnRMoonchai\\WebApiWFC\\MobileServices\\src\\MobileService\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='HandHeldDB']/@connectionString" />
+  </parameter>
+</parameters>

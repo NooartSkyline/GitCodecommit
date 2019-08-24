@@ -1,0 +1,67 @@
+-- Script Date: 21/10/2557 16:43  - ErikEJ.SqlCeScripting version 3.5.2.42
+CREATE TABLE [Asset] (
+  [BUKRS] nvarchar(4) NOT NULL
+, [ANLN1] nvarchar(12) NOT NULL
+, [ANLHTXT] nvarchar(255) NOT NULL
+, [ANLN1_TXT] nvarchar(255) NOT NULL
+, [ANLN2] nvarchar(4) NOT NULL
+, [AKTIV] nvarchar(8) NOT NULL
+, [ZUGDT] nvarchar(8) NOT NULL
+, [DEAKT] nvarchar(8) NOT NULL
+, [ANBTR] float NOT NULL
+, [NAFAB] float NOT NULL
+, [NETAMOUNT] float NOT NULL
+, [BZDAT] nvarchar(8) NOT NULL
+, [NDJAR] nvarchar(3) NOT NULL
+, [RATE_AFAB] float NOT NULL
+, [AFABG] nvarchar(8) NOT NULL
+, [WERKS] nvarchar(4) NOT NULL
+, [WERKS_TXT] nvarchar(255) NOT NULL
+, [STORT] nvarchar(10) NOT NULL
+, [STORT_TXT] nvarchar(255) NOT NULL
+, [ANLKL] nvarchar(8) NOT NULL
+, [ANLKL_TXT] nvarchar(255) NOT NULL
+, [KTOGR] nvarchar(8) NOT NULL
+, [KTOGR_TXT] nvarchar(255) NOT NULL
+, [KOSTL] nvarchar(10) NOT NULL
+, [KOSTL_TXT] nvarchar(255) NOT NULL
+, [ORD41] nvarchar(4) NOT NULL
+, [ORD41_TXT] nvarchar(255) NOT NULL
+, [ORD42] nvarchar(4) NOT NULL
+, [ORD42_TXT] nvarchar(255) NOT NULL
+, [ORD43] nvarchar(4) NOT NULL
+, [ORD43_TXT] nvarchar(255) NOT NULL
+, [ORD44] nvarchar(4) NOT NULL
+, [ORD44_TXT] nvarchar(255) NOT NULL
+, [AIBN1] nvarchar(12) NOT NULL
+, [AIBN1_TXT] nvarchar(255) NOT NULL
+, [AIBN2] nvarchar(4) NOT NULL
+, [AIBN2_TXT] nvarchar(255) NOT NULL
+, [SERNR] nvarchar(8) NOT NULL
+, [INVNR] nvarchar(25) NOT NULL
+, [MENGE] float NOT NULL
+, [MEINS] nvarchar(3) NOT NULL
+, [MEINS_TXT] nvarchar(100) NOT NULL
+, [LIFNR] nvarchar(10) NOT NULL
+, [LIFNR_TXT] nvarchar(255) NOT NULL
+, [ZUJHR] nvarchar(4) NOT NULL
+, [ZUPER] nvarchar(3) NOT NULL
+, [CAUFN] nvarchar(12) NOT NULL
+, [KFZKZ] nvarchar(10) NOT NULL
+, [VSGES] nvarchar(2) NOT NULL
+, [VSGES_TXT] nvarchar(255) NOT NULL
+, [VRSBA] float NOT NULL
+, [EBELN] nvarchar(10) NOT NULL
+, [EBELP] nvarchar(5) NOT NULL
+, [ERNAM] nvarchar(12) NOT NULL
+, [ERDAT] nvarchar(8) NOT NULL
+, [AENAM] nvarchar(12) NOT NULL
+, [AEDAT] nvarchar(8) NOT NULL
+, [PERNR] nvarchar(8) NOT NULL
+, [PERNR_TXT] nvarchar(255) NOT NULL
+, [ZCOLOR] nvarchar(100) NOT NULL
+, [MESSAGE] nvarchar(255) NOT NULL
+);
+GO
+ALTER TABLE [Asset] ADD CONSTRAINT [PK_Asset] PRIMARY KEY ([ANLN1],[ANLN2]);
+GO

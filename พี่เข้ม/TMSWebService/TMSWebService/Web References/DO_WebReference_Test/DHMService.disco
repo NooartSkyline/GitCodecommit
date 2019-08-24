@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://192.168.0.29/test-tmsservice/DHMService.asmx?wsdl" docRef="http://192.168.0.29/test-tmsservice/DHMService.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://192.168.0.29/test-tmsservice/DHMService.asmx" xmlns:q1="http://www.onelink.co.th/DHMService" binding="q1:DHMServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://192.168.0.29/test-tmsservice/DHMService.asmx" xmlns:q2="http://www.onelink.co.th/DHMService" binding="q2:DHMServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

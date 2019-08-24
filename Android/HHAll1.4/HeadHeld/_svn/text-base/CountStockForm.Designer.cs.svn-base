@@ -1,0 +1,236 @@
+﻿namespace DoHome.HandHeld.Client
+{
+    partial class CountStockForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.txtProductOrBarcode = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.bindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dgProduct = new System.Windows.Forms.DataGrid();
+            this.dataGridTableStyle1 = new System.Windows.Forms.DataGridTableStyle();
+            this.dataGridTextBoxColumn4 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn5 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn1 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn2 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.dataGridTextBoxColumn3 = new System.Windows.Forms.DataGridTextBoxColumn();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnHoldBill = new System.Windows.Forms.Button();
+            this.btnResumeBill = new System.Windows.Forms.Button();
+            this.btnList = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.lblMessage = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // txtProductOrBarcode
+            // 
+            this.txtProductOrBarcode.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductOrBarcode.Location = new System.Drawing.Point(76, 3);
+            this.txtProductOrBarcode.Name = "txtProductOrBarcode";
+            this.txtProductOrBarcode.Size = new System.Drawing.Size(142, 19);
+            this.txtProductOrBarcode.TabIndex = 35;
+            this.txtProductOrBarcode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProductOrBarcode_KeyDown);
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(3, 3);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(71, 16);
+            this.label1.Text = "รหัส/บาร์โค้ด :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // dgProduct
+            // 
+            this.dgProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.dgProduct.DataSource = this.bindingSource;
+            this.dgProduct.Location = new System.Drawing.Point(3, 26);
+            this.dgProduct.Name = "dgProduct";
+            this.dgProduct.RowHeadersVisible = false;
+            this.dgProduct.Size = new System.Drawing.Size(317, 225);
+            this.dgProduct.TabIndex = 40;
+            this.dgProduct.TableStyles.Add(this.dataGridTableStyle1);
+            this.dgProduct.DoubleClick += new System.EventHandler(this.dgProduct_DoubleClick);
+            this.dgProduct.Click += new System.EventHandler(this.dgProduct_Click);
+            // 
+            // dataGridTableStyle1
+            // 
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn4);
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn5);
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn1);
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn2);
+            this.dataGridTableStyle1.GridColumnStyles.Add(this.dataGridTextBoxColumn3);
+            this.dataGridTableStyle1.MappingName = "HandHeldCounterHold";
+            // 
+            // dataGridTextBoxColumn4
+            // 
+            this.dataGridTextBoxColumn4.Format = "";
+            this.dataGridTextBoxColumn4.FormatInfo = null;
+            this.dataGridTextBoxColumn4.MappingName = "UniqueID";
+            this.dataGridTextBoxColumn4.Width = 0;
+            // 
+            // dataGridTextBoxColumn5
+            // 
+            this.dataGridTextBoxColumn5.Format = "";
+            this.dataGridTextBoxColumn5.FormatInfo = null;
+            this.dataGridTextBoxColumn5.HeaderText = "รหัสสินค้า";
+            this.dataGridTextBoxColumn5.MappingName = "Productcode";
+            this.dataGridTextBoxColumn5.Width = 70;
+            // 
+            // dataGridTextBoxColumn1
+            // 
+            this.dataGridTextBoxColumn1.Format = "";
+            this.dataGridTextBoxColumn1.FormatInfo = null;
+            this.dataGridTextBoxColumn1.HeaderText = "ตำแหน่ง";
+            this.dataGridTextBoxColumn1.MappingName = "Location";
+            this.dataGridTextBoxColumn1.Width = 100;
+            // 
+            // dataGridTextBoxColumn2
+            // 
+            this.dataGridTextBoxColumn2.Format = "";
+            this.dataGridTextBoxColumn2.FormatInfo = null;
+            this.dataGridTextBoxColumn2.HeaderText = "หน่วยนับ";
+            this.dataGridTextBoxColumn2.MappingName = "Unitname";
+            this.dataGridTextBoxColumn2.Width = 70;
+            // 
+            // dataGridTextBoxColumn3
+            // 
+            this.dataGridTextBoxColumn3.Format = "N2";
+            this.dataGridTextBoxColumn3.FormatInfo = null;
+            this.dataGridTextBoxColumn3.HeaderText = "จำนวน";
+            this.dataGridTextBoxColumn3.MappingName = "Quantity";
+            // 
+            // btnNew
+            // 
+            this.btnNew.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnNew.Location = new System.Drawing.Point(4, 254);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(50, 20);
+            this.btnNew.TabIndex = 41;
+            this.btnNew.Text = "นับใหม่";
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnHoldBill
+            // 
+            this.btnHoldBill.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnHoldBill.Location = new System.Drawing.Point(56, 254);
+            this.btnHoldBill.Name = "btnHoldBill";
+            this.btnHoldBill.Size = new System.Drawing.Size(50, 20);
+            this.btnHoldBill.TabIndex = 42;
+            this.btnHoldBill.Text = "พักบิล";
+            this.btnHoldBill.Click += new System.EventHandler(this.btnHoldBill_Click);
+            // 
+            // btnResumeBill
+            // 
+            this.btnResumeBill.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnResumeBill.Location = new System.Drawing.Point(108, 254);
+            this.btnResumeBill.Name = "btnResumeBill";
+            this.btnResumeBill.Size = new System.Drawing.Size(50, 20);
+            this.btnResumeBill.TabIndex = 43;
+            this.btnResumeBill.Text = "เรียกบิล";
+            this.btnResumeBill.Click += new System.EventHandler(this.btnResumeBill_Click);
+            // 
+            // btnList
+            // 
+            this.btnList.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnList.Location = new System.Drawing.Point(161, 254);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(92, 20);
+            this.btnList.TabIndex = 44;
+            this.btnList.Text = "ตรวจสอบรายการ";
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.btnSave.Location = new System.Drawing.Point(279, 254);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(39, 20);
+            this.btnSave.TabIndex = 45;
+            this.btnSave.Text = "บันทึก";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.lblMessage.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblMessage.Location = new System.Drawing.Point(224, 6);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(98, 16);
+            this.lblMessage.Text = "Message";
+            this.lblMessage.Visible = false;
+            // 
+            // CountStockForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(323, 275);
+            this.Controls.Add(this.lblMessage);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnList);
+            this.Controls.Add(this.btnResumeBill);
+            this.Controls.Add(this.btnHoldBill);
+            this.Controls.Add(this.btnNew);
+            this.Controls.Add(this.dgProduct);
+            this.Controls.Add(this.txtProductOrBarcode);
+            this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CountStockForm";
+            this.Text = "นับสต็อกสินค้า";
+            this.Load += new System.EventHandler(this.CountStockForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TextBox txtProductOrBarcode;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGrid dgProduct;
+        private System.Windows.Forms.DataGridTableStyle dataGridTableStyle1;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.Button btnHoldBill;
+        private System.Windows.Forms.Button btnResumeBill;
+        private System.Windows.Forms.Button btnList;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.BindingSource bindingSource;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn1;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn2;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn3;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn4;
+        private System.Windows.Forms.Label lblMessage;
+        private System.Windows.Forms.DataGridTextBoxColumn dataGridTextBoxColumn5;
+    }
+}

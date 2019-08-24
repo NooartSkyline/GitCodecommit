@@ -1,0 +1,195 @@
+﻿namespace DoHome.HandHeld.Client
+{
+    partial class CountStockMainQuantityForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtQuantitySales = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtProductName = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtQuantityStock = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUnitSales = new System.Windows.Forms.TextBox();
+            this.txtUnitStock = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(169, 98);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(72, 20);
+            this.btnCancel.TabIndex = 54;
+            this.btnCancel.Text = "ยกเลิก";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(91, 98);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(72, 20);
+            this.btnSave.TabIndex = 53;
+            this.btnSave.Text = "ตกลง";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label3.Location = new System.Drawing.Point(187, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 17);
+            this.label3.Text = "จำนวน :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtQuantitySales
+            // 
+            this.txtQuantitySales.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtQuantitySales.Location = new System.Drawing.Point(246, 43);
+            this.txtQuantitySales.Name = "txtQuantitySales";
+            this.txtQuantitySales.Size = new System.Drawing.Size(51, 19);
+            this.txtQuantitySales.TabIndex = 52;
+            this.txtQuantitySales.Text = "0.00";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label2.Location = new System.Drawing.Point(-3, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(66, 17);
+            this.label2.Text = "หน่วยขาย :";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtProductName
+            // 
+            this.txtProductName.BackColor = System.Drawing.SystemColors.Info;
+            this.txtProductName.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtProductName.Location = new System.Drawing.Point(67, 18);
+            this.txtProductName.Name = "txtProductName";
+            this.txtProductName.Size = new System.Drawing.Size(230, 19);
+            this.txtProductName.TabIndex = 50;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label1.Location = new System.Drawing.Point(10, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 16);
+            this.label1.Text = "ชื่อ :";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtQuantityStock
+            // 
+            this.txtQuantityStock.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtQuantityStock.Location = new System.Drawing.Point(246, 68);
+            this.txtQuantityStock.Name = "txtQuantityStock";
+            this.txtQuantityStock.Size = new System.Drawing.Size(51, 19);
+            this.txtQuantityStock.TabIndex = 61;
+            this.txtQuantityStock.Text = "0.00";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label4.Location = new System.Drawing.Point(-3, 68);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.Text = "หน่วยสต็อค :";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.label5.Location = new System.Drawing.Point(187, 69);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(54, 17);
+            this.label5.Text = "จำนวน :";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtUnitSales
+            // 
+            this.txtUnitSales.BackColor = System.Drawing.SystemColors.Info;
+            this.txtUnitSales.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtUnitSales.Location = new System.Drawing.Point(67, 44);
+            this.txtUnitSales.Name = "txtUnitSales";
+            this.txtUnitSales.Size = new System.Drawing.Size(131, 19);
+            this.txtUnitSales.TabIndex = 64;
+            // 
+            // txtUnitStock
+            // 
+            this.txtUnitStock.BackColor = System.Drawing.SystemColors.Info;
+            this.txtUnitStock.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Regular);
+            this.txtUnitStock.Location = new System.Drawing.Point(67, 69);
+            this.txtUnitStock.Name = "txtUnitStock";
+            this.txtUnitStock.Size = new System.Drawing.Size(131, 19);
+            this.txtUnitStock.TabIndex = 65;
+            // 
+            // CountStockMainQuantityForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(303, 130);
+            this.Controls.Add(this.txtUnitStock);
+            this.Controls.Add(this.txtUnitSales);
+            this.Controls.Add(this.txtQuantityStock);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtQuantitySales);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtProductName);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label3);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "CountStockMainQuantityForm";
+            this.Text = "ระบุจำนวนที่นับได้";
+            this.Load += new System.EventHandler(this.CountStockMainQuantityForm_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtQuantitySales;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtProductName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtQuantityStock;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtUnitSales;
+        private System.Windows.Forms.TextBox txtUnitStock;
+    }
+}

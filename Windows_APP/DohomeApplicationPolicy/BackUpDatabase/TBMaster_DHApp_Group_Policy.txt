@@ -1,0 +1,22 @@
+USE [DBMASTER]
+GO
+
+/****** Object:  Table [dbo].[TBMaster_DHApp_Group_Policy]    Script Date: 9/12/2018 11:20:58 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[TBMaster_DHApp_Group_Policy](
+	[Group_Code] [varchar](10) NOT NULL,
+	[Group_Name] [varchar](50) NOT NULL,
+	[Group_Desc] [text] NULL,
+ CONSTRAINT [PK_TBMaster_DHApp_Group_Policy] PRIMARY KEY CLUSTERED 
+(
+	[Group_Code] ASC,
+	[Group_Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+

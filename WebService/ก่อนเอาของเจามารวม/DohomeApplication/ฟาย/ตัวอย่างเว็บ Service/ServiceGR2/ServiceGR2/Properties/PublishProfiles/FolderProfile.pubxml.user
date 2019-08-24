@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>F:\GitCodeCommit\WebService\ServiceGR2\Published\2018-06-29</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/dev.lib.dll">
+      <publishTime>03/27/2018 10:45:27</publishTime>
+    </File>
+    <File Include="bin/MoreLinq.dll">
+      <publishTime>01/23/2018 09:56:56</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>03/24/2018 17:44:14</publishTime>
+    </File>
+    <File Include="bin/ServiceGR2.dll">
+      <publishTime>06/29/2018 14:44:49</publishTime>
+    </File>
+    <File Include="bin/ServiceGR2.pdb">
+      <publishTime>06/29/2018 14:44:49</publishTime>
+    </File>
+    <File Include="bin/SourceCode.HostClientAPI.dll">
+      <publishTime>02/26/2015 04:59:22</publishTime>
+    </File>
+    <File Include="bin/SourceCode.SmartObjects.Client.dll">
+      <publishTime>05/18/2016 16:02:31</publishTime>
+    </File>
+    <File Include="bin/System.ValueTuple.dll">
+      <publishTime>07/19/2017 10:01:32</publishTime>
+    </File>
+    <File Include="DBMASTER.dbml">
+      <publishTime>06/20/2018 11:08:39</publishTime>
+    </File>
+    <File Include="DBTRANS.dbml">
+      <publishTime>06/26/2018 11:17:40</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>06/21/2018 14:38:01</publishTime>
+    </File>
+    <File Include="WebService1.asmx">
+      <publishTime>06/20/2018 11:02:55</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

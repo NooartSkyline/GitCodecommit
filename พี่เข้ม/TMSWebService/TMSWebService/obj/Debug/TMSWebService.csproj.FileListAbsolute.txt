@@ -1,0 +1,19 @@
+E:\Work\WebService\TMSWebService\TMSWebService\bin\TMSWebService.dll.config
+E:\Work\WebService\TMSWebService\TMSWebService\bin\TMSWebService.dll
+E:\Work\WebService\TMSWebService\TMSWebService\bin\TMSWebService.pdb
+E:\Work\WebService\TMSWebService\TMSWebService\bin\SourceCode.HostClientAPI.dll
+E:\Work\WebService\TMSWebService\TMSWebService\bin\SourceCode.SmartObjects.Client.dll
+E:\Work\WebService\TMSWebService\TMSWebService\bin\SourceCode.Workflow.Client.dll
+E:\Work\WebService\TMSWebService\TMSWebService\obj\Debug\TMSWebService.dll
+E:\Work\WebService\TMSWebService\TMSWebService\obj\Debug\TMSWebService.pdb
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.dll.config
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.dll
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.pdb
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Debug\TMSWebService.dll
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Debug\TMSWebService.pdb
+D:\K2\K2 API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Debug\TMSWebService.csprojResolveAssemblyReference.cache
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.dll.config
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.dll
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\bin\TMSWebService.pdb
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Debug\TMSWebService.dll
+D:\K2\API - WinApp - WebService\Real\K2 WebServiceTMS\TMSWebService\TMSWebService\obj\Debug\TMSWebService.pdb

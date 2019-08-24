@@ -1,0 +1,23 @@
+C:\Program Files\Microsoft.NET\SDK\CompactFramework\v3.5\bin
+
+SvcUtil.exe /language:cs http://192.168.0.37/mobileservice/MobileService.svc
+
+
+NetCFSvcUtil.exe /language:cs http://localhost/MobileService/MobileService.svc
+
+
+
+public static System.ServiceModel.Channels.Binding CreateDefaultBinding()
+    {
+        System.ServiceModel.Channels.CustomBinding binding = new System.ServiceModel.Channels.CustomBinding();
+        binding.Elements.Add(new System.ServiceModel.Channels.TextMessageEncodingBindingElement(System.ServiceModel.Channels.MessageVersion.Soap11, System.Text.Encoding.UTF8));
+        //binding.Elements.Add(new System.ServiceModel.Channels.HttpTransportBindingElement());
+        var httpTransportBindingElement = new System.ServiceModel.Channels.HttpTransportBindingElement();
+        httpTransportBindingElement.MaxBufferSize = int.MaxValue;
+        httpTransportBindingElement.MaxReceivedMessageSize = long.MaxValue;
+        httpTransportBindingElement.MaxBufferPoolSize = long.MaxValue;
+        binding.Elements.Add(httpTransportBindingElement);
+
+        return binding;
+    }
+

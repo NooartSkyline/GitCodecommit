@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBTRANS" Class="DBTRANSDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=192.168.0.104;Initial Catalog=DBTRANS;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="DBTRANSConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TBTrans_PostGISerial" Member="TBTrans_PostGISerials">
+    <Type Name="TBTrans_PostGISerial">
+      <Column Name="DELIV_NUMB" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SERIALNO" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ITM_NUMBER" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MATNR" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="SAVE_SAP" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TBTrans_PostGRItem" Member="TBTrans_PostGRItems">
+    <Type Name="TBTrans_PostGRItem">
+      <Column Name="VBELN" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MATNR" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="MAKTX" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LFIMG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VRKME" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WERKS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LGORT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="ERDAT" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="SERNP" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="XCHPF" Type="System.String" DbType="VarChar(1)" CanBeNull="true" />
+      <Column Name="MHDRZ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MHDHB" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="STATUS" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="QTY" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CREATEDATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DOC_SEARCH" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOC_TYPE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOC_SITE" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="DOC_DATE" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EMP_ID" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="POSNR" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="RFMNG" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LGMNG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="MEINS" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UMVKZ" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BWART" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SERIAL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="PKSTK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WBSTK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KOSTK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VSBED" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LFART" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BEZEI" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VSART" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VGBEL" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CHARG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="UNIT_SELECT" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="BATCH_CHECK" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BATCH_EXP_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="BATCH_MANUFAC_DATE" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="UECHA" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="KCMENG" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="SPLIT" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="WEIGHTS" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="QTY_D" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EMP_CONFIRM_DAM" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="VGPOS" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="HH_DOCNO" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

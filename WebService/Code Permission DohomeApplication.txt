@@ -1,0 +1,47 @@
+1019903
+123456
+
+http://192.168.0.29/ServiceDohomeApplication/WebService.asmx?op=LOGIN_DOHOMEAPP
+
+cOqyOKGB1UitBX1gdoo0SLgoPfh7jAQS ---- Token
+
+
+http://permission.dohome.co.th:8061/WebServices/Authentication.asmx?WSDL ---- WebLogin
+http://permission.dohome.co.th:8061/WebServices/Policies.asmx?WSDL ---- WebSecurity
+
+----Code---
+
+WebLogIn.Token token = new WebLogIn.Token();
+                token.Value = this.Config.DefaultToken;
+                WebLogIn.Login lg = new WebLogIn.Login();
+                lg.Username = this.txtUserID.Text;
+                lg.Password = this.txtPassword.Text;
+
+                WebLogIn.AuthenticationSoapClient aut = new WebLogIn.AuthenticationSoapClient();
+
+                WebLogIn.ResLogin res = aut.Login(token, lg);
+                if (res.Authenticated)
+                {
+                    //เช็คว่าเป็น Cashier หรือไม่
+                    if (res.Policy == null)
+                    {
+                        string sText = "รหัสแคชเชียร์ " + this.txtUserID.Text + "- "+ res.Employee.FullName +"\n";
+                        sText += "- ยังไม่ได้กำหนด Policy\n";
+                        sText += "กรุณาติดต่อผู้ดูแลระบบเพื่อทำการตรวจสอบ";
+                        MessageBox.Show(sText, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                    else
+                    {
+                        this.Local_Config.OfficerID = this.txtUserID.Text;
+                        this.Local_Config.OfficerName = res.Employee.FullName;
+                        this.Local_Config.Employee_UserInfo = res.Employee;
+                        this.Local_Config.Employee_Policy = res.Policy;
+                        return true;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show(res.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return false;
+                }

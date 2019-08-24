@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/MobileService_deploy" />
+  <setParameter name="1100-Web.config Connection String" value="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" />
+  <setParameter name="1200-Web.config Connection String" value="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" />
+  <setParameter name="1300-Web.config Connection String" value="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" />
+  <setParameter name="1400-Web.config Connection String" value="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" />
+  <setParameter name="HandHeldDB-Web.config Connection String" value="Server=.;Database=HandHeldDB;User ID=sa;Password=minadadmin;" />
+</parameters>

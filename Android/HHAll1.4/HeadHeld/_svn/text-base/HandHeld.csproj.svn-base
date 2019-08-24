@@ -1,0 +1,426 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C7FFCC25-40AC-455E-93F6-EE296684D17B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DoHome.HandHeld.Client</RootNamespace>
+    <AssemblyName>HandHeld</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.02</OSVersion>
+    <DeployDirSuffix>HandHeld</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <ApplicationIcon>handheld32.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsCE.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Resco.OutlookControls.CF3, Version=6.9.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\RescoCFNET\Bin\Resco.OutlookControls.CF3.dll</HintPath>
+    </Reference>
+    <Reference Include="Resco.ProgressBar.CF3, Version=6.9.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\RescoCFNET\Bin\Resco.ProgressBar.CF3.dll</HintPath>
+    </Reference>
+    <Reference Include="Resco.SmartGrid.CF3, Version=6.9.0.0, Culture=neutral, PublicKeyToken=e116d99a00eca71b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\RescoCFNET\Bin\Resco.SmartGrid.CF3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.0.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CFClientBase.cs" />
+    <Compile Include="ChooseFromListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseFromListForm.Designer.cs">
+      <DependentUpon>ChooseFromListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\DataGridCustomCheckBoxColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\DataGridCustomColumnBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LocationLabelPrintForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationLabelPrintForm.Designer.cs">
+      <DependentUpon>LocationLabelPrintForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LabelLocationPrintManager.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationCheckForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationCheckForm2.Designer.cs">
+      <DependentUpon>LocationCheckForm2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationCheckOfflineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationCheckOfflineForm.Designer.cs">
+      <DependentUpon>LocationCheckOfflineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LocationCheckManager.cs" />
+    <Compile Include="LocationKeyboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationKeyboardForm.designer.cs">
+      <DependentUpon>LocationKeyboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MobileService.cs" />
+    <Compile Include="ProductMixedOfflineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductMixedOfflineForm.Designer.cs">
+      <DependentUpon>ProductMixedOfflineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\BranchManager.cs" />
+    <Compile Include="DataAccess\WarehouseManager.cs" />
+    <Compile Include="DataAccess\Synchonize.cs" />
+    <Compile Include="ProductCheckPriceOfflineForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCheckPriceOfflineForm.Designer.cs">
+      <DependentUpon>ProductCheckPriceOfflineForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\LocationCheckProduct.cs" />
+    <Compile Include="TransferToServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransferToServerForm.Designer.cs">
+      <DependentUpon>TransferToServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess\Employee.cs" />
+    <Compile Include="DataAccess\Location.cs" />
+    <Compile Include="ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationOfflineModeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationOfflineModeForm.Designer.cs">
+      <DependentUpon>LocationOfflineModeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockMainForm.Designer.cs">
+      <DependentUpon>CountStockMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockMainQuantityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockMainQuantityForm.Designer.cs">
+      <DependentUpon>CountStockMainQuantityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockMainSaveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockMainSaveForm.Designer.cs">
+      <DependentUpon>CountStockMainSaveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InputNumberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InputNumberForm.Designer.cs">
+      <DependentUpon>InputNumberForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockQuantityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockQuantityForm.Designer.cs">
+      <DependentUpon>CountStockQuantityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockResumeBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockResumeBillForm.Designer.cs">
+      <DependentUpon>CountStockResumeBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CountStockForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CountStockForm.Designer.cs">
+      <DependentUpon>CountStockForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnterPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterPriceForm.Designer.cs">
+      <DependentUpon>EnterPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductCheckPriceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCheckPriceForm.Designer.cs">
+      <DependentUpon>ProductCheckPriceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DisplayListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayListForm.Designer.cs">
+      <DependentUpon>DisplayListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductBlankForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductBlankForm.Designer.cs">
+      <DependentUpon>ProductBlankForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductMixForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductMixForm.Designer.cs">
+      <DependentUpon>ProductMixForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeWarehouseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeWarehouseForm.Designer.cs">
+      <DependentUpon>ChangeWarehouseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMessageBox.cs" />
+    <Compile Include="LocationProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationProductForm.Designer.cs">
+      <DependentUpon>LocationProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalContext.cs" />
+    <Compile Include="ProductCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductCheckForm.Designer.cs">
+      <DependentUpon>ProductCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationForm.Designer.cs">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOrderRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductOrderRequest.Designer.cs">
+      <DependentUpon>ProductOrderRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductRandomCheckForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductRandomCheckForm.Designer.cs">
+      <DependentUpon>ProductRandomCheckForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChooseFromListForm.resx">
+      <DependentUpon>ChooseFromListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockMainForm.resx">
+      <DependentUpon>CountStockMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockMainQuantityForm.resx">
+      <DependentUpon>CountStockMainQuantityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockMainSaveForm.resx">
+      <DependentUpon>CountStockMainSaveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InputNumberForm.resx">
+      <DependentUpon>InputNumberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockQuantityForm.resx">
+      <DependentUpon>CountStockQuantityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockResumeBillForm.resx">
+      <DependentUpon>CountStockResumeBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CountStockForm.resx">
+      <DependentUpon>CountStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnterPriceForm.resx">
+      <DependentUpon>EnterPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCheckPriceForm.resx">
+      <DependentUpon>ProductCheckPriceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayListForm.resx">
+      <DependentUpon>DisplayListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductBlankForm.resx">
+      <DependentUpon>ProductBlankForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductMixForm.resx">
+      <DependentUpon>ProductMixForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeWarehouseForm.resx">
+      <DependentUpon>ChangeWarehouseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationProductForm.resx">
+      <DependentUpon>LocationProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCheckForm.resx">
+      <DependentUpon>ProductCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationForm.resx">
+      <DependentUpon>LocationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductOrderRequest.resx">
+      <DependentUpon>ProductOrderRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductRandomCheckForm.resx">
+      <DependentUpon>ProductRandomCheckForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="ServiceHelper.cs" />
+    <Compile Include="SqlHelper.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="Utils\PlatformDetection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="handheld.ico" />
+    <Content Include="handheld32.ico" />
+    <Content Include="HandHeldDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\1311732659_search_button.png" />
+    <Content Include="Images\1311732782_search-blue.png" />
+    <Content Include="Images\1320821820_keyboard--plus.png" />
+    <Content Include="Images\application_view_list.png" />
+    <Content Include="Images\cb_check.bmp" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\keyboard_add.png" />
+    <EmbeddedResource Include="LocationLabelPrintForm.resx">
+      <DependentUpon>LocationLabelPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationCheckForm2.resx">
+      <DependentUpon>LocationCheckForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationCheckOfflineForm.resx">
+      <DependentUpon>LocationCheckOfflineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationKeyboardForm.resx">
+      <DependentUpon>LocationKeyboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductMixedOfflineForm.resx">
+      <DependentUpon>ProductMixedOfflineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductCheckPriceOfflineForm.resx">
+      <DependentUpon>ProductCheckPriceOfflineForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransferToServerForm.resx">
+      <DependentUpon>TransferToServerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationOfflineModeForm.resx">
+      <DependentUpon>LocationOfflineModeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sql.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

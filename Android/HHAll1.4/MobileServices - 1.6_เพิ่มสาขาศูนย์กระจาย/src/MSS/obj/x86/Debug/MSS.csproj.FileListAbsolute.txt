@@ -1,0 +1,54 @@
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\MSS.exe.config
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\MSS.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\MSS.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\MSS.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\MSS.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\BLToolkit.4.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\EnDeCode.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\sapnco.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\sapnco_utils.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\SAPProxy.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\SAPProxyII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\SAPProxyIII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\bin\Debug\SetPassword.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\obj\x86\Debug\MSS.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\obj\x86\Debug\MSS.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\obj\x86\Debug\MSS.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices\src\MSS\obj\x86\Debug\MSS.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\MSS.exe.config
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\MSS.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\MSS.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\MSS.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\MSS.pdb
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\BLToolkit.4.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\EnDeCode.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\sapnco.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\sapnco_utils.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\SAPProxy.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\SAPProxyII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\SAPProxyIII.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\bin\Debug\SetPassword.dll
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\obj\x86\Debug\MSS.csprojResolveAssemblyReference.cache
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\obj\x86\Debug\MSS.exe.manifest
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\obj\x86\Debug\MSS.application
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\obj\x86\Debug\MSS.exe
+D:\LogOnRMoonchai\WebApiWFC\MobileServices - 1.2\src\MSS\obj\x86\Debug\MSS.pdb
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\MSS.exe.config
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\MSS.exe.manifest
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\MSS.application
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\MSS.exe
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\MSS.pdb
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\BLToolkit.4.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\EnDeCode.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\SAP.Connector.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\sapnco.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\sapnco_utils.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\SAPProxy.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\SAPProxyII.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\SAPProxyIII.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\bin\Debug\SetPassword.dll
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\obj\x86\Debug\MSS.csprojResolveAssemblyReference.cache
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\obj\x86\Debug\MSS.exe.manifest
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\obj\x86\Debug\MSS.application
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\obj\x86\Debug\MSS.exe
+D:\Project SAP\HH กบ\HHAll1.4\MobileServices - 1.4\src\MSS\obj\x86\Debug\MSS.pdb

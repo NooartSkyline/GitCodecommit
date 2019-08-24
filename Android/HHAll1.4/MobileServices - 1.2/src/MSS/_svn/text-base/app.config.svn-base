@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="SAP.Middleware.Connector">
+      <sectionGroup name="ClientSettings">
+        <section name="DestinationConfiguration" type="SAP.Middleware.Connector.RfcDestinationConfiguration, sapnco"/>
+      </sectionGroup>
+    </sectionGroup>
+  </configSections>
+  <SAP.Middleware.Connector>
+    <ClientSettings>
+      <DestinationConfiguration>
+        <destinations>
+          <add NAME="QAS" USER="INTERFACE" PASSWD="" CLIENT="500"
+              LANG="TH" ASHOST="192.168.0.54" SYSNR="0"
+              MAX_POOL_SIZE="10" IDLE_TIMEOUT="10"/>
+        </destinations>
+      </DestinationConfiguration>
+    </ClientSettings>
+  </SAP.Middleware.Connector>
+  <connectionStrings>
+    <add name="1100" connectionString="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" providerName="System.Data.SqlClient" />
+    <!--<add name="1100" connectionString="Server=uwcsql;Database=UWPos;User ID=abc;Password=abc;" providerName="System.Data.SqlClient" />-->
+    <add name="1200" connectionString="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" providerName="System.Data.SqlClient" />
+    <add name="1300" connectionString="Server=UBWeb;Database=UWPos;User ID=sa;Password=profit;" providerName="System.Data.SqlClient" />
+    <!--  <add name="DefaultConnection" connectionString="Server=uwcsql;Database=UWPos;User ID=abc;Password=abc;" providerName="System.Data.SqlClient" />-->
+    <add name="HandHeldDB" connectionString="Server=10.0.20.212;Database=HandHeldDB;User ID=sa;Password=minadadmin;" providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <appSettings>
+    <add key="SapClient" value="500" />
+    <add key="SapName" value="QAS" />
+    <add key="AccountingYear" value="2554" />
+    <add key="MobileServiceServer" value="10.0.20.212" />
+  </appSettings>
+  <startup useLegacyV2RuntimeActivationPolicy="true">
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/>
+  </startup>
+</configuration>

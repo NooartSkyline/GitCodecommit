@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DBMaster">
+  <DataContextMoniker Name="/DBMasterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="98a15bcb-344c-4e66-9244-e61be0c3f9df" absoluteBounds="0.75, 0.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DBMasterDataContext/TBMaster_DHApp_Group_Detail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f97910b5-9aa7-4168-ad0e-cb629a0e6777" absoluteBounds="0.765, 1.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="67bafefb-505e-4e5f-a100-f1b536598698" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
+      <DataClassMoniker Name="/DBMasterDataContext/TBMaster_DHApp_User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0ec4945d-1ed0-47c4-8f6e-916f13cc71e2" absoluteBounds="3.765, 1.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ea46590b-ce95-490d-96d7-e23848fc98e2" absoluteBounds="0.875, 2.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DBMasterDataContext/TBMaster_DHApp_Group_Policy" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ce9e5c1-2bdc-4ced-b09b-7977c08ead56" absoluteBounds="0.89, 2.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65b18be8-c9fd-4dae-ab6c-bc0688d0e8ec" absoluteBounds="3.25, 2.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/DBMasterDataContext/TBMaster_User_Job_Key" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a25ba2a4-67f9-4018-a3aa-e741e26a35af" absoluteBounds="3.2649999999999997, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

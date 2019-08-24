@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 16, 19.25" name="K2_Convert">
+  <DataContextMoniker Name="/K2_ConvertDataContext" />
+  <nestedChildShapes>
+    <classShape Id="57cc6096-bb96-4883-988b-cf919cd080f4" absoluteBounds="1, 1.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_RETURN_WEBSERVICE_TEMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c09e91a6-e4ce-4ff8-87d6-a306e3095ec0" absoluteBounds="1.0149999999999997, 1.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d285525-0638-4b40-9a59-9bf03d7bfd80" absoluteBounds="4.75, 0.75, 2, 1.7708968098958329">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_BARCODE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="70d3579e-b04f-4ae2-8d55-fe435bc9e578" absoluteBounds="4.765, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2eccbaec-7878-4c99-ba6f-75d77e096209" absoluteBounds="0.75, 4.75, 2, 6.1938297526041666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_USERAPPROVE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="00aafdf9-2950-4bc0-8884-ca23edc736f6" absoluteBounds="0.765, 5.21, 1.9700000000000002, 5.6338297526041661" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="acaeb40f-33d9-463d-89c7-01bd5a833c4c" absoluteBounds="4.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_BATCH_SERIALNUMBER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="d90a8b6f-424f-4b28-95ae-4c3761cb3a8a" absoluteBounds="4.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="83165e42-a844-4589-bed4-38e72505f041" absoluteBounds="7.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_BATCH_SERIALNUMBER_LOG" />
+      <nestedChildShapes>
+        <elementListCompartment Id="89505fa6-e1ba-46af-b17f-ee7aa273083f" absoluteBounds="7.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="da58c05b-9636-49fa-9a58-50c9ec1d26eb" absoluteBounds="7.75, 4.75, 2, 4.4631168619791666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_CONFIRM_CONVERTARTILCE" />
+      <nestedChildShapes>
+        <elementListCompartment Id="04a4ccc6-894b-463a-81e9-25889015c4e5" absoluteBounds="7.765, 5.21, 1.9700000000000002, 3.903116861979167" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d8f088f-0a29-4c2f-8c31-1389fdc290c7" absoluteBounds="10.75, 0.75, 2, 7.5399397786458326">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_DT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b3308495-d291-4e36-ae35-0fa419ecf22b" absoluteBounds="10.765, 1.21, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ec0683e1-0d5a-4721-8ac4-68365ac6bafd" absoluteBounds="3.75, 10.75, 2, 7.5399397786458309">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_DT_RAWMAT" />
+      <nestedChildShapes>
+        <elementListCompartment Id="88ece9f2-1a94-4a9b-8815-b48ae3935b5d" absoluteBounds="3.765, 11.21, 1.9700000000000002, 6.979939778645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4420b9d2-9043-4755-a5a0-363d8ebb129a" absoluteBounds="6.75, 10.75, 2, 8.3091455078125023">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_HD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c2f193a5-cb9d-44b7-b937-4c83e4e2d0b2" absoluteBounds="6.765, 11.21, 1.9700000000000002, 7.7491455078125009" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8f48e526-3d83-422f-8110-cc4e815db787" absoluteBounds="10.75, 9.75, 2, 3.6939111328124987">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_LIST_USER_APPROVE_AUTO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6c49d7a3-44e6-47a4-998b-a6783e249dc6" absoluteBounds="10.765, 10.21, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="35d421cf-757f-468d-b325-c4e332c8b95f" absoluteBounds="13.75, 0.75, 2, 3.1170068359375005">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_PRICE_TEMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c462bb81-de41-48b4-9b4e-35984f9f4654" absoluteBounds="13.765, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="65ff2a53-8f5f-4d1b-802d-7a4c771db709" absoluteBounds="13.75, 4.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_RAWMATERIAL_TEMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b5a2241-9861-474e-8080-e7f84c4d872b" absoluteBounds="13.765, 5.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1d482d78-acba-41c7-9876-5e2236b74cba" absoluteBounds="13.75, 8.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_REASONOFCORNVER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1481fc82-033b-4e32-a50e-9681fc8a90c1" absoluteBounds="13.765, 9.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="93764de5-822c-4e79-acc6-6e5eb0061de3" absoluteBounds="13.75, 11.75, 2, 1.7708968098958344">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_REASONOFCORNVER_BATCH_SERIAL_TEMP" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8ba53d35-7cfd-41d7-8f0b-649c2ddeea17" absoluteBounds="13.765, 12.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f4ed40ec-99ff-48d3-8183-0896532ea6c6" absoluteBounds="9.75, 14.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_RUNNERID" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5b7fae2c-c34f-4fd4-9b48-28aecc566965" absoluteBounds="9.765, 15.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e6fc9452-ff2d-4229-a00d-18d9826a5da6" absoluteBounds="12.75, 14.75, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_RUNNINGNUMBER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7bff9c49-0fbd-40d0-b762-9a5f27ad87a9" absoluteBounds="12.765, 15.21, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="c228139d-65c3-4a66-928f-0755e33b554c" absoluteBounds="4.5, 7.875, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/K2_ConvertDataContext/TBREQUESTCONVERT_CHECK_USERLOGNO" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a29949d-817c-40dd-b5a7-55c99ebf9700" absoluteBounds="4.515, 8.335, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
